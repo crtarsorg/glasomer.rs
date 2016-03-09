@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Vote Quiz</title>
+
+		<!-- Third party JS assets -->
+		<script type='text/javascript' src="app/assets/libs/jquery/dist/jquery.js"></script>
+		<script type='text/javascript' src="app/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type='text/javascript' src="app/assets/libs/underscore/underscore.js"></script>
+		<script type='text/javascript' src="app/assets/libs/backbone/backbone-min.js"></script>
+		<script type='text/javascript' src="app/assets/libs/handlebars/handlebars.js"></script>
+
+		<!-- Third party CSS assets -->
+		<link rel="stylesheet" href="app/assets/libs/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="app/assets/libs/fontawesome/css/font-awesome.min.css">
+
+		<!-- Application JS -->
+		<script type='text/javascript' src='app/templates/templates.min.js'></script>
+		<script type='text/javascript' src='app/models/models.min.js'></script>
+		<script type='text/javascript' src='app/views/views.min.js'></script>
+
+	</head>
+	<body>
+		<div id="container">
+		</div>
+		<script>
+			var questionnaireView = new QuestionnaireView({ el: $("#container") });
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "Vote Quiz",
+  "authors": [
+    "georges <georges@opendatakosovo.org>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "CC-BY-1.0",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "bootstrap": "~3.3.6",
+    "underscore": "~1.8.3",
+    "backbone": "~1.2.3",
+    "handlebars": "~4.0.5",
+    "fontawesome": "~4.5.0"
+  }
+}
