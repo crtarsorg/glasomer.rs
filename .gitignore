@@ -1,23 +1,37 @@
+# Common files.
 # pycharm and mac os x files.
-.DS_Store
-.idea/
-app/.DS_Store
+*.DS_Store
+*.idea/
+*.*~
 
+# API files.
+config.cfg
+# Byte-compiled / optimized / DLL files
+api/__pycache__/
+*.py[cod]
+# C extensions
+*.so
+*.swp
+# Distribution / packaging
+api/.Python
+api/venv
+
+# Questionnaire app files. 
 # Node modules
-node_modules
+questionnaire_app/node_modules
 
 # Templates
-app/templates/*.js
+questionnaire_app/app/templates/*.js
 
 # Views
-app/views/views.min.js
+questionnaire_app/app/views/views.min.js
 
 # Models
-app/models/models.min.js
+questionnaire_app/app/models/models.min.js
 
 # Bower components
-bower_components
+questionnaire_app/bower_components
 
 # Libs
-app/assets/libs
+questionnaire_app/app/assets/libs
 
