@@ -6,12 +6,13 @@ window.QuestionnaireView = Backbone.View.extend({
     render: function () {
         var q1 = getQuestion("Lorem ipsum dolor sit amet 1?", ["Yes", "No", "No Answer"]);
         var q2 = getQuestion("Lorem ipsum dolor sit amet 2?", ["Yes", "No"]);
+        var q3 = getQuestion("Lorem ipsum dolor sit amet 3?", ["Yes", "No"]);
 
         Handlebars.registerHelper('setIndex', function (value) {
             this.name = value;
         });
 
-        var questions = new Questions([q1, q2]);
+        var questions = new Questions([q1, q2, q3]);
         var jsonString = JSON.stringify(questions.toJSON());
         $(this.el).html(this.template({questions: JSON.parse(jsonString)}));
         return this
