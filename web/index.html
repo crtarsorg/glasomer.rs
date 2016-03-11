@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Vote Quiz</title>
+
+    <!-- Third party JS assets -->
+    <script type='text/javascript' src="app/assets/libs/jquery/dist/jquery.js"></script>
+    <script type='text/javascript' src="app/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="app/assets/libs/underscore/underscore.js"></script>
+    <script type='text/javascript' src="app/assets/libs/backbone/backbone-min.js"></script>
+    <script type='text/javascript' src="app/assets/libs/handlebars/handlebars.js"></script>
+
+    <!-- Third party CSS assets -->
+    <link rel="stylesheet" href="app/assets/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/assets/libs/fontawesome/css/font-awesome.min.css">
+
+    <!-- Application JS -->
+    <script type='text/javascript' src='app/templates/templates.min.js'></script>
+    <script type='text/javascript' src='app/models/models.min.js'></script>
+    <script type='text/javascript' src='app/views/views.min.js'></script>
+
+</head>
+<style>
+    .navbar {
+        margin-bottom: 0px;
+        background-color: #f9f9f9;
+    }
+</style>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="">
+                        <h4 style="margin-top: 0px;">Vote Quiz</h4>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div id="container">
+        </div>
+    </div>
+    <script>
+        var questionnaireView = new QuestionnaireView({el: $("#container")});
+    </script>
+</div>
+</body>
+</html>

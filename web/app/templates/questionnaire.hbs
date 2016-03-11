@@ -1,0 +1,44 @@
+<div id="questionnaire" style="text-align: center; height:100%;">
+    <br>
+    <h2>Questions</h2>
+    <br>
+    {{#each questions}}
+        <div class="question">
+            {{setIndex @text}}
+            <div>
+                <h2>
+                    {{text}}
+                </h2>
+                {{#each possibleAnswers}}
+                    <input class="" type="radio" name="{{../text}}" value="{{value}}"> {{text}}
+                {{/each}}
+            </div>
+            <br>
+            <hr style="width:50%;">
+        </div>
+    {{/each}}
+    <br>
+    <button id="btn_save" class="btn btn-primary">Save</button>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log("READYYYY!");
+        $('#btn_save').click(function () {
+            var answers_json = {};
+            var answers_array = [];
+            $(".question").each(function () {
+                var name = $(this).find("div").find("h2").text().trim();
+                var selected_answer = $("input[name='" + name + "']:checked").val();
+                answers_json[name] = selected_answer;
+                answers_array.push(selected_answer);
+            });
+
+            console.log(answers_array);
+            if (answers_array.indexOf(undefined) != -1){
+                alert("You must fill all of the fields to continue.!");
+            } else {
+                console.log(answers_json);
+            }
+        })
+    })
+</script>
