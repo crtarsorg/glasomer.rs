@@ -1,25 +1,14 @@
 from flask import Flask, request
 import os
-import tweepy
 import ConfigParser
 from flask.ext.pymongo import PyMongo
 from logging.handlers import RotatingFileHandler
 from flask.ext.cors import CORS
-from utils.utils import Utils
-from utils.mongo_harassments_utils import MongoHarassmentsUtils
 from utils.mongo_utils import MongoCommentsUtils
-from flask.ext.babel import Babel
-from flask.ext.basicauth import BasicAuth
-import tldextract
-
-babel = Babel()
-basic_auth = BasicAuth()
 
 # Create MongoDB database object.
 mongo = PyMongo()
-mongo_harassments_utils = MongoHarassmentsUtils(mongo)
 mongo_comments_utils = MongoCommentsUtils(mongo)
-utils = Utils()
 
 def create_app():
 
@@ -31,12 +20,6 @@ def create_app():
 
     # configure logging
     configure_logging(app)
-
-    # init BasicAuth
-    basic_auth.init_app(app)
-
-    # init internationalization
-    babel.init_app(app)
 
     #Import blueprint modules
     from mod_api.views import mod_api

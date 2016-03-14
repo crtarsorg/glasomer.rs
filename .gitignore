@@ -21,17 +21,17 @@ api/venv
 questionnaire_app/node_modules
 
 # Templates
-questionnaire_app/app/templates/*.js
+web/app/templates/*.js
 
 # Views
-questionnaire_app/app/views/views.min.js
+web/app/views/views.min.js
 
 # Models
-questionnaire_app/app/models/models.min.js
+web/app/models/models.min.js
 
 # Bower components
-questionnaire_app/bower_components
+web/bower_components
 
 # Libs
-questionnaire_app/app/assets/libs
+web/app/assets/libs
 
