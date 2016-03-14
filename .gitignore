@@ -18,7 +18,7 @@ api/venv
 
 # Questionnaire app files. 
 # Node modules
-questionnaire_app/node_modules
+web/node_modules
 
 # Templates
 web/app/templates/*.js
