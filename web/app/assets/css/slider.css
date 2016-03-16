@@ -8,7 +8,7 @@ ol li {
   vertical-align: top;
 }
 .round {
-  background-color: #e6e6e6;
+  background-color: #ACBBCE;
   border-radius: 16px;
   margin: 0 0.5em 0 0.5em;
   width: 90%;
@@ -26,11 +26,10 @@ ol li {
 }
 
 .ui-slider-horizontal .ui-slider-handle {
-  background: #000;
+  background: #1A3966;
   border-radius: 0.7em;
   height: 1.5em;
   width: 26px;
   top: 0.2em;
-  margin-left: 7%;
   margin: 0 2px;
 }
