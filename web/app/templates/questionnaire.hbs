@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="app/assets/css/slider.css">
 <style>
     .question {
         height: auto;
@@ -31,7 +33,7 @@
                 <div style="margin-top:-50px;">
                     <h2>
                         {{text}}
-                    </h2>
+                    </h2><br>
                     <div class="radio-div">
                         {{#each possibleAnswers}}
                             <input type="radio" id="{{../text}} {{value}}" value="{{value}}" name="{{../text}}">
@@ -40,6 +42,26 @@
                         {{/each}}
                     </div>
                 </div>
+                <fieldset class="question-fieldset">
+                    <div style="text-align: center">
+                        <h4 style="color: #000;">Importance Level</h4>
+                    </div>
+                    <div class="round">
+                        <div class="slider"></div>
+                    </div>
+                    <label class="slider-label" for="a1"><input type="radio" name="importance_level" id="a1"
+                                                                data-value="86" value="Least">Least</label>
+                    <label class="slider-label" for="a2"><input type="radio" name="importance_level" id="a2"
+                                                                data-value="87" value="Less">Less</label>
+                    <label class="slider-label" for="a3"><input type="radio" name="importance_level" id="a3"
+                                                                data-value="88" value="Somewhat"
+                                                                checked="checked">Somewhat</label>
+                    <label class="slider-label" for="a4"><input type="radio" name="importance_level" id="a4"
+                                                                data-value="89"
+                                                                value="More">More</label>
+                    <label class="slider-label" for="a5"><input type="radio" name="importance_level" id="a5"
+                                                                data-value="90" value="Most">Most</label>
+                </fieldset><br>
                 <hr class="hr-style" style="width: 100%;">
             </div>
             <br><br>
@@ -52,15 +74,31 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
-        console.log("READYYYY!");
+//        console.log("READYYYY!");
+        $('.question-fieldset').each(function () {
+            var radios = $(this).find(':radio').hide();
+            console.log(radios);
+            $('.slider').slider({
+                min: parseInt(radios.first().data('value'), 10),
+                max: parseInt(radios.last().data('value'), 10),
+                slide: function (event, ui) {
+                    $(this).closest('.question').find('[data-value=' + ui.value + ']').click();
+                }
+            });
+        });
+
         $('#btn_save').click(function () {
             var answers_json = {};
+
             var answers_array = [];
             $(".question").each(function () {
                 var name = $(this).find("div").find("h2").text().trim();
                 var selected_answer = $("input[name='" + name + "']:checked").prop("value");
                 answers_json[name] = selected_answer;
                 answers_array.push(selected_answer);
+                alert($(':radio:checked').map(function() {
+                return this.name + ': '+  this.value;
+            }).get());;
             });
 
             console.log(answers_array);
