@@ -1,4 +1,5 @@
 var Question = Backbone.Model.extend({
+    model_name: "category",
     defaults: {
 		text: "",
         possibleAnswers: Answers

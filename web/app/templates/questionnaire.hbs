@@ -20,6 +20,7 @@
         box-shadow: inset 0 0 7px black, 0 0 7px black;
         color: #000;
     }
+
     #category {
         color: #0d3349;
     }
@@ -46,50 +47,77 @@
     </div>
     <br>
     <hr>
-    <div id="questions" class="questions">
+    <div id="questions">
         <br>
-        {{#each questions}}
-            <div class="question">
-                {{setIndex @text}}
-                <div style="margin-top:-50px;">
-                    <h2>
-                        {{text}}
-                    </h2><br>
-                    <div class="radio-div">
-                        {{#each possibleAnswers}}
-                            <input type="radio" id="{{../text}} {{value}}" value="{{value}}" name="{{../text}}">
-                            <label for="{{../text}} {{value}}"><span></span>&nbsp;{{text}}</label>
+        {{#each categories}}
+            <div id="{{name}}" class="categories">
+                <br>
+                <h2>{{ name }}</h2>
+                <br>
+                <div class="questions">
+                    {{#each questions}}
+                        <div class="question">
+                            {{setIndex @text}}
+                            <div style="margin-top:-50px;">
+                                <h2>
+                                    {{text}}
+                                </h2><br>
+                                <div class="radio-div">
+                                    {{#each possibleAnswers}}
+                                        <input type="radio" id="{{../text}} {{value}}" value="{{value}}"
+                                               name="{{../text}}">
+                                        <label for="{{../text}} {{value}}"><span></span>&nbsp;{{text}}</label>
+                                        <br>
+                                    {{/each}}
+                                </div>
+                            </div>
+                            <fieldset class="question-fieldset">
+                                <div style="text-align: center">
+                                    <h4 style="color: #000;">Importance Level</h4>
+                                </div>
+                                <div class="round">
+                                    <div class="slider"></div>
+                                </div>
+                                <label class="col-xs-4 slider-label" for="a1"><input type="radio"
+                                                                                     name="importance_level"
+                                                                                     id="a1"
+                                                                                     data-value="86" value="Least">Nije
+                                    važno</label>
+
+                                <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a2"><input
+                                        type="radio"
+                                        name="importance_level"
+                                        id="a2"
+                                        data-value="87"
+                                        value="Less">Manje
+                                    važno</label>
+
+                                <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a3"><input
+                                        type="radio"
+                                        name="importance_level"
+                                        id="a3"
+                                        data-value="88"
+                                        value="Somewhat"
+                                        checked="checked">Važno</label>
+
+                                <label style="margin-left: 30px;" class="col-xs-4 slider-label" for="a4"><input
+                                        type="radio"
+                                        name="importance_level"
+                                        id="a4"
+                                        data-value="89"
+                                        value="More important">Veoma
+                                    važno</label>
+                            </fieldset>
                             <br>
-                        {{/each}}
-                    </div>
+                            <hr class="hr-style" style="width: 100%;">
+                        </div>
+                        <br><br>
+                    {{/each}}
                 </div>
-                <fieldset class="question-fieldset">
-                    <div style="text-align: center">
-                        <h4 style="color: #000;">Importance Level</h4>
-                    </div>
-                    <div class="round">
-                        <div class="slider"></div>
-                    </div>
-                    <label class="col-xs-4 slider-label" for="a1"><input type="radio" name="importance_level" id="a1"
-                                                                data-value="86" value="Least">Nije važno</label>
-
-                    <label  style="margin-left: 50px;" class="col-xs-4 slider-label" for="a2"><input type="radio" name="importance_level" id="a2"
-                                                                data-value="87" value="Less">Manje važno</label>
-
-                    <label  style="margin-left: 50px;" class="col-xs-4 slider-label" for="a3"><input type="radio" name="importance_level" id="a3"
-                                                                data-value="88" value="Somewhat"
-                                                                checked="checked">Važno</label>
-
-                    <label style="margin-left: 30px;" class="col-xs-4 slider-label" for="a4"><input type="radio" name="importance_level" id="a4"
-                                                                data-value="89"
-                                                                value="More important">Veoma važno</label>
-                </fieldset><br>
-                <hr class="hr-style" style="width: 100%;">
             </div>
-            <br><br>
         {{/each}}
         <br>
-        <button id="btn_save" style="margin-left: 38%;" class="btn btn-primary">Show My Results</button>
+        <button id="btn_save" style="margin-left: -5%;" class="btn btn-primary">Show My Results</button>
         <br>
     </div>
     <br>
@@ -109,6 +137,25 @@
             });
         });
 
+        $(".categories").each(function () {
+            if ($(this).attr("id") == 'Ekonomija'){
+                $(this).css("display", "block");
+            } else {
+                $(this).css("display", "none");
+            }
+        });
+
+        $("#category").change(function () {
+            var category = $(this).val();
+            $(".categories").each(function () {
+                if ($(this).attr("id") == category){
+                    $(this).css("display", "block");
+                } else {
+                    $(this).css("display", "none");
+                }
+            });
+        });
+
         $('#btn_save').click(function () {
             var answers_json = {};
 
@@ -118,9 +165,10 @@
                 var selected_answer = $("input[name='" + name + "']:checked").prop("value");
                 answers_json[name] = selected_answer;
                 answers_array.push(selected_answer);
-                alert($(':radio:checked').map(function() {
-                return this.name + ': '+  this.value;
-            }).get());;
+                alert($(':radio:checked').map(function () {
+                    return this.name + ': ' + this.value;
+                }).get());
+                ;
             });
 
             console.log(answers_array);
