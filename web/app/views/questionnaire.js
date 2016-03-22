@@ -4,14 +4,14 @@ window.QuestionnaireView = Backbone.View.extend({
         this.render();
     },
     render: function () {
-        var q1 = getQuestion("Lorem ipsum dolor sit amet 1?", ["Yes", "No", "No Answer"]);
-        var q2 = getQuestion("Lorem ipsum dolor sit amet 2?", ["Yes", "No"]);
-        var q3 = getQuestion("Lorem ipsum dolor sit amet 4?", ["Yes", "No"]);
-        var q4 = getQuestion("Lorem ipsum dolor sit amet 5?", ["Yes", "No", "No Answer"]);
-        var q5 = getQuestion("Lorem ipsum dolor sit amet 6?", ["Yes", "No"]);
-        var q6 = getQuestion("Lorem ipsum dolor sit amet 7?", ["Yes", "No"]);
-        var q7 = getQuestion("Lorem ipsum dolor sit amet 8?", ["Yes", "No", "No Answer"]);
-        var q8 = getQuestion("Lorem ipsum dolor sit amet 9?", ["Yes", "No"]);
+        var q1 = getQuestion("Lorem ipsum dolor sit amet 1?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
+        var q2 = getQuestion("Lorem ipsum dolor sit amet 2?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
+        var q3 = getQuestion("Lorem ipsum dolor sit amet 4?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
+        var q4 = getQuestion("Lorem ipsum dolor sit amet 5?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
+        var q5 = getQuestion("Lorem ipsum dolor sit amet 6?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
+        var q6 = getQuestion("Lorem ipsum dolor sit amet 7?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
+        var q7 = getQuestion("Lorem ipsum dolor sit amet 8?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
+        var q8 = getQuestion("Lorem ipsum dolor sit amet 9?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
 
         Handlebars.registerHelper('setIndex', function (value) {
             this.name = value;
@@ -21,7 +21,19 @@ window.QuestionnaireView = Backbone.View.extend({
         var jsonString = JSON.stringify(questions.toJSON());
         $(this.el).html(this.template({questions: JSON.parse(jsonString)}));
         return this
+    },
+    events: {
+        "click #btn_save": "saveData",
+        "change ": "questionSwitch"
+    },
+    saveData: function() {
+
+    },
+    questionSwitch: function() {
+
+
     }
+
 });
 
 function getQuestion(text, answers) {

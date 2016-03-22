@@ -39,6 +39,11 @@ module.exports = function(grunt) {
                             './css/font-awesome.min.css',
                             './fonts/*.*'
                         ]
+                    },
+                    mongoose: {
+                        main: [
+                            './lib/*.js'
+                        ]
                     }
                 }
             }

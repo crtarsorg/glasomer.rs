@@ -20,11 +20,32 @@
         box-shadow: inset 0 0 7px black, 0 0 7px black;
         color: #000;
     }
+    #category {
+        color: #0d3349;
+    }
 </style>
 <div id="questionnaire" style="text-align: center;">
     <br>
     <h2>Questions</h2>
+    <hr>
+    <div class="form-group">
+        <label class="control-label col-xs-4">Question Area:</label>
+        <select class="form-group col-xs-5" id="category">
+            <option value="Ekonomija">Ekonomija</option>
+            <option value="Pravosuđe">Pravosuđe</option>
+            <option value="Obrazovanje">Obrazovanje</option>
+            <option value="Zdravstvo">Zdravstvo</option>
+            <option value="Socijalna zaštita">Socijalna zaštita</option>
+            <option value="Poljoprivreda">Poljoprivreda</option>
+            <option value="Društvo">Društvo</option>
+            <option value="Spoljna politika">Spoljna politika</option>
+            <option value="Mediji">Mediji</option>
+            <option value="Ekologija">Ekologija</option>
+            <option value="Budžetski prioriti">Budžetski prioriti</option>
+        </select>
+    </div>
     <br>
+    <hr>
     <div id="questions" class="questions">
         <br>
         {{#each questions}}
@@ -49,18 +70,19 @@
                     <div class="round">
                         <div class="slider"></div>
                     </div>
-                    <label class="slider-label" for="a1"><input type="radio" name="importance_level" id="a1"
-                                                                data-value="86" value="Least">Least</label>
-                    <label class="slider-label" for="a2"><input type="radio" name="importance_level" id="a2"
-                                                                data-value="87" value="Less">Less</label>
-                    <label class="slider-label" for="a3"><input type="radio" name="importance_level" id="a3"
+                    <label class="col-xs-4 slider-label" for="a1"><input type="radio" name="importance_level" id="a1"
+                                                                data-value="86" value="Least">Nije važno</label>
+
+                    <label  style="margin-left: 50px;" class="col-xs-4 slider-label" for="a2"><input type="radio" name="importance_level" id="a2"
+                                                                data-value="87" value="Less">Manje važno</label>
+
+                    <label  style="margin-left: 50px;" class="col-xs-4 slider-label" for="a3"><input type="radio" name="importance_level" id="a3"
                                                                 data-value="88" value="Somewhat"
-                                                                checked="checked">Somewhat</label>
-                    <label class="slider-label" for="a4"><input type="radio" name="importance_level" id="a4"
+                                                                checked="checked">Važno</label>
+
+                    <label style="margin-left: 30px;" class="col-xs-4 slider-label" for="a4"><input type="radio" name="importance_level" id="a4"
                                                                 data-value="89"
-                                                                value="More">More</label>
-                    <label class="slider-label" for="a5"><input type="radio" name="importance_level" id="a5"
-                                                                data-value="90" value="Most">Most</label>
+                                                                value="More important">Veoma važno</label>
                 </fieldset><br>
                 <hr class="hr-style" style="width: 100%;">
             </div>
@@ -74,7 +96,6 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
-//        console.log("READYYYY!");
         $('.question-fieldset').each(function () {
             var radios = $(this).find(':radio').hide();
             console.log(radios);
