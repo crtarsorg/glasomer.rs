@@ -254,5 +254,8 @@
       "answer": "",
       "importance": ""
     }
+  },
+  "Budžetski prioriti": {
+    "areas": ["Vojska", "Kultura", "Socijalna zažtita", "Policija", "Nauka", "Zdravstvo", "Obrazovanje"]
   }
 }
