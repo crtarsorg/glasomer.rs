@@ -144,39 +144,5 @@
                 $(this).css("display", "none");
             }
         });
-
-        $("#category").change(function () {
-            var category = $(this).val();
-            $(".categories").each(function () {
-                if ($(this).attr("id") == category){
-                    $(this).css("display", "block");
-                } else {
-                    $(this).css("display", "none");
-                }
-            });
-        });
-
-        $('#btn_save').click(function () {
-            var answers_json = {};
-
-            var answers_array = [];
-            $(".question").each(function () {
-                var name = $(this).find("div").find("h2").text().trim();
-                var selected_answer = $("input[name='" + name + "']:checked").prop("value");
-                answers_json[name] = selected_answer;
-                answers_array.push(selected_answer);
-                alert($(':radio:checked').map(function () {
-                    return this.name + ': ' + this.value;
-                }).get());
-                ;
-            });
-
-            console.log(answers_array);
-            if (answers_array.indexOf(undefined) != -1) {
-                alert("You must fill all of the fields to continue.!");
-            } else {
-                console.log(answers_json);
-            }
-        })
     })
 </script>

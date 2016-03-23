@@ -5,41 +5,65 @@ window.QuestionnaireView = Backbone.View.extend({
     },
     render: function () {
         initCategoriesWithQuestions($(this.el), this.template);
-        //var q1 = getQuestion("Lorem ipsum dolor sit amet 1?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
-        //var q2 = getQuestion("Lorem ipsum dolor sit amet 2?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
-        //var q3 = getQuestion("Lorem ipsum dolor sit amet 4?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
-        //var q4 = getQuestion("Lorem ipsum dolor sit amet 5?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
-        //var q5 = getQuestion("Lorem ipsum dolor sit amet 6?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
-        //var q6 = getQuestion("Lorem ipsum dolor sit amet 7?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
-        //var q7 = getQuestion("Lorem ipsum dolor sit amet 8?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
-        //var q8 = getQuestion("Lorem ipsum dolor sit amet 9?", ["Slažem se", "Ne slažem se", "Nemam stav"]);
-        //
+
         Handlebars.registerHelper('setIndex', function (value) {
             this.name = value;
         });
-        //
-        //var questions = new Questions([q1, q2, q3, q4, q5, q6, q7, q8]);
-        //
-        //var category1 = new Category({"name": "Ekonomija", "questions": questions});
-        //var category2 = new Category({"name": "Ekologija", "questions": questions});
-        //var categories = new Categories([category1, category2]);
-        //var jsonString = JSON.stringify(categories.toJSON());
-        //console.log(JSON.parse(jsonString));
-        //$(this.el).html(this.template({categories: JSON.parse(jsonString)}));
+
         return this
     },
     events: {
-        "click #btn_save": "saveData",
-        "change ": "questionSwitch"
+        "click #btn_save": "dataHandler",
+        "change #category": "categorySwitch"
     },
-    saveData: function () {
+    dataHandler: function () {
 
+        var answers_json = {
+            "name": "Endrit"
+        };
+
+        var answers_array = [];
+        $(".question").each(function () {
+            var name = $(this).find("div").find("h2").text().trim();
+            var selected_answer = $("input[name='" + name + "']:checked").prop("value");
+            answers_json[name] = selected_answer;
+            answers_array.push(selected_answer);
+//                alert($(':radio:checked').map(function() {
+//                return this.name + ': '+  this.value;
+//                }).get());;
+        });
+        if (answers_array.indexOf(undefined) != -1) {
+            alert("You must fill all of the fields to continue.!");
+        }
+        else {
+
+        }
+
+        // Switch to result view
+        var resultView = new ResultView({el: $("#container")});
     },
-    questionSwitch: function () {
-
+    categorySwitch: function () {
+        var category = $("#category").val();
+        $(".categories").each(function () {
+            if ($(this).attr("id") == category){
+                $(this).css("display", "block");
+            } else {
+                $(this).css("display", "none");
+            }
+        });
 
     }
 
+});
+
+window.ResultView = Backbone.View.extend({
+    template: JST["app/templates/results.hbs"],
+    initialize: function() {
+        this.render();
+    },
+    render: function() {
+        $(this.el).html(this.template({options: [{name: "endriti"}]}));
+    }
 });
 
 function initCategoriesWithQuestions(el, template) {
@@ -74,7 +98,7 @@ function readTextFile(file, callback) {
         if (rawFile.readyState === 4 && rawFile.status == "200") {
             callback(rawFile.responseText);
         }
-    }
+    };
     rawFile.send(null);
 }
 
