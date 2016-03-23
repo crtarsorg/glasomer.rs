@@ -18,13 +18,11 @@ window.QuestionnaireView = Backbone.View.extend({
     },
     dataHandler: function () {
 
-        var answers_json = {
-            "name": "Endrit"
-        };
+        var answers_json = {};
 
         var answers_array = [];
         $(".question").each(function () {
-            var name = $(this).find("div").find("h2").text().trim();
+            var name = $(".question").find("div").find("h2").text().trim();
             var selected_answer = $("input[name='" + name + "']:checked").prop("value");
             answers_json[name] = selected_answer;
             answers_array.push(selected_answer);
@@ -36,11 +34,11 @@ window.QuestionnaireView = Backbone.View.extend({
             alert("You must fill all of the fields to continue.!");
         }
         else {
-
+            // Switch to result view
+            var resultView = new ResultView({element: "#container", data: answers_array});
         }
 
-        // Switch to result view
-        var resultView = new ResultView({el: $("#container")});
+
     },
     categorySwitch: function () {
         var category = $("#category").val();
@@ -58,11 +56,11 @@ window.QuestionnaireView = Backbone.View.extend({
 
 window.ResultView = Backbone.View.extend({
     template: JST["app/templates/results.hbs"],
-    initialize: function() {
-        this.render();
+    initialize: function(options) {
+        this.render(options);
     },
-    render: function() {
-        $(this.el).html(this.template({options: [{name: "endriti"}]}));
+    render: function(options) {
+        $(options.element).html(this.template({options: options.data}));
     }
 });
 
@@ -70,7 +68,7 @@ function initCategoriesWithQuestions(el, template) {
     readTextFile("app/static/questions.json", function (text) {
         var json_data = JSON.parse(text);
         var questions_json = {};
-        console.log(json_data);
+
         var categories = new Categories([]);
         for (var category in json_data){
             var questions = new Questions([]);
