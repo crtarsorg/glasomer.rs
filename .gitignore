@@ -21,7 +21,7 @@ api/venv
 web/node_modules
 
 # Templates
-web/app/templates/*.js
+web/app/templates/templates.min.js
 
 # Views
 web/app/views/views.min.js

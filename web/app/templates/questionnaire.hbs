@@ -54,7 +54,12 @@
                 <br>
                 <h2>{{ name }}</h2>
                 <br>
-                <div class="questions">
+            <div class="questions">
+                {{#if_eq name "Budžetski prioriti"}}
+                    <div class="question">
+                        <h1>Under construction...</h1>
+                    </div>
+                {{else}}
                     {{#each questions}}
                         <div class="question">
                             {{setIndex @text}}
@@ -113,6 +118,7 @@
                         </div>
                         <br><br>
                     {{/each}}
+                {{/if_eq}}
                 </div>
             </div>
         {{/each}}
@@ -138,7 +144,7 @@
         });
 
         $(".categories").each(function () {
-            if ($(this).attr("id") == 'Ekonomija'){
+            if ($(this).attr("id") == 'Ekonomija') {
                 $(this).css("display", "block");
             } else {
                 $(this).css("display", "none");
