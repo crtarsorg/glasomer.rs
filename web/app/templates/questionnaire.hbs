@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" href="app/assets/css/slider.css">
+<link rel="stylesheet" href="app/assets/css/check-box.css">
 <style>
     .question {
         height: auto;
@@ -15,10 +16,26 @@
         text-align: left;
         padding: 50px 50px 50px 30px;
         width: auto;
+        overflow: hidden;
         margin: 0 40px 40px 40px;
         background-color: #fff;
         box-shadow: inset 0 0 7px black, 0 0 7px black;
         color: #000;
+    }
+
+    .left {
+        width: 49%;
+        height: 400px;
+        float: left;
+        text-align: center;
+        border-right: 1px solid black;
+    }
+
+    .right {
+        text-align: center;
+        width: 49%;
+        height: 400px;
+        float: right;
     }
 
     #category {
@@ -54,76 +71,159 @@
                 <br>
                 <h2>{{ name }}</h2>
                 <br>
-            <div class="questions">
-                {{#if_eq name "Budžetski prioriti"}}
-                    <div class="question">
-                        <h1>Under construction...</h1>
-                    </div>
-                {{else}}
-                    {{#each questions}}
+                <div class="questions">
+                    {{#if_eq name "Budžetski prioriti"}}
                         <div class="question">
-                            {{setIndex @text}}
-                            <div style="margin-top:-50px;">
-                                <h2>
-                                    {{text}}
-                                </h2><br>
-                                <div class="radio-div">
-                                    {{#each possibleAnswers}}
-                                        <input type="radio" id="{{../text}} {{value}}" value="{{value}}"
-                                               name="{{../text}}">
-                                        <label for="{{../text}} {{value}}"><span></span>&nbsp;{{text}}</label>
-                                        <br>
-                                    {{/each}}
+                            <div class="left">
+                                <h3>Increase Budget</h3>
+                                <div class="increase_budget_chb" style="padding-left: 50px; text-align: left;">
+                                    <!--Vojska", "Kultura", "Socijalna zažtita", "Policija", "Nauka", "Zdravstvo", "Obrazovanje"-->
+                                    <br>
+                                    <input type="checkbox" name="chb-increase" id="Vojska_in" value="Vojska"
+                                           class="css-checkbox">
+                                    <label for="Vojska_in" class="css-label">Vojska</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-increase" id="Kultura_in" value="Kultura"
+                                           class="css-checkbox">
+                                    <label for="Kultura_in" class="css-label">Kultura</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-increase" id="Socijalna zažtita_in"
+                                           value="Socijalna zažtita"
+                                           class="css-checkbox">
+                                    <label for="Socijalna zažtita_in" class="css-label">Socijalna zažtita</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-increase" id="Policija_in" value="Policija"
+                                           class="css-checkbox">
+                                    <label for="Policija_in" class="css-label">Policija</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-increase" id="Nauka_in" value="Nauka"
+                                           class="css-checkbox">
+                                    <label for="Nauka_in" class="css-label">Nauka</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-increase" id="zdravstvo_in" value="Zdravstvo"
+                                           class="css-checkbox">
+                                    <label for="zdravstvo_in" class="css-label">Zdravstvo</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-increase" id="obrazovanje_in" value="Obrazovanje"
+                                           class="css-checkbox">
+                                    <label for="obrazovanje_in" class="css-label">Obrazovanje</label>
+                                    <br>
                                 </div>
                             </div>
-                            <fieldset class="question-fieldset">
-                                <div style="text-align: center">
-                                    <h4 style="color: #000;">Importance Level</h4>
+                            <div class="right">
+                                <h3>Decrease Budget</h3>
+                                <div class="decrease_budget_chb" style="padding-left: 50px; text-align: left;">
+                                    <!--Vojska", "Kultura", "Socijalna zažtita", "Policija", "Nauka", "Zdravstvo", "Obrazovanje"-->
+                                    <br>
+                                    <input type="checkbox" name="chb-decrease" id="Vojska_de" value="Vojska"
+                                           class="css-checkbox">
+                                    <label for="Vojska_de" class="css-label">Vojska</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-decrease" id="Kultura_de" value="Kultura"
+                                           class="css-checkbox">
+                                    <label for="Kultura_de" class="css-label">Kultura</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-decrease" id="Socijalna zažtita_de"
+                                           value="Socijalna zažtita"
+                                           class="css-checkbox">
+                                    <label for="Socijalna zažtita_de" class="css-label">Socijalna zažtita</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-decrease" id="Policija_de" value="Policija"
+                                           class="css-checkbox">
+                                    <label for="Policija_de" class="css-label">Policija</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-decrease" id="Nauka_de" value="Nauka"
+                                           class="css-checkbox">
+                                    <label for="Nauka_de" class="css-label">Nauka</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-decrease" id="zdravstvo_de" value="Zdravstvo"
+                                           class="css-checkbox">
+                                    <label for="zdravstvo_de" class="css-label">Zdravstvo</label>
+                                    <br>
+                                    <br>
+                                    <input type="checkbox" name="chb-decrease" id="obrazovanje_de" value="Obrazovanje"
+                                           class="css-checkbox">
+                                    <label for="obrazovanje_de" class="css-label">Obrazovanje</label>
+                                    <br>
                                 </div>
-                                <div class="round">
-                                    <div class="slider"></div>
-                                </div>
-                                <label class="col-xs-4 slider-label" for="a1"><input type="radio"
-                                                                                     name="importance_level"
-                                                                                     id="a1"
-                                                                                     data-value="86" value="Least">Nije
-                                    važno</label>
-
-                                <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a2"><input
-                                        type="radio"
-                                        name="importance_level"
-                                        id="a2"
-                                        data-value="87"
-                                        value="Less">Manje
-                                    važno</label>
-
-                                <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a3"><input
-                                        type="radio"
-                                        name="importance_level"
-                                        id="a3"
-                                        data-value="88"
-                                        value="Somewhat"
-                                        checked="checked">Važno</label>
-
-                                <label style="margin-left: 30px;" class="col-xs-4 slider-label" for="a4"><input
-                                        type="radio"
-                                        name="importance_level"
-                                        id="a4"
-                                        data-value="89"
-                                        value="More important">Veoma
-                                    važno</label>
-                            </fieldset>
-                            <br>
-                            <hr class="hr-style" style="width: 100%;">
+                            </div>
                         </div>
-                        <br><br>
-                    {{/each}}
-                {{/if_eq}}
+                    {{else}}
+                        {{#each questions}}
+                            <div class="question">
+                                {{setIndex @text}}
+                                <div style="margin-top:-50px;">
+                                    <h2>
+                                        {{text}}
+                                    </h2><br>
+                                    <div class="radio-div">
+                                        {{#each possibleAnswers}}
+                                            <input type="radio" id="{{../text}} {{value}}" value="{{value}}"
+                                                   name="{{../text}}">
+                                            <label for="{{../text}} {{value}}"><span></span>&nbsp;{{text}}</label>
+                                            <br>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                                <fieldset class="question-fieldset">
+                                    <div style="text-align: center">
+                                        <h4 style="color: #000;">Importance Level</h4>
+                                    </div>
+                                    <div class="round">
+                                        <div class="slider"></div>
+                                    </div>
+                                    <label class="col-xs-4 slider-label" for="a1"><input type="radio"
+                                                                                         name="importance_level"
+                                                                                         id="a1"
+                                                                                         data-value="86" value="Least">Nije
+                                        važno</label>
+
+                                    <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a2"><input
+                                            type="radio"
+                                            name="importance_level"
+                                            id="a2"
+                                            data-value="87"
+                                            value="Less">Manje
+                                        važno</label>
+
+                                    <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a3"><input
+                                            type="radio"
+                                            name="importance_level"
+                                            id="a3"
+                                            data-value="88"
+                                            value="Somewhat"
+                                            checked="checked">Važno</label>
+
+                                    <label style="margin-left: 30px;" class="col-xs-4 slider-label" for="a4"><input
+                                            type="radio"
+                                            name="importance_level"
+                                            id="a4"
+                                            data-value="89"
+                                            value="More important">Veoma
+                                        važno</label>
+                                </fieldset>
+                                <br>
+                                <hr class="hr-style" style="width: 100%;">
+                            </div>
+                            <br><br>
+                        {{/each}}
+                    {{/if_eq}}
                 </div>
             </div>
         {{/each}}
         <br>
-        <button id="btn_save" style="margin-left: -5%;" class="btn btn-primary">Show My Results</button>
+        <button id="btn_save" style="margin-left: -5%;" class="btn btn-default">Show My Results</button>
         <br>
     </div>
     <br>

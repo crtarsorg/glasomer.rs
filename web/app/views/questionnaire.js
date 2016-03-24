@@ -89,6 +89,7 @@ function initCategoriesWithQuestions(el, template) {
         }
         console.log(questions_json);
         var jsonString = JSON.stringify(categories.toJSON());
+        console.log(JSON.parse(jsonString));
         el.html(template({categories: JSON.parse(jsonString)}));
 
     })
