@@ -14,15 +14,18 @@
 <div id="questionnaire" style="text-align: center;">
      <div id="questions" class="questions">
          <div class="panel panel-primary">
-            <div class="panel-heading">Your Top Three Matching Results</div>
+            <div class="panel-heading">Your Top 3 Matching Results</div>
             {{#each results}}
               <div class="panel-body">
-                  <div class="text">{{this.partyName}}</div>
-                  <div class="large-text">{{this.matchingResult}}</div>
-
+                  <div class="quotes col-xs-5">
+                      <div class="text" style="font-size: 20px;">{{this.partyName}}</div>
+                      <div class="large-text" style="font-size: 4em; color: darkred;">{{this.matchingResult}}</div>
+                  </div>
+                  <div class="col-xs-7">
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                  </div>
               </div><hr>
             {{/each}}
           </div>
-        <div>
      </div>
 </div>

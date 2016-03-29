@@ -11,7 +11,7 @@ window.QuestionnaireView = Backbone.View.extend({
         });
 
         Handlebars.registerHelper('if_eq', function (a, b, opts) {
-            if (a == b) // Or === depending on your needs
+            if (a == b)
                 return opts.fn(this);
             else
                 return opts.inverse(this);
@@ -24,6 +24,7 @@ window.QuestionnaireView = Backbone.View.extend({
     },
     dataHandler: function () {
 
+        var category = $("#category").val();
         var answers_array = [];
         $(".question").each(function () {
             var answers_json = {};
@@ -49,6 +50,21 @@ window.QuestionnaireView = Backbone.View.extend({
             }).get();
             answers_array.push(answers_json);
         });
+
+        var checkboxes = [];
+        $('input:checkbox.css-checkbox', ".increase_budget_chb").each(function () {
+
+            var checkedValue = (this.checked ? $(this).val() : "");
+            if (checkedValue != ""){
+                checkboxes.push(checkedValue);
+            }
+        });
+
+        var ch_b_json = {
+            question: "Budžetski prioriti",
+            answer: checkboxes
+        };
+        answers_array.push(ch_b_json);
 
         if (answers_array.length == 0) {
             alert("You must fill all of the fields to continue.!");
@@ -81,8 +97,6 @@ window.ResultView = Backbone.View.extend({
 
         var matchingResult;
         var template = this.template;
-
-
 
         readTextFile("app/static/questions.json", function (respJson) {
             var json_handler = JSON.parse(respJson);
@@ -121,37 +135,12 @@ window.ResultView = Backbone.View.extend({
             });
             resultJson = resultJson.sort(function(a, b) { return a.matchingResult < b.matchingResult ? 1 : -1; }).slice(0, 3);
 
-            console.log(resultJson);
+
             $(options.element).html(template({results: resultJson}));
         });
-
     }
 });
 
-
-function isInArray(value, array) {
-  return array.indexOf(value) > -1;
-}
-
-
-function returnTopThreeHighestValues(results){
-
-    var arr = [];
-
-    for (var itm in results) {
-      arr.push(results[itm]);
-    }
-
-    // sort the array, largest numbers to lowest
-    arr.sort(function(a,b){return b - a});
-
-    // grab the first 3 numbers
-    var firstThree = arr.slice(0, 3);
-
-    console.log(firstThree);
-    return firstThree;
-
-}
 function calculateMatchingResult(politicianAnswers, userAnswer){
 
     var partyMatcher = {
@@ -163,7 +152,7 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
 
     $.each(politicianAnswers, function(key, item){
 
-        if (item["question"] != "Budžetski prioriti") {
+        if (item["question"] != "Budžetski prioriti" && userAnswer['question'] != "Budžetski prioriti") {
 
             $.each(item, function (key, party) {
 
@@ -207,10 +196,26 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
                 }
             });
         }
+        else if (item["question"] == "Budžetski prioriti" && userAnswer['question'] == "Budžetski prioriti"){
+            //console.log(item);
+            //console.log(userAnswer);
+            $.each(item['politiciansAnswers'], function (key, party) {
+
+                $.each(party['increase'], function(indx, val){
+                    if (isInArray(val, userAnswer['answer'])){
+                        partyMatcher[key] = partyMatcher[key] + 1.88679;
+                    }
+                });
+            });
+        }
     });
 
     return partyMatcher;
 
+}
+
+function isInArray(value, array) {
+  return array.indexOf(value) > -1;
 }
 
 function initCategoriesWithQuestions(el, template) {
