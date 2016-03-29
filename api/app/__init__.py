@@ -24,6 +24,8 @@ def create_app():
     #Import blueprint modules
     from mod_api.views import mod_api
 
+    app.register_blueprint(mod_api)
+
     #Initialize the app to work with MongoDB
     mongo.init_app(app, config_prefix='MONGO')
 
@@ -49,10 +51,6 @@ def load_config(app):
 
     app.config['SERVER_PORT'] = config.get('Application', 'SERVER_PORT')
     app.config['MONGO_DBNAME'] = config.get('Mongo', 'DB_NAME')
-
-    # Basic Auth
-    app.config['BASIC_AUTH_USERNAME'] = config.get('BasicAuth', 'USERNAME')
-    app.config['BASIC_AUTH_PASSWORD'] = config.get('BasicAuth', 'PASSWORD')
 
     # Logging path might be relative or starts from the root.
     # If it's relative then be sure to prepend the path with the application's root directory path.

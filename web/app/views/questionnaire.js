@@ -24,27 +24,39 @@ window.QuestionnaireView = Backbone.View.extend({
     },
     dataHandler: function () {
 
-        var answers_json = {};
-
         var answers_array = [];
         $(".question").each(function () {
-            var name = $(".question").find("div").find("h2").text().trim();
-            var selected_answer = $("input[name='" + name + "']:checked").prop("value");
-            answers_json[name] = selected_answer;
-            answers_array.push(selected_answer);
-//                alert($(':radio:checked').map(function() {
-//                return this.name + ': '+  this.value;
-//                }).get());;
+            var answers_json = {};
+            var name = $(this).find("div").find("h2").text().trim();
+
+            var selected_answer = $("input[name='" + name + "']:checked").val();
+            answers_json = {
+                question: name,
+                answer: selected_answer
+            };
+
+            $(':radio:checked', '.question-fieldset').map(function() {
+
+                var tmp_val;
+                if(answers_json.answer != undefined){
+                    tmp_val = this.value;
+                }
+                else{
+                    tmp_val = undefined;
+                }
+                answers_json['importance_level'] = tmp_val;
+
+            }).get();
+            answers_array.push(answers_json);
         });
-        if (answers_array.indexOf(undefined) != -1) {
+
+        if (answers_array.length == 0) {
             alert("You must fill all of the fields to continue.!");
         }
         else {
-            // Switch to result view
+            // Switch to results' view
             var resultView = new ResultView({element: "#container", data: answers_array});
         }
-
-
     },
     categorySwitch: function () {
         var category = $("#category").val();
@@ -66,20 +78,151 @@ window.ResultView = Backbone.View.extend({
         this.render(options);
     },
     render: function(options) {
-        $(options.element).html(this.template({options: options.data}));
+
+        var matchingResult;
+        var template = this.template;
+
+
+
+        readTextFile("app/static/questions.json", function (respJson) {
+            var json_handler = JSON.parse(respJson);
+            var partyMatcher = {
+                'Serbian Progressive Party': 0,
+                'Socialist party of Serbia': 0,
+                'Democratic Party': 0,
+                'New Democratic Party': 0
+            };
+            // Calculate matching result
+            for (var item in options.data){
+                if(options.data[item]['question'] != '' && options.data[item]['answer'] != undefined){
+                    matchingResult = calculateMatchingResult(json_handler, options.data[item]);
+                    //console.log(matchingResult);
+                    partyMatcher = {
+                        'Serbian Progressive Party': partyMatcher['Serbian Progressive Party'] + matchingResult['Serbian Progressive Party'],
+                        'Socialist party of Serbia': partyMatcher['Socialist party of Serbia'] + matchingResult['Socialist party of Serbia'],
+                        'Democratic Party': partyMatcher['Democratic Party'] + matchingResult['Democratic Party'],
+                        'New Democratic Party': partyMatcher['New Democratic Party'] + matchingResult['New Democratic Party']
+                    };
+                }
+
+            }
+
+            //var top_three_res = returnTopThreeHighestValues(partyMatcher);
+
+            var resultJson = [];
+            $.each(partyMatcher, function(key, value){
+                var val = Math.round(value);
+                var new_json = {
+                    "partyName": key,
+                    "matchingResult": val.toString() + "%"
+                };
+                resultJson.push(new_json);
+
+            });
+            resultJson = resultJson.sort(function(a, b) { return a.matchingResult < b.matchingResult ? 1 : -1; }).slice(0, 3);
+
+            console.log(resultJson);
+            $(options.element).html(template({results: resultJson}));
+        });
+
     }
 });
+
+
+function isInArray(value, array) {
+  return array.indexOf(value) > -1;
+}
+
+
+function returnTopThreeHighestValues(results){
+
+    var arr = [];
+
+    for (var itm in results) {
+      arr.push(results[itm]);
+    }
+
+    // sort the array, largest numbers to lowest
+    arr.sort(function(a,b){return b - a});
+
+    // grab the first 3 numbers
+    var firstThree = arr.slice(0, 3);
+
+    console.log(firstThree);
+    return firstThree;
+
+}
+function calculateMatchingResult(politicianAnswers, userAnswer){
+
+    var partyMatcher = {
+        'Serbian Progressive Party': 0,
+        'Socialist party of Serbia': 0,
+        'Democratic Party': 0,
+        'New Democratic Party': 0
+    };
+
+    $.each(politicianAnswers, function(key, item){
+
+        if (item["question"] != "Budžetski prioriti") {
+
+            $.each(item, function (key, party) {
+
+                if (party['question'] == userAnswer['question']){
+
+                    if (userAnswer['answer'] == party['politiciansAnswers']['Serbian Progressive Party']['answer']){
+                        var first_match_qt = 0.943395;
+                        if(userAnswer['importance_level'] == party['politiciansAnswers']['Serbian Progressive Party']['importance']){
+                            first_match_qt = first_match_qt + 0.943395;
+                        }
+                        partyMatcher['Serbian Progressive Party'] = first_match_qt;
+                    }
+
+                    if (userAnswer['answer'] == party['politiciansAnswers']['Socialist party of Serbia']['answer']){
+
+                        var first_match_qt = 0.943395;
+                        if (userAnswer['importance_level'] == party['politiciansAnswers']['Socialist party of Serbia']['importance']){
+                            first_match_qt = first_match_qt + 0.943395;
+                        }
+                        partyMatcher['Socialist party of Serbia'] = first_match_qt;
+                    }
+
+                    if (userAnswer['answer'] == party['politiciansAnswers']['Democratic Party']['answer']){
+                        var first_match_qt = 0.943395;
+                        if (userAnswer['importance_level'] == party['politiciansAnswers']['Democratic Party']['importance']){
+                            first_match_qt = first_match_qt + 0.943395;
+                        }
+                        partyMatcher['Democratic Party'] = first_match_qt;
+                    }
+
+                    if (userAnswer['answer'] == party['politiciansAnswers']['New Democratic Party']['answer']){
+
+                        var first_match_qt = 0.943395;
+                        if (userAnswer['importance_level'] == party['politiciansAnswers']['New Democratic Party']['importance']){
+                            first_match_qt = first_match_qt + 0.943395;
+                        }
+
+                        partyMatcher['New Democratic Party'] = first_match_qt;
+
+                    }
+                }
+            });
+        }
+    });
+
+    return partyMatcher;
+
+}
 
 function initCategoriesWithQuestions(el, template) {
     readTextFile("app/static/questions.json", function (text) {
         var json_data = JSON.parse(text);
-        var questions_json = {};
 
         var categories = new Categories([]);
         for (var category in json_data){
-            var questions = new Questions([]);
-            //console.log(category);
+
+            var questions = [];
             for (var question in json_data[category]){
+
                 var question_text = json_data[category][question]['question'];
                 var question = getQuestion(question_text, ["Slažem se", "Ne slažem se", "Nemam stav"]);
                 questions.push(question);
@@ -87,9 +230,8 @@ function initCategoriesWithQuestions(el, template) {
             var question_category = new Category({"name": category, "questions": questions});
             categories.push(question_category);
         }
-        console.log(questions_json);
+
         var jsonString = JSON.stringify(categories.toJSON());
-        console.log(JSON.parse(jsonString));
         el.html(template({categories: JSON.parse(jsonString)}));
 
     })
@@ -115,7 +257,7 @@ function getQuestion(text, answers) {
 function getAnswers(answers) {
     var answers_collection = new Answers([]);
     for (var i = 0; i < answers.length; i++) {
-        var answer = new Answer({text: answers[i], value: answers[i].toLowerCase()});
+        var answer = new Answer({text: answers[i], value: answers[i]});
         answers_collection.push(answer);
     }
     return answers_collection;

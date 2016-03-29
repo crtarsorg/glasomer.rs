@@ -13,11 +13,16 @@
 </style>
 <div id="questionnaire" style="text-align: center;">
      <div id="questions" class="questions">
-         Results View
-         {{#each options}}
-            <div>
-                {{name}}
-            </div>
-         {{/each}}
+         <div class="panel panel-primary">
+            <div class="panel-heading">Your Top Three Matching Results</div>
+            {{#each results}}
+              <div class="panel-body">
+                  <div class="text">{{this.partyName}}</div>
+                  <div class="large-text">{{this.matchingResult}}</div>
+
+              </div><hr>
+            {{/each}}
+          </div>
+        <div>
      </div>
 </div>

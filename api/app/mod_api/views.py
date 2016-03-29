@@ -3,7 +3,7 @@ from flask import render_template
 from flask import current_app
 
 
-mod_api = Blueprint('api', __name__, url_prefix='/api')
+mod_api = Blueprint('api', __name__)
 
 
 @mod_api.route('/', methods=['GET'])

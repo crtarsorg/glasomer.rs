@@ -3,260 +3,1009 @@
     "q1": {
       "question": "Da bi uspešno privlačili strane investicije neophodno je davati subvencije investitorima.",
       "politiciansAnswers":{
-        "Vullkani": {
-         "answer": "agree",
-          "importance": "important"
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
         }
       }
     },
     "q2": {
       "question": "Treba prekinuti saradnju sa MMF-om.",
       "politiciansAnswers":{
-
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
       }
     },
      "q3": {
       "question": "Da bi se podstaklo zapošljavanje treba smanjiti poreze poslodavcima i doprinose na zarade zaposlenih.",
-      "answer": "",
-       "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        }
+      }
     },
      "q4": {
       "question": "Treba ukinuti sve parafiskalne namete, da bi privreda prodisala.",
-      "answer": "",
-       "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
      "q5": {
       "question": "Treba onemogućiti da država sklapa tajne ugovore sa stranim investitorima.",
-      "answer": "",
-       "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
      "q6": {
       "question": "Oslonac za napredak privrede treba tražiti u razvoju domaćeg preduzetništva i poljoprivrede.",
-      "answer": "",
-       "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        }
+      }
     },
      "q7": {
       "question": "Vlada bi trebalo da uskrati državne podsticaje investitorima koji ne poštuju ljudska i radna prava zaposlenih.",
-      "answer": "",
-       "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        }
+      }
     },
     "q8": {
       "question": "Fiskalna stabilizacija ne bi smela da se zasniva na umanjenju penzija.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        }
+      }
     },
     "q9": {
       "question": "Vlada bi trebalo da pooštri sistem sankcija za poslodavce u slučaju nepoštovanja suda u radnim sporovima.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        }
+      }
     },
     "q10": {
       "question": "Država treba da kroz javne nabavke ili druge oblike trošenja javnih sredstava da preferencijalni tretman socijalnim preduzećima koja zapošljavaju ugrožene kategorije stanovništva.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     }
   },
   "Pravosuđe": {
     "q1": {
       "question": "Potrebno je poštriti kriterijume za izbor sudija i tužilaca i strogo ih vezati za kriterijum uspešnosti u vršenju prakse, bez mešanja države.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        }
+      }
     },
     "q2": {
       "question": "Građanima se mora obezbediti predvidivost po pitanju vremena trajanja sudskih postupaka.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q3": {
       "question": "Vlada bi trebalo da osnuje zasebne sudove za radne odnose da bi se radni sporovi stvarno rešavali u zakonskom roku od šest meseci.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        }
+      }
     }
   },
   "Obrazovanje": {
     "q1": {
       "question": "Uvesti obavezno srednjoškolsko obrazovanje.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        }
+      }
     },
     "q2": {
       "question": "Obrazovnu politiku menjati u pravcu veće zastupljenosti prenosivih veština (strani jezici, rad na kompjuteru, prezentovanje materijala, pisanje).",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q3": {
       "question": "Ukinuti veronauku u školama.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q4": {
       "question": "Uvesti seksualno obrazovanje u škole.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q5": {
       "question": "Građansko vaspitanje treba da bude obavezan predmet.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q6": {
       "question": "Uraditi reevaluaciju licenci za rad svim privatnim fakultetima u Srbiji.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q7": {
       "question": "Potrebno je uvesti preduzetničko obrazovanje u srednje škole.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        }
+      }
     }
   },
   "Zdravstvo": {
     "q1": {
       "question": "Građanima da budu dostupne usluge iz osnovnog paketa zdravstvenih usluga i u privatnim ordinacijama o trošku državnog zdravstvenog osiguranja.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Važno"
+        }
+      }
     },
     "q2": {
       "question": "Izjednačiti položaj privatnih i državnih apoteka – omogućiti podizanje lekova koji se izdaju na recept i u privatnim apotekama.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        }
+      }
     },
     "q3": {
       "question": "Omogućiti građanima da biraju obim zdravstvenog osiguranja i osiguravajuću kompaniju.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Važno"
+        }
+      }
     }
   },
   "Socijalna zaštita": {
     "q1": {
       "question": "PIO fond treba reformisati tako da garantuje samo minimalne penzije. Za sve više od toga zaposlenima omogućiti da uplaćuju posebno.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q2": {
       "question": "Materijalno obezbeđenje (novčana naknada namenjena socijalno najugroženijim porodicama) produžiti sa devet meseci godišnje na celu godinu.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q3": {
       "question": "Socijalno ugroženim građanima država mora da obezbedi besplatnu pravnu pomoć.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Važno"
+        }
+      }
     }
 
   },
   "Poljoprivreda": {
     "q1": {
       "question": "Omogućiti poklanjanje velikih parcela plodne zemlje stranim investitorima.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q2": {
       "question": "Država da poveća subvencije poljoprivrednim proizvođačima.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q3": {
       "question": "Zbog jeftinije proizvodnje proizvoditi i genetski modifikovanu hranu.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        }
+      }
     }
   },
   "Društvo": {
     "q1": {
       "question": "U član 21. Ustava Srbije uvesti odredbu kojom se garantuje i zabrana diskriminacije po osnovu seksualnog opredeljenja.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q2": {
       "question": "Promeniti izborni zakon tako da glasači mogu da daju svoj glas pojedinicima, a ne izbornim listama.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Važno"
+        }
+      }
     },
     "q3": {
       "question": "AP Vojvodina treba da ima izvršnu, zakonodavnu i sudsku vlast.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q4": {
       "question": "Ako je to neophodan uslov za nastavak EU integracija, priznati nezavisnost Kosova.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        }
+      }
     },
     "q5": {
       "question": "Crkvama i verskim organizacijama propisati plaćanje poreza.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q6": {
       "question": "Omogućiti nesmetano i ubrzano dobijanje dozvola za pokretanje proizvodnje na osnovu obnovljivih izvora energije.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        }
+      }
     },
     "q7": {
       "question": "Uvesti kvotu od minimum 30% za manje zastupljen pol u izvršnoj vlasti i povećati broj žena na 50% na izborim listama političkih partija.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Važno"
+        }
+      }
     },
     "q8": {
       "question": "Svi građani i građanke, bez obzira na pol, starosnu dob, invaliditet i druge razlike, treba da imaju obezbeđen pristup servisima u zajednici.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q9": {
       "question": "U Narodnoj skupštini Republike Srbije treba da postoji telo koje se bavi pitanjima mladih.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q10": {
       "question": "Doneti Zakon o poreklu imovine u najkraćem mogućem roku.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        }
+      }
     }
   },
   "Spoljna politika": {
     "q1": {
       "question": "Najbolje za budućnost Srbije je da postane članica EU.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q2": {
       "question": "Srbija bi trebalo da postane članica NATO.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        }
+      }
     }
   },
   "Mediji": {
     "q1": {
       "question": "Delovanje REM-a treba zakonski osmisliti ispočetka i promeniti kadrovski sastav u potpunosti.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q2": {
       "question": "Obezbediti da sve informacije o budžetskim davanjima za medije budu objavljene na jednom mestu i dostupne javnosti.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q3": {
       "question": "Dodatno ojačati mehanizme koji obezbeđuju nezavistan i efikasan rad kontrolnih institucija.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Ne slažem se",
+          "importance": "Nije važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "New Democratic Party": {
+          "answer": "Slažem se",
+          "importance": "Važno"
+        }
+      }
     }
   },
   "Ekologija": {
     "q1": {
       "question": "Srbija mora značajno da umanji emisije CO2 kroz smanjenje upotrebe lignita u proizvodnji struje, povećanje energetske efikasnosti i upotrebu obnovljivih izvora energije.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        }
+      }
     },
     "q2": {
       "question": "Novčana sredstva koja se prikupljaju od naknada za zaštitu životne sredine moraju da budu upotrebljena isključivo za zaštitu i unapređenje životne sredine.",
-      "answer": "",
-      "importance": ""
+      "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "answer": "Slažem se",
+          "importance": "Nije važno"
+        },
+        "Socialist party of Serbia":{
+          "answer": "Slažem se",
+          "importance": "Manje važno"
+        },
+        "Democratic Party":{
+          "answer": "Ne slažem se",
+          "importance": "Važno"
+        },
+        "New Democratic Party": {
+          "answer": "Ne slažem se",
+          "importance": "Veoma"
+        }
+      }
     }
   },
   "Budžetski prioriti": {
     "question": "Budžetski prioriti",
-    "areas": ["Vojska", "Kultura", "Socijalna zažtita", "Policija", "Nauka", "Zdravstvo", "Obrazovanje"]
+    "areas": ["Vojska", "Kultura", "Socijalna zažtita", "Policija", "Nauka", "Zdravstvo", "Obrazovanje"],
+    "politiciansAnswers":{
+        "Serbian Progressive Party": {
+          "increase": ["Vojska", "Obrazovanje"],
+          "decrease": ["1"]
+        },
+        "Socialist party of Serbia":{
+          "increase": ["Vojska", "Kultura", "Zdravstvo"],
+          "decrease": ["1"]
+        },
+        "Democratic Party":{
+          "increase": ["Kultura", "Policija", "Nauka"],
+          "decrease": ["1"]
+        },
+        "New Democratic Party": {
+          "increase": ["Vojska", "Socijalna zažtita", "Nauka"],
+          "decrease": ["1"]
+        }
+      }
   }
 }

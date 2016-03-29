@@ -184,41 +184,40 @@
                                         <div class="slider"></div>
                                     </div>
                                     <label class="col-xs-4 slider-label" for="a1"><input type="radio"
-                                                                                         name="importance_level"
-                                                                                         id="a1"
-                                                                                         data-value="86" value="Least">Nije
-                                        važno</label>
+                                         name="importance_level"
+                                         id="a1"
+                                         data-value="86" value="Nije važno">Nije važno
+                                    </label>
 
-                                    <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a2"><input
-                                            type="radio"
-                                            name="importance_level"
-                                            id="a2"
-                                            data-value="87"
-                                            value="Less">Manje
-                                        važno</label>
+                                <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a2"><input
+                                        type="radio"
+                                        name="importance_level"
+                                        id="a2"
+                                        data-value="87"
+                                        value="Manje važno">Manje važno</label>
 
-                                    <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a3"><input
-                                            type="radio"
-                                            name="importance_level"
-                                            id="a3"
-                                            data-value="88"
-                                            value="Somewhat"
-                                            checked="checked">Važno</label>
+                                <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a3"><input
+                                        type="radio"
+                                        name="importance_level"
+                                        id="a3"
+                                        data-value="88"
+                                        value="Važno"
+                                        checked="checked">Važno</label>
 
-                                    <label style="margin-left: 30px;" class="col-xs-4 slider-label" for="a4"><input
-                                            type="radio"
-                                            name="importance_level"
-                                            id="a4"
-                                            data-value="89"
-                                            value="More important">Veoma
-                                        važno</label>
-                                </fieldset>
-                                <br>
-                                <hr class="hr-style" style="width: 100%;">
-                            </div>
-                            <br><br>
-                        {{/each}}
-                    {{/if_eq}}
+                                <label style="margin-left: 30px;" class="col-xs-4 slider-label" for="a4"><input
+                                        type="radio"
+                                        name="importance_level"
+                                        id="a4"
+                                        data-value="89"
+                                        value="Veoma">Veoma
+                                    važno</label>
+                            </fieldset>
+                            <br>
+                            <hr class="hr-style" style="width: 100%;">
+                        </div>
+                        <br><br>
+                    {{/each}}
+                {{/if_eq}}
                 </div>
             </div>
         {{/each}}
@@ -233,7 +232,7 @@
     $(document).ready(function () {
         $('.question-fieldset').each(function () {
             var radios = $(this).find(':radio').hide();
-            console.log(radios);
+            //console.log(radios);
             $('.slider').slider({
                 min: parseInt(radios.first().data('value'), 10),
                 max: parseInt(radios.last().data('value'), 10),
@@ -246,7 +245,8 @@
         $(".categories").each(function () {
             if ($(this).attr("id") == 'Ekonomija') {
                 $(this).css("display", "block");
-            } else {
+            }
+            else {
                 $(this).css("display", "none");
             }
         });
