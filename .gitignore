@@ -18,20 +18,20 @@ api/venv
 
 # Questionnaire app files. 
 # Node modules
-web/node_modules
+node_modules
 
 # Templates
-web/app/templates/templates.min.js
+app/templates/templates.min.js
 
 # Views
-web/app/views/views.min.js
+app/views/views.min.js
 
 # Models
-web/app/models/models.min.js
+app/models/models.min.js
 
 # Bower components
-web/bower_components
+bower_components
 
 # Libs
-web/app/assets/libs
+app/assets/libs
 
