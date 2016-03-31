@@ -26,6 +26,10 @@ input[type="radio"] + label span {
      background-color:#acbbce ;
 }
 
+input[type="radio"] + label:hover {
+     cursor: pointer ;
+}
+
 input[type="radio"]:checked + label span{
      background-color:#1A3966;
 }

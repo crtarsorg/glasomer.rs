@@ -11,21 +11,38 @@
         color: #000;
     }
 </style>
-<div id="questionnaire" style="text-align: center;">
-     <div id="questions" class="questions">
-         <div class="panel panel-primary">
+
+<script type="text/javascript">
+    $(document).ready(function () {
+         setTimeout(function() {
+            $("#loading-div").hide('blind', {}, 1000);
+            $("#questionnaire").css('display', "block");
+        }, 1000);
+    })
+</script>
+<div id="loading-div" style="width: 100%; height: 70%; text-align: center;">
+    <img src="app/assets/img/loading.gif" style="height: 70px; width: 70px; margin-top: 10%;" name="loading">
+</div>
+<div id="questionnaire" style="text-align: center; display: none;">
+    <br><br>
+    <div id="questions" class="questions">
+        <div class="panel panel-primary">
             <div class="panel-heading">Your Top 3 Matching Results</div>
             {{#each results}}
-              <div class="panel-body">
-                  <div class="quotes col-xs-5">
-                      <div class="text" style="font-size: 20px;">{{this.partyName}}</div>
-                      <div class="large-text" style="font-size: 4em; color: darkred;">{{this.matchingResult}}</div>
-                  </div>
-                  <div class="col-xs-7">
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                  </div>
-              </div><hr>
+                <div class="panel-body">
+                    <div class="quotes col-xs-5">
+                        <div class="text" style="font-size: 20px;">{{this.partyName}}</div>
+                        <div class="large-text" style="font-size: 4em; color: darkred;">{{this.matchingResult}}</div>
+                    </div>
+                    <div class="col-xs-7">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat."
+                    </div>
+                </div>
+                <hr>
             {{/each}}
-          </div>
-     </div>
+        </div>
+    </div>
+    <br><br>
 </div>
