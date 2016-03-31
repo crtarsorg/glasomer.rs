@@ -40,9 +40,10 @@ module.exports = function(grunt) {
                             './fonts/*.*'
                         ]
                     },
-                    mongoose: {
+                    DataTables: {
                         main: [
-                            './lib/*.js'
+                            './media/css/jquery.dataTables.min.css',
+                            './media/js/jquery.dataTables.min.js'
                         ]
                     }
                 }
