@@ -48,7 +48,7 @@
     <hr>
     <div class="form-group">
         <label class="control-label col-xs-4">Question Area:</label>
-        <select class="form-group col-xs-5" id="category">
+        <select class="form-group form-control col-xs-5" id="category">
             <option value="Ekonomija">Ekonomija</option>
             <option value="Pravosuđe">Pravosuđe</option>
             <option value="Obrazovanje">Obrazovanje</option>
@@ -69,7 +69,8 @@
         {{#each categories}}
             <div id="{{name}}" class="categories">
                 <br>
-                <h2>{{ name }}</h2>
+                <h3>{{ name }}</h3>
+                <h4></h4>
                 <br>
                 <div class="questions">
                     {{#if_eq name "Budžetski prioriti"}}

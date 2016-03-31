@@ -31,6 +31,7 @@ window.QuestionnaireView = Backbone.View.extend({
             var name = $(this).find("div").find("h2").text().trim();
 
             var selected_answer = $("input[name='" + name + "']:checked").val();
+
             answers_json = {
                 question: name,
                 answer: selected_answer
@@ -48,7 +49,11 @@ window.QuestionnaireView = Backbone.View.extend({
                 answers_json['importance_level'] = tmp_val;
 
             }).get();
-            answers_array.push(answers_json);
+
+            if(answers_json['question'] != ""){
+                answers_array.push(answers_json);
+            }
+
         });
 
         var checkboxes = [];
@@ -66,6 +71,7 @@ window.QuestionnaireView = Backbone.View.extend({
         };
         answers_array.push(ch_b_json);
 
+        console.log(answers_array);
         if (answers_array.length == 0) {
             alert("You must fill all of the fields to continue.!");
         }
@@ -138,10 +144,24 @@ window.ResultView = Backbone.View.extend({
 
             $(options.element).html(template({results: resultJson}));
         });
+
+        $.ajax({
+            type: "POST",
+            url: "http://0.0.0.0:5001/api/save",
+            data: JSON.stringify(options.data),
+            contentType: "application/json"
+        }).fail(function(err) {
+            console.log('An error occurred!')
+        });
+
     }
 });
 
 function calculateMatchingResult(politicianAnswers, userAnswer){
+
+    // Constants used to calculate the matching results
+    var SINGLE_MATCHING_QT = 0.943395;
+    var DOUBLE_MATCHING_QT = 1.88679;
 
     var partyMatcher = {
         'Serbian Progressive Party': 0,
@@ -159,35 +179,35 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
                 if (party['question'] == userAnswer['question']){
 
                     if (userAnswer['answer'] == party['politiciansAnswers']['Serbian Progressive Party']['answer']){
-                        var first_match_qt = 0.943395;
+                        var first_match_qt = SINGLE_MATCHING_QT;
                         if(userAnswer['importance_level'] == party['politiciansAnswers']['Serbian Progressive Party']['importance']){
-                            first_match_qt = first_match_qt + 0.943395;
+                            first_match_qt = first_match_qt + SINGLE_MATCHING_QT;
                         }
                         partyMatcher['Serbian Progressive Party'] = first_match_qt;
                     }
 
                     if (userAnswer['answer'] == party['politiciansAnswers']['Socialist party of Serbia']['answer']){
 
-                        var first_match_qt = 0.943395;
+                        var first_match_qt = SINGLE_MATCHING_QT;
                         if (userAnswer['importance_level'] == party['politiciansAnswers']['Socialist party of Serbia']['importance']){
-                            first_match_qt = first_match_qt + 0.943395;
+                            first_match_qt = first_match_qt + SINGLE_MATCHING_QT;
                         }
                         partyMatcher['Socialist party of Serbia'] = first_match_qt;
                     }
 
                     if (userAnswer['answer'] == party['politiciansAnswers']['Democratic Party']['answer']){
-                        var first_match_qt = 0.943395;
+                        var first_match_qt = SINGLE_MATCHING_QT;
                         if (userAnswer['importance_level'] == party['politiciansAnswers']['Democratic Party']['importance']){
-                            first_match_qt = first_match_qt + 0.943395;
+                            first_match_qt = first_match_qt + SINGLE_MATCHING_QT;
                         }
                         partyMatcher['Democratic Party'] = first_match_qt;
                     }
 
                     if (userAnswer['answer'] == party['politiciansAnswers']['New Democratic Party']['answer']){
 
-                        var first_match_qt = 0.943395;
+                        var first_match_qt = SINGLE_MATCHING_QT;
                         if (userAnswer['importance_level'] == party['politiciansAnswers']['New Democratic Party']['importance']){
-                            first_match_qt = first_match_qt + 0.943395;
+                            first_match_qt = first_match_qt + SINGLE_MATCHING_QT;
                         }
 
                         partyMatcher['New Democratic Party'] = first_match_qt;
@@ -203,7 +223,7 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
 
                 $.each(party['increase'], function(indx, val){
                     if (isInArray(val, userAnswer['answer'])){
-                        partyMatcher[key] = partyMatcher[key] + 1.88679;
+                        partyMatcher[key] = partyMatcher[key] + DOUBLE_MATCHING_QT;
                     }
                 });
             });

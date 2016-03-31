@@ -16,7 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "mongoose": "~3.8.3",
     "jquery": "~2.2.0",
     "jquery-ui": "~1.10.3",
     "bootstrap": "~3.3.6",

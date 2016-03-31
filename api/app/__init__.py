@@ -1,14 +1,15 @@
-from flask import Flask, request
+from flask import Flask
 import os
 import ConfigParser
 from flask.ext.pymongo import PyMongo
 from logging.handlers import RotatingFileHandler
 from flask.ext.cors import CORS
-from utils.mongo_utils import MongoCommentsUtils
+from utils.mongo_utils import MongoUtils
 
 # Create MongoDB database object.
 mongo = PyMongo()
-mongo_comments_utils = MongoCommentsUtils(mongo)
+mongo_utils = MongoUtils(mongo)
+
 
 def create_app():
 
@@ -21,7 +22,7 @@ def create_app():
     # configure logging
     configure_logging(app)
 
-    #Import blueprint modules
+    # Import blueprint modules
     from mod_api.views import mod_api
 
     app.register_blueprint(mod_api)
