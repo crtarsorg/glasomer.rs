@@ -28,7 +28,7 @@ window.QuestionnaireView = Backbone.View.extend({
         var answers_array = [];
         $(".question").each(function () {
             var answers_json = {};
-            var name = $(this).find("div").find("h2").text().trim();
+            var name = $(this).find("div").find("h3").text().trim();
 
             var selected_answer = $("input[name='" + name + "']:checked").val();
 
@@ -71,7 +71,6 @@ window.QuestionnaireView = Backbone.View.extend({
         };
         answers_array.push(ch_b_json);
 
-        console.log(answers_array);
         if (answers_array.length == 0) {
             alert("You must fill all of the fields to continue.!");
         }
@@ -104,6 +103,10 @@ window.ResultView = Backbone.View.extend({
         var matchingResult;
         var template = this.template;
 
+        Handlebars.registerHelper('json', function(context) {
+            return JSON.stringify(context);
+        });
+
         readTextFile("app/static/questions.json", function (respJson) {
             var json_handler = JSON.parse(respJson);
             var partyMatcher = {
@@ -112,11 +115,12 @@ window.ResultView = Backbone.View.extend({
                 'Democratic Party': 0,
                 'New Democratic Party': 0
             };
+
             // Calculate matching result
             for (var item in options.data){
                 if(options.data[item]['question'] != '' && options.data[item]['answer'] != undefined){
                     matchingResult = calculateMatchingResult(json_handler, options.data[item]);
-                    //console.log(matchingResult);
+                    console.log(options.data);
                     partyMatcher = {
                         'Serbian Progressive Party': partyMatcher['Serbian Progressive Party'] + matchingResult['Serbian Progressive Party'],
                         'Socialist party of Serbia': partyMatcher['Socialist party of Serbia'] + matchingResult['Socialist party of Serbia'],
@@ -126,9 +130,6 @@ window.ResultView = Backbone.View.extend({
                 }
 
             }
-
-            //var top_three_res = returnTopThreeHighestValues(partyMatcher);
-
             var resultJson = [];
             $.each(partyMatcher, function(key, value){
                 var val = Math.round(value);
@@ -141,8 +142,21 @@ window.ResultView = Backbone.View.extend({
             });
             resultJson = resultJson.sort(function(a, b) { return a.matchingResult < b.matchingResult ? 1 : -1; }).slice(0, 3);
 
+            var answers_array = [];
+            for(var item in json_handler){
+                for (var element in json_handler[item]) {
+                    if (json_handler[item][element]['question'] != undefined){
+                        answers_array.push({
+                            name: json_handler[item][element]['question'],
+                            parties: json_handler[item][element]['politiciansAnswers']
+                        });
+                    }
 
-            $(options.element).html(template({results: resultJson}));
+                }
+
+            }
+
+            $(options.element).html(template({results: resultJson, all_answers: answers_array }));
         });
 
         $.ajax({
@@ -177,6 +191,10 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
             $.each(item, function (key, party) {
 
                 if (party['question'] == userAnswer['question']){
+
+                    $.each(party, function(prop, val){
+                        console.log(prop + val);
+                    });
 
                     if (userAnswer['answer'] == party['politiciansAnswers']['Serbian Progressive Party']['answer']){
                         var first_match_qt = SINGLE_MATCHING_QT;
@@ -217,8 +235,7 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
             });
         }
         else if (item["question"] == "Budžetski prioriti" && userAnswer['question'] == "Budžetski prioriti"){
-            //console.log(item);
-            //console.log(userAnswer);
+
             $.each(item['politiciansAnswers'], function (key, party) {
 
                 $.each(party['increase'], function(indx, val){
@@ -235,7 +252,7 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
 }
 
 function isInArray(value, array) {
-  return array.indexOf(value) > -1;
+    return array.indexOf(value) > -1;
 }
 
 function initCategoriesWithQuestions(el, template) {
