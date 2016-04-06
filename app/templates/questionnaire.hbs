@@ -292,11 +292,11 @@
                 $("#" + id).removeAttr("disabled");
 
                 opposite_label.css("text-decoration", "line-through");
-                opposite_label.css("background-image", "url('/app/assets/img/checkbox_unclicked.png')");
+                opposite_label.css("background-image", "url('/app/glasomer/app/assets/img/checkbox_unclicked.png')");
                 current_label.css("text-decoration", "none");
             } else {
                 $("#" + id).removeAttr("disabled", true);
-                opposite_label.css("background-image", "url('app/assets/img/checkbox.png')");
+                opposite_label.css("background-image", "url('/app/glasomer/app/assets/img/checkbox.png')");
                 $("#" + opposite_id).removeAttr("disabled");
                 opposite_label.css("text-decoration", "none");
                 current_label.css("text-decoration", "none");
