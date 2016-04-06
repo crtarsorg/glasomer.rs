@@ -74,7 +74,6 @@ window.QuestionnaireView = Backbone.View.extend({
             }
 
         });
-        console.log(dec_checkboxes);
 
         var ch_b_json = {
             question: "Budžetski prioriti",
@@ -143,7 +142,7 @@ window.ResultView = Backbone.View.extend({
                 resultJson.push(new_json);
 
             });
-            console.log(resultJson);
+
             resultJson = resultJson.sort(function(a, b) { return a.matchingResult < b.matchingResult ? 1 : -1; }).slice(0,3);
 
             var answers_array = [];
