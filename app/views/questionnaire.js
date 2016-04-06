@@ -179,7 +179,7 @@ window.ResultView = Backbone.View.extend({
 
         $.ajax({
             type: "POST",
-            url: "http://opendatakosovo.org/app/glasomer/api/save",
+            url: "http://opendatakosovo.org/api/glasomer/api/save",
             data: JSON.stringify(options.data),
             contentType: "application/json"
         }).fail(function(err) {

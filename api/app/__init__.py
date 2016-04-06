@@ -31,7 +31,7 @@ def create_app():
     mongo.init_app(app, config_prefix='MONGO')
 
     # Allow cross-domain access to API.
-    CORS(app, resources={r"/api/": {"origins": "*"}})
+    CORS(app, resources={r"*": {"origins": "*"}})
 
     return app
 
