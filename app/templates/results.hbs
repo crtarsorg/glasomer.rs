@@ -25,6 +25,116 @@
     }
 </style>
 
+<div id="loading-div" style="width: 100%; height: 70%; text-align: center;">
+    <img src="app/assets/img/loading.gif" style="height: 70px; width: 70px; margin-top: 10%;" name="loading">
+</div>
+<div id="questionnaire" style="text-align: center; display: none;">
+    <br><br>
+    <div id="questions" class="questions">
+         <!-- Trigger the modal with a button -->
+        <button type="button" id="showAll" class="btn btn-info btn-sm" data-toggle="modal" data-target="#resultsModal">All Parties' Answers</button>
+        <button type="button" id="showTopThree" class="btn btn-info btn-sm" data-toggle="modal" data-target="#resultsModal">Compare Your Answers</button>
+        <br><br>
+        <div class="row pull-right">
+            <ul class="rrssb-buttons">
+              <li class="rrssb-facebook">
+                <!--  Replace with your URL. For best results, make sure you page has the proper FB Open Graph tags in header:
+                      https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content/ -->
+                <a href="https://www.facebook.com/sharer/sharer.php?" class="popup">
+                  <span class="rrssb-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29"><path d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"/></svg>
+                  </span>
+                  <span class="rrssb-text">facebook</span>
+                </a>
+              </li>
+              <li class="rrssb-linkedin">
+                <!-- Replace href with your meta and URL information -->
+                <a href="http://www.linkedin.com/shareArticle?mini=true&amp;" class="popup">
+                  <span class="rrssb-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"/></svg>
+                  </span>
+                  <span class="rrssb-text">linkedin</span>
+                </a>
+              </li>
+              <li class="rrssb-twitter">
+                <!-- Replace href with your Meta and URL information  -->
+                <a href="https://twitter.com/intent/tweet?"
+                class="popup">
+                  <span class="rrssb-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><path d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62a15.093 15.093 0 0 1-8.86-2.32c2.702.18 5.375-.648 7.507-2.32a5.417 5.417 0 0 1-4.49-3.64c.802.13 1.62.077 2.4-.154a5.416 5.416 0 0 1-4.412-5.11 5.43 5.43 0 0 0 2.168.387A5.416 5.416 0 0 1 2.89 4.498a15.09 15.09 0 0 0 10.913 5.573 5.185 5.185 0 0 1 3.434-6.48 5.18 5.18 0 0 1 5.546 1.682 9.076 9.076 0 0 0 3.33-1.317 5.038 5.038 0 0 1-2.4 2.942 9.068 9.068 0 0 0 3.02-.85 5.05 5.05 0 0 1-2.48 2.71z"/></svg>
+                  </span>
+                  <span class="rrssb-text">twitter</span>
+                </a>
+              </li>
+            </ul>
+            <!-- Buttons end here -->
+        </div>
+        <br><br>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Your Top 3 Matching Results</div>
+            {{#each results}}
+                <div class="panel-body">
+                    <div class="quotes col-xs-5">
+                        <img class="img-responsive img-thumbnail" src="/app/static/imgs/logos/{{this.partyName}}.png"/>
+                        <div class="text" style="font-size: 20px;">{{this.partyName}}</div>
+                        <div class="large-text" style="font-size: 4em; color: darkred;">{{this.matchingResult}}%</div>
+                    </div>
+                    <div class="col-xs-7">
+                        <p>{{this.profile.text}}</p>
+                    </div>
+                </div>
+                <hr>
+            {{/each}}
+          </div>
+     </div>
+    <div class="row">
+        <a style="" class="btn btn-default btn-sm pull-right" href="http://opendatakosovo.org/app/glasomer/">Return to Quiz</a>
+    </div>
+</div>
+<!-- Modal -->
+<div id="resultsModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" style="color: #0b3e6f">Compare answers</h4>
+      </div>
+      <div class="modal-body">
+        <table id="resultsTbl" class="table table-responsive" style="display:none" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Quiz questions made to political parties [ click <img src="/app/static/imgs/details_open.png"/> to see the comparison]</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th></th>
+                </tr>
+            </tfoot>
+        </table>
+          <table id="topThreeTbl" class="table table-responsive" style="display:none" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Quiz questions made to political parties [ click <img src="/app/static/imgs/details_open.png"/> to see the comparison]</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th></th>
+                </tr>
+            </tfoot>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 <script type="text/javascript">
     $(document).ready(function () {
          setTimeout(function() {
@@ -32,44 +142,77 @@
             $("#questionnaire").css('display', "block");
         }, 1000);
 
-        var dataTbl = {{{json all_answers}}}; // we put three brackets to escape html encoding
-        console.log(dataTbl);
-        var table = $('#resultsTbl').DataTable( {
-            "data": dataTbl,
-            "columns": [
-                {
-                    "className":      'details-control',
-                    "orderable":      false,
-                    "data":           null,
-                    "defaultContent": ''
-                },
-                { "data": "name" }
-            ],
-            "language": {
-                "url": "//cdn.datatables.net/plug-ins/1.10.11/i18n/Serbian.json"
-            },
-            "order": [[1, 'asc']]
+        var topThreeMatch = {{{json results}}};
+        var parties = '';
+        $.each(topThreeMatch, function(key, val){
+
+            parties = parties + val['partyName'] + "-" + val['matchingResult'] +"%, ";
         });
 
-        // Add event listener for opening and closing details
-        $('#resultsTbl tbody').on('click', 'td.details-control', function () {
-            var tr = $(this).closest('tr');
-            var row = table.row( tr );
 
-            if ( row.child.isShown() ) {
-                // This row is already open - close it
-                row.child.hide();
-                tr.removeClass('shown');
-            }
-            else {
-                // Open this row
-                row.child( formatSubTable(row.data()) ).show();
-                tr.addClass('shown');
-            }
+        // Share plugin instance
+        $('.rrssb-buttons').rrssb({
+            // required:
+            title: "I matched with: "+ parties + " how about you? Take the quiz to find out",
+            url: 'http://opendatakosovo.org/app/glasomer/',
+
+            // optional:
+            description: "I matched with: "+ parties + ", how about you? Take the quiz to find out"
+          });
+
+        var allDataTbl = {{{json all_answers}}}; // we put three brackets to escape html encoding
+        $('#showAll').click(function(){
+            $('#resultsTbl').show();
+            $('#topThreeTbl').hide();
+            drawTable(allDataTbl, '#resultsTbl', '#topThreeTbl_wrapper');
+        });
+
+        var topThreeResultsTbl = {{{json answers_matched}}};
+        $('#showTopThree').click(function(){
+            $('#resultsTbl').hide();
+            $('#topThreeTbl').show();
+            drawTable(topThreeResultsTbl, '#topThreeTbl', '#resultsTbl_wrapper');
         });
 
     });
 
+function drawTable(dataTbl, divContainer, wrapper){
+    $(wrapper).hide();
+    var table = $(divContainer).DataTable( {
+        destroy: true,
+        "data": dataTbl,
+        "columns": [
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": ''
+            },
+            { "data": "question" }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.11/i18n/Serbian.json"
+        },
+        "order": [[1, 'asc']]
+    });
+
+    // Add event listener for opening and closing details
+    $(divContainer + ' tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatSubTable(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    });
+}
 
 function formatSubTable ( d ) {
 
@@ -83,77 +226,11 @@ function formatSubTable ( d ) {
             '<td>' + d.parties[party]['importance'] + '</td>'+
         '</tr>';
     }
-
-
-
-     var tableHtml = '<table class="table" style="padding-left:50px; border: 1px">'
+    return '<table class="table" style="padding-left:50px; border: 1px">'
              + "<th>Party Name</th>"
              + '<th>Answer</th>'
              + '<th>Importance</th>'
              + rowInjection
              + '</table>';
-
-    return tableHtml;
 }
 </script>
-<div id="loading-div" style="width: 100%; height: 70%; text-align: center;">
-    <img src="app/assets/img/loading.gif" style="height: 70px; width: 70px; margin-top: 10%;" name="loading">
-</div>
-<div id="questionnaire" style="text-align: center; display: none;">
-    <br><br>
-    <div id="questions" class="questions">
-        <div class="panel panel-primary">
-            <div class="panel-heading">Your Top 3 Matching Results</div>
-            {{#each results}}
-                <div class="panel-body">
-                    <div class="quotes col-xs-5">
-                        <div class="text" style="font-size: 20px;">{{this.partyName}}</div>
-                        <div class="large-text" style="font-size: 4em; color: darkred;">{{this.matchingResult}}</div>
-                    </div>
-                    <div class="col-xs-7">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat."
-                    </div>
-                </div>
-                <hr>
-            {{/each}}
-          </div>
-        <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#resultsModal">Show Comparison</button>
-
-     </div>
-
-</div>
-<!-- Modal -->
-<div id="resultsModal" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-lg">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title" style="color: #0b3e6f">Compare your answers</h4>
-      </div>
-      <div class="modal-body">
-        <table id="resultsTbl" class="table table-responsive" cellspacing="0" width="100%">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Quiz questions made to political parties [ click <img src="/app/static/imgs/details_open.png"/> to see the comparison]</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <th></th>
-                    <th>Name</th>
-                </tr>
-            </tfoot>
-        </table>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>

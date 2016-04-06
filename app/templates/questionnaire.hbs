@@ -41,30 +41,26 @@
 </style>
 <div id="questionnaire" style="text-align: center;">
     <br>
-    <h2>Questions</h2>
     <hr>
-    <div class="form-group">
-        <label class="control-label col-xs-4">Question Area:</label>
-        <select class="form-group col-xs-5" id="category">
-            <option value="Ekonomija">Ekonomija</option>
-            <option value="Pravosuđe">Pravosuđe</option>
-            <option value="Obrazovanje">Obrazovanje</option>
-            <option value="Zdravstvo">Zdravstvo</option>
-            <option value="Socijalna zaštita">Socijalna zaštita</option>
-            <option value="Poljoprivreda">Poljoprivreda</option>
-            <option value="Društvo">Društvo</option>
-            <option value="Spoljna politika">Spoljna politika</option>
-            <option value="Mediji">Mediji</option>
-            <option value="Ekologija">Ekologija</option>
-            <option value="Budžetski prioriti">Budžetski prioriti</option>
-        </select>
-    </div>
-    <br>
+    <h4>Questions</h4>
     <hr>
     <div id="questions">
         {{#each categories}}
             <div id="{{name}}" class="categories">
-                <h2>{{ name }}</h2>
+                <h3>{{ name }}</h3><h4 class="control-label" style="padding: 5px;">
+                Section <b>
+                {{#if_eq name "Ekonomija"}} 1/11{{/if_eq}}
+                {{#if_eq name "Pravosuđe"}} 2/11{{/if_eq}}
+                {{#if_eq name "Obrazovanje"}} 3/11{{/if_eq}}
+                {{#if_eq name "Zdravstvo"}} 4/11{{/if_eq}}
+                {{#if_eq name "Socijalna zaštita"}} 5/11{{/if_eq}}
+                {{#if_eq name "Poljoprivreda"}} 6/11{{/if_eq}}
+                {{#if_eq name "Društvo"}} 7/11{{/if_eq}}
+                {{#if_eq name "Spoljna politika"}} 8/11{{/if_eq}}
+                {{#if_eq name "Mediji"}} 9/11{{/if_eq}}
+                {{#if_eq name "Ekologija"}} 10/11{{/if_eq}}
+                {{#if_eq name "Budžetski prioriti"}} 11/11{{/if_eq}}
+                </b></h4>
                 <br>
                 <div class="questions">
                     {{#if_eq name "Budžetski prioriti"}}
@@ -178,11 +174,13 @@
                                     <div class="round">
                                         <div class="slider"></div>
                                     </div>
-                                    <label class="col-xs-4 slider-label" for="a1"><input type="radio"
-                                                                                         name="importance_level"
-                                                                                         id="a1"
-                                                                                         data-value="86"
-                                                                                         value="Nije važno">Nije važno
+                                    <label class="col-xs-4 slider-label" for="a1">
+                                        <input type="radio"
+                                         name="importance_level"
+                                         id="a1"
+                                         data-value="86"
+                                         value="Nije važno">
+                                        Nije važno
                                     </label>
 
                                     <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a2"><input
@@ -217,15 +215,55 @@
                 </div>
             </div>
         {{/each}}
-        <br>
+
+    </div>
+    <div class="row divResult" style="display: none;">
         <button id="btn_save" style="margin-left: -5%;" class="btn btn-default">Show My Results</button>
-        <br>
     </div>
     <br>
+    <div class="row">
+        <div class=" col-xs-4" style="padding: 5px;">
+            <button id="prevBtn" class="btn btn-sm btn-default col-xs-3" name="prev">Previous</button>
+        </div>
+        <div class=" col-xs-offset-4 col-xs-4" style="padding: 5px;">
+            <button id="nextBtn" class="btn btn-sm btn-default col-xs-3 pull-right" name="next">Next</button>
+        </div>
+    </div>
 
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
+
+        $('#prevBtn').prop('disabled', true);
+
+        var divs = $("#questions > div");
+        var now = 0; // currently shown div
+         $("#nextBtn").click(function (e) {
+            divs.eq(now).hide();
+            now = (now + 1 < divs.length) ? now + 1 : 0;
+            divs.eq(now).show(); // show next
+            if(now == 10){
+                $('.divResult').show();
+                $('#nextBtn').prop('disabled', true);
+            }
+            if(now != 0){
+                $('#prevBtn').prop('disabled', false);
+            }
+        });
+
+        $("#prevBtn").click(function (e) {
+            divs.eq(now).hide();
+            now = (now > 0) ? now - 1 : divs.length - 1;
+            divs.eq(now).show();
+            if(now != 10){
+                $('.divResult').hide();
+                $('#nextBtn').prop('disabled', false);
+            }
+            if(now == 0){
+                $('#prevBtn').prop('disabled', true);
+            }
+        });
+
         $('.question-fieldset').each(function () {
             var radios = $(this).find(':radio').hide();
             //console.log(radios);
@@ -237,24 +275,10 @@
                 }
             });
         });
-        var budget_items = ["Vojska", "Kultura", "Socijalna_zažtita", "Policija", "Nauka", "Zdravstvo", "Obrazovanje"];
 
         $(".css-checkbox").change(function () {
             var id = $(this).attr("id");
             var opposite_id = "";
-
-            //
-            /*
-            var suffix = id.substr(id.length - 3); // => "_in or _de"
-            var increase_items = {
-                "increase": [],
-                "decrease": []
-            };
-            var suffix_json = {
-                "_in": "increase",
-                "_de": "decrease"
-            };
-            */
 
             if (id.indexOf("_in") > 0) {
                 opposite_id = id.replace("_in", "_de");
@@ -278,7 +302,6 @@
                 current_label.css("text-decoration", "none");
             }
         });
-
 
         $(".categories").each(function () {
             if ($(this).attr("id") == 'Ekonomija') {

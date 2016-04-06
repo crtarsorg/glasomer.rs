@@ -40,10 +40,10 @@ module.exports = function(grunt) {
                             './fonts/*.*'
                         ]
                     },
-                    DataTables: {
+                    rrssb: {
                         main: [
-                            './media/css/jquery.dataTables.min.css',
-                            './media/js/jquery.dataTables.min.js'
+                            './css/rrssb.css',
+                            './js/rrssb.min.js'
                         ]
                     }
                 }
