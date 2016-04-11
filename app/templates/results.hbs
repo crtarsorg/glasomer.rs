@@ -219,23 +219,30 @@ function formatSubTable ( d ) {
     var rowInjection = '';
 
     for(var party in d.parties){
-        var comment;
+        var comment, answer, importance;
         if (party == 'Users Answer'){
             comment = '/';
         }else{
             comment = d.parties[party]['comment'];
         }
+
         if(d.parties[party]['answer'] == undefined){
-            d.parties[party]['answer'] = '/';
+            answer = '/';
+        }else{
+            answer = d.parties[party]['answer'];
         }
-        if(d.parties[party]['importance']){
-            d.parties[party]['importance'] = '/';
+
+        if(d.parties[party]['importance'] == undefined){
+            importance = '/';
+        }else{
+            importance = d.parties[party]['importance'];
         }
+        
         rowInjection = rowInjection +
         '<tr>'+
             '<td>' + party + '</td>'+
-            '<td>' + d.parties[party]['answer'] + '</td>'+
-            '<td>' + d.parties[party]['importance'] + '</td>'+
+            '<td>' + answer + '</td>'+
+            '<td>' + importance + '</td>'+
             '<td>' + comment + '</td>'+
         '</tr>';
     }
