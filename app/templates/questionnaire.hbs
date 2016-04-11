@@ -245,10 +245,10 @@
             divs.eq(now).show(); // show next
             if(now == 10){
                 $('.divResult').show();
-                $('#nextBtn').hide();
+                $('#nextBtn').prop('disabled', true);
             }
             if(now != 0){
-                $('#prevBtn').hide();
+                $('#prevBtn').prop('disabled', false);
             }
         });
 
@@ -258,10 +258,10 @@
             divs.eq(now).show();
             if(now != 10){
                 $('.divResult').hide();
-                $('#nextBtn').show();
+                $('#nextBtn').prop('disabled', false);
             }
             if(now == 0){
-                $('#prevBtn').show();
+                $('#prevBtn').prop('disabled', true);
             }
         });
 
