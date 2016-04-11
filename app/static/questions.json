@@ -2551,7 +2551,7 @@
     }
   },
   "Budžetski prioriteti": {
-    "question": "Budžetski prioriti",
+    "question": "Budžetski prioriteti",
     "areas": ["Vojska", "Kultura", "Socijalna zažtita", "Policija", "Nauka", "Zdravstvo", "Obrazovanje"],
     "politiciansAnswers":{
         "Serbian Progressive Party": {

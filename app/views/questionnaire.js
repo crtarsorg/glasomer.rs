@@ -76,7 +76,7 @@ window.QuestionnaireView = Backbone.View.extend({
         });
 
         var ch_b_json = {
-            question: "Budžetski prioriti",
+            question: "Budžetski prioriteti",
             answer: {
                 increase: inc_checkboxes,
                 decrease: dec_checkboxes
@@ -145,7 +145,6 @@ window.ResultView = Backbone.View.extend({
 
             resultJson = resultJson.sort(function(a, b) { return a.matchingResult < b.matchingResult ? 1 : -1; }).slice(0,3);
 
-            console.log()
             var answers_array = [];
             for(var item in json_handler){
                 for (var element in json_handler[item]) {
@@ -208,7 +207,7 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
     $.each(politicianAnswers, function(key, item){
 
 
-        if (item["question"] != "Budžetski prioriti" && userAnswer['question'] != "Budžetski prioriti") {
+        if (item["question"] != "Budžetski prioriteti" && userAnswer['question'] != "Budžetski prioriteti") {
 
             $.each(item, function (key, party) {
 
@@ -236,7 +235,7 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
             user_match_answer['parties']['Users Answer'] = {answer: userAnswer['answer'], importance: userAnswer['importance_level']};
 
         }
-        //else if (item["question"] == "Budžetski prioriti" && userAnswer['question'] == "Budžetski prioriti"){
+        //else if (item["question"] == "Budžetski prioriteti" && userAnswer['question'] == "Budžetski prioriteti"){
         //
         //    $.each(item['politiciansAnswers'], function (key, party) {
         //
@@ -260,7 +259,6 @@ function initCategoriesWithQuestions(el, template) {
     readTextFile("app/static/questions.json", function (text) {
         var json_data = JSON.parse(text);
 
-        console.log(json_data);
         var categories = [];
         for (var category in json_data){
 
@@ -274,7 +272,6 @@ function initCategoriesWithQuestions(el, template) {
 
             categories.push({"name": category, "questions": questions});
         }
-        console.log(categories);
         var jsonString = JSON.stringify(categories);
         el.html(template({categories: JSON.parse(jsonString)}));
 

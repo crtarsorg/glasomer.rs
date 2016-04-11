@@ -60,11 +60,11 @@
                 {{#if_eq name "Spoljna politika"}} 8/11{{/if_eq}}
                 {{#if_eq name "Mediji"}} 9/11{{/if_eq}}
                 {{#if_eq name "Ekologija"}} 10/11{{/if_eq}}
-                {{#if_eq name "Budžetski prioriti"}} 11/11{{/if_eq}}
+                {{#if_eq name "Budžetski prioriteti"}} 11/11{{/if_eq}}
                 </b></h4>
                 <br>
                 <div class="questions">
-                    {{#if_eq name "Budžetski prioriti"}}
+                    {{#if_eq name "Budžetski prioriteti"}}
                         <div class="question">
                             <div class="left">
                                 <h3>Povećati budžet</h3>
@@ -224,10 +224,10 @@
     <br>
     <div class="row">
         <div class=" col-xs-4" style="padding: 5px;">
-            <a id="prevBtn" href="#top" class="btn btn-sm btn-default col-xs-3" name="prev">Prethodni</a>
+            <button id="prevBtn" class="btn btn-sm btn-default col-xs-3" name="prev">Prethodni</button>
         </div>
         <div class=" col-xs-offset-4 col-xs-4" style="padding: 5px;">
-            <a id="nextBtn" href="#top" class="btn btn-sm btn-default col-xs-3 pull-right" name="next">Sledeći</a>
+            <button id="nextBtn" class="btn btn-sm btn-default col-xs-3 pull-right" name="next">Sledeći</button>
         </div>
     </div>
 
@@ -240,6 +240,7 @@
         var divs = $("#questions > div");
         var now = 0; // currently shown div
          $("#nextBtn").click(function (e) {
+             $('html, body').animate({scrollTop : 0},300);
             divs.eq(now).hide();
             now = (now + 1 < divs.length) ? now + 1 : 0;
             divs.eq(now).show(); // show next
@@ -253,6 +254,7 @@
         });
 
         $("#prevBtn").click(function (e) {
+            $('html, body').animate({scrollTop : 0},300);
             divs.eq(now).hide();
             now = (now > 0) ? now - 1 : divs.length - 1;
             divs.eq(now).show();
