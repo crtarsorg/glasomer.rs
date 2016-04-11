@@ -55,7 +55,6 @@ window.QuestionnaireView = Backbone.View.extend({
 
         });
 
-        var budget_items = ["Vojska", "Kultura", "Socijalna_zažtita", "Policija", "Nauka", "Zdravstvo", "Obrazovanje"];
         var inc_checkboxes = [];
         $('input:checkbox.css-checkbox', ".increase_budget_chb").each(function () {
 
@@ -149,16 +148,24 @@ window.ResultView = Backbone.View.extend({
             for(var item in json_handler){
                 for (var element in json_handler[item]) {
                     if (json_handler[item][element]['question'] != undefined){
+                        var tmp_json = {
+                            question: json_handler[item][element]['question'],
+                            parties: json_handler[item][element]['politiciansAnswers']
+                        };
                         $.each(answers_collection, function(index, sub_item){
-                            if (json_handler[item][element]['question'] == sub_item['question']) {
-                                var tmp_json = {
-                                    question: json_handler[item][element]['question'],
-                                    parties: json_handler[item][element]['politiciansAnswers']
-                                };
-                                tmp_json['parties']['Users Answer'] = sub_item['parties']['Users Answer'];
-                                answers_array.push(tmp_json);
+                            if (json_handler[item][element]['question'] == sub_item['question'] ) {
+                                var user_answer;
+                                if (sub_item['parties']['Users Answer'] != undefined){
+                                    user_answer = sub_item['parties']['Users Answer'];
+                                }
+                                else{
+                                    user_answer = '/'
+                                }
+                                tmp_json['parties']['Users Answer'] = user_answer;
                             }
+
                         });
+                        answers_array.push(tmp_json);
                     }
                 }
             }
