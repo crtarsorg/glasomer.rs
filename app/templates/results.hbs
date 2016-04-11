@@ -177,7 +177,7 @@
     });
 
 function drawTable(dataTbl, divContainer, wrapper){
-    $(wrapper).remove();
+    $(wrapper).hide();
     var table = $(divContainer).DataTable( {
         destroy: true,
         "data": dataTbl,
