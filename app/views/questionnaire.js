@@ -145,13 +145,20 @@ window.ResultView = Backbone.View.extend({
 
             resultJson = resultJson.sort(function(a, b) { return a.matchingResult < b.matchingResult ? 1 : -1; }).slice(0,3);
 
+            console.log()
             var answers_array = [];
             for(var item in json_handler){
                 for (var element in json_handler[item]) {
                     if (json_handler[item][element]['question'] != undefined){
-                        answers_array.push({
-                            question: json_handler[item][element]['question'],
-                            parties: json_handler[item][element]['politiciansAnswers']
+                        $.each(answers_collection, function(index, sub_item){
+                            if (json_handler[item][element]['question'] == sub_item['question']) {
+                                var tmp_json = {
+                                    question: json_handler[item][element]['question'],
+                                    parties: json_handler[item][element]['politiciansAnswers']
+                                };
+                                tmp_json['parties']['Users Answer'] = sub_item['parties']['Users Answer'];
+                                answers_array.push(tmp_json);
+                            }
                         });
                     }
                 }
@@ -253,7 +260,8 @@ function initCategoriesWithQuestions(el, template) {
     readTextFile("app/static/questions.json", function (text) {
         var json_data = JSON.parse(text);
 
-        var categories = new Categories([]);
+        console.log(json_data);
+        var categories = [];
         for (var category in json_data){
 
             var questions = [];
@@ -263,11 +271,11 @@ function initCategoriesWithQuestions(el, template) {
                 var question = getQuestion(question_text, ["Slažem se", "Ne slažem se", "Nemam stav"]);
                 questions.push(question);
             }
-            var question_category = new Category({"name": category, "questions": questions});
-            categories.push(question_category);
-        }
 
-        var jsonString = JSON.stringify(categories.toJSON());
+            categories.push({"name": category, "questions": questions});
+        }
+        console.log(categories);
+        var jsonString = JSON.stringify(categories);
         el.html(template({categories: JSON.parse(jsonString)}));
 
     })
@@ -287,7 +295,7 @@ function readTextFile(file, callback) {
 
 function getQuestion(text, answers) {
     var possible_answers = getAnswers(answers);
-    return new Question({text: text, possibleAnswers: possible_answers});
+    return {text: text, possibleAnswers: possible_answers};
 }
 
 function getAnswers(answers) {

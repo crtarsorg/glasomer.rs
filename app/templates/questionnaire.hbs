@@ -42,13 +42,14 @@
 <div id="questionnaire" style="text-align: center;">
     <br>
     <hr>
-    <h4>Questions</h4>
+    <h4>Pitanja</h4>
+    <a id="top" style="display: none"></a>
     <hr>
     <div id="questions">
         {{#each categories}}
             <div id="{{name}}" class="categories">
                 <h3>{{ name }}</h3><h4 class="control-label" style="padding: 5px;">
-                Section <b>
+                Deo <b>
                 {{#if_eq name "Ekonomija"}} 1/11{{/if_eq}}
                 {{#if_eq name "Pravosuđe"}} 2/11{{/if_eq}}
                 {{#if_eq name "Obrazovanje"}} 3/11{{/if_eq}}
@@ -66,7 +67,7 @@
                     {{#if_eq name "Budžetski prioriti"}}
                         <div class="question">
                             <div class="left">
-                                <h3>Increase Budget</h3>
+                                <h3>Povećati budžet</h3>
                                 <div class="increase_budget_chb" style="padding-left: 50px; text-align: left;">
                                     <!--Vojska", "Kultura", "Socijalna zažtita", "Policija", "Nauka", "Zdravstvo", "Obrazovanje"-->
                                     <br>
@@ -108,7 +109,7 @@
                                 </div>
                             </div>
                             <div class="right">
-                                <h3>Decrease Budget</h3>
+                                <h3>Smanjiti budžet</h3>
                                 <div class="decrease_budget_chb" style="padding-left: 50px; text-align: left;">
                                     <!--Vojska", "Kultura", "Socijalna zažtita", "Policija", "Nauka", "Zdravstvo", "Obrazovanje"-->
                                     <br>
@@ -169,7 +170,7 @@
                                 </div>
                                 <fieldset class="question-fieldset">
                                     <div style="text-align: center">
-                                        <h5 style="color: #000;">Importance Level</h5>
+                                        <h5 style="color: #000;">Koliko je ovo pitanje važno</h5>
                                     </div>
                                     <div class="round">
                                         <div class="slider"></div>
@@ -218,15 +219,15 @@
 
     </div>
     <div class="row divResult" style="display: none;">
-        <button id="btn_save" style="margin-left: -5%;" class="btn btn-default">Show My Results</button>
+        <button id="btn_save" style="margin-left: -5%;" class="btn btn-default">Prikaži rezultate</button>
     </div>
     <br>
     <div class="row">
         <div class=" col-xs-4" style="padding: 5px;">
-            <button id="prevBtn" class="btn btn-sm btn-default col-xs-3" name="prev">Previous</button>
+            <a id="prevBtn" href="#top" class="btn btn-sm btn-default col-xs-3" name="prev">Prethodni</a>
         </div>
         <div class=" col-xs-offset-4 col-xs-4" style="padding: 5px;">
-            <button id="nextBtn" class="btn btn-sm btn-default col-xs-3 pull-right" name="next">Next</button>
+            <a id="nextBtn" href="#top" class="btn btn-sm btn-default col-xs-3 pull-right" name="next">Sledeći</a>
         </div>
     </div>
 
@@ -244,10 +245,10 @@
             divs.eq(now).show(); // show next
             if(now == 10){
                 $('.divResult').show();
-                $('#nextBtn').prop('disabled', true);
+                $('#nextBtn').hide();
             }
             if(now != 0){
-                $('#prevBtn').prop('disabled', false);
+                $('#prevBtn').hide();
             }
         });
 
@@ -257,10 +258,10 @@
             divs.eq(now).show();
             if(now != 10){
                 $('.divResult').hide();
-                $('#nextBtn').prop('disabled', false);
+                $('#nextBtn').show();
             }
             if(now == 0){
-                $('#prevBtn').prop('disabled', true);
+                $('#prevBtn').show();
             }
         });
 

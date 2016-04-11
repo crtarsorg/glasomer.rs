@@ -11,11 +11,11 @@
         color: #000;
     }
     td.details-control {
-        background: url('/app/glasomer/app/static/imgs/details_open.png') no-repeat center center;
+        background: url('app/static/imgs/details_open.png') no-repeat center center;
         cursor: pointer;
     }
     tr.shown td.details-control {
-        background: url('/app/glasomer/app/static/imgs/details_close.png') no-repeat center center;
+        background: url('app/static/imgs/details_close.png') no-repeat center center;
     }
     table{
         color: #0b3e6f !important;
@@ -32,8 +32,8 @@
     <br><br>
     <div id="questions" class="questions">
          <!-- Trigger the modal with a button -->
-        <button type="button" id="showAll" class="btn btn-info btn-sm" data-toggle="modal" data-target="#resultsModal">All Parties' Answers</button>
-        <button type="button" id="showTopThree" class="btn btn-info btn-sm" data-toggle="modal" data-target="#resultsModal">Compare Your Answers</button>
+        <button type="button" id="showAll" class="btn btn-info btn-sm" data-toggle="modal" data-target="#resultsModal">Odgovori svih stranaka</button>
+        <button type="button" id="showTopThree" class="btn btn-info btn-sm" data-toggle="modal" data-target="#resultsModal">Uporedite svoje odgovore (sa odgovorima stranaka)</button>
         <br><br>
         <div class="row pull-right">
             <ul class="rrssb-buttons">
@@ -71,11 +71,11 @@
         </div>
         <br><br>
         <div class="panel panel-primary">
-            <div class="panel-heading">Your Top 3 Matching Results</div>
+            <div class="panel-heading">Tri stranke sa kojima se najviše podudaraju vaši odgovori</div>
             {{#each results}}
                 <div class="panel-body">
                     <div class="quotes col-xs-5">
-                        <img class="img-responsive img-thumbnail" src="/app/glasomer/app/static/imgs/logos/{{this.partyName}}.png"/>
+                        <img class="img-responsive img-thumbnail" src="app/static/imgs/logos/{{this.partyName}}.png"/>
                         <div class="text" style="font-size: 20px;">{{this.partyName}}</div>
                         <div class="large-text" style="font-size: 4em; color: darkred;">{{this.matchingResult}}%</div>
                     </div>
@@ -88,7 +88,7 @@
           </div>
      </div>
     <div class="row">
-        <a style="" class="btn btn-default btn-sm pull-right" href="http://opendatakosovo.org/app/glasomer/">Return to Quiz</a>
+        <a style="" class="btn btn-default btn-sm pull-right" href="http://opendatakosovo.org/app/glasomer/">Vratite se na kviz</a>
     </div>
 </div>
 <!-- Modal -->
@@ -98,14 +98,14 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title" style="color: #0b3e6f">Compare answers</h4>
+        <h4 class="modal-title" style="color: #0b3e6f">Uporedite odgovore</h4>
       </div>
       <div class="modal-body">
         <table id="resultsTbl" class="table table-responsive" style="display:none" cellspacing="0" width="100%">
             <thead>
                 <tr>
                     <th></th>
-                    <th>Quiz questions made to political parties [ click <img src="/app/glasomer/app/static/imgs/details_open.png"/> to see the comparison]</th>
+                    <th>Quiz questions made to political parties [ click <img src="app/static/imgs/details_open.png"/> to see the comparison]</th>
                 </tr>
             </thead>
             <tfoot>
@@ -118,7 +118,7 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th>Quiz questions made to political parties [ click <img src="/app/glasomer/app/static/imgs/details_open.png"/> to see the comparison]</th>
+                    <th>Quiz questions made to political parties [ click <img src="app/static/imgs/details_open.png"/> to see the comparison]</th>
                 </tr>
             </thead>
             <tfoot>
@@ -177,7 +177,7 @@
     });
 
 function drawTable(dataTbl, divContainer, wrapper){
-    $(wrapper).hide();
+    $(wrapper).remove();
     var table = $(divContainer).DataTable( {
         destroy: true,
         "data": dataTbl,
@@ -219,17 +219,25 @@ function formatSubTable ( d ) {
     var rowInjection = '';
 
     for(var party in d.parties){
+        var comment;
+        if (party == 'Users Answer'){
+            comment = '/';
+        }else{
+            comment = d.parties[party]['comment'];
+        }
         rowInjection = rowInjection +
         '<tr>'+
             '<td>' + party + '</td>'+
             '<td>' + d.parties[party]['answer'] + '</td>'+
             '<td>' + d.parties[party]['importance'] + '</td>'+
+            '<td>' + comment + '</td>'+
         '</tr>';
     }
     return '<table class="table" style="padding-left:50px; border: 1px">'
              + "<th>Party Name</th>"
              + '<th>Answer</th>'
              + '<th>Importance</th>'
+             + '<th>Komentar</th>'
              + rowInjection
              + '</table>';
 }

@@ -5,7 +5,7 @@
       "politiciansAnswers":{
         "Demokratska stranka": {
                 "answer": "Ne slažem se",
-                "comment": "Upravo je politika nekontrolisanog davanja subvencija tobožnjim investitorima koje idu i do 40.000 evra u pojedinim slučajevima pokazatelj da ova vlada nema drugog načina da privuče investicije. Mnogi od tih investitora isplaćuju radnicima minimalne plate, za šta dobijaju basnoslovne podsticaje. Većina tih ugovora u poslednje vreme je netransparentna, poslovi su sklapani direktnom pogodbom i daleko od očiju javnosti i radi se zapravo o kupovini investicija, pri čemu investitori odlaze odmah čim država prestane da ih izdržava. Pitanje je veoma važno za DS jer se upravo na ovu lošu praksu troše sredstva koje se mogu upotrebiti za stvarno pokretanje privrede.",
+                "comment": "Upravo je politika nekontrolisanog davanja subvencija tobožnjim investitorima koje idu i do 40.000 evra u pojedinim slučajevima pokazatelj da ova vlada nema drugog načina da privuče investicije. Mnogi od tih investitora isplaćuju radnicima minimalne plate, za šta dobijaju basnoslovne podsticaje. Većina tih ugovora u poslednje vreme je netransparentna, poslovi su sklapani direktnom pogodbom i daleko od očiju javnosti i radi se zapravo o kupovini investicija, pri čemu investitori odlaze odmah čim država prestane da ih izdržava. Pitanje je Veoma važno za DS jer se upravo na ovu lošu praksu troše sredstva koje se mogu upotrebiti za stvarno pokretanje privrede.",
                 "importance": "Veoma važno"
             },
             "Demokratska stranka Srbije": {
@@ -170,7 +170,7 @@
       "politiciansAnswers":{
             "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "Parafiskalnim nametimase opterećuje privredna aktivnost i država na netransparentan način obezbeđuje dodatna budžetska sredstva.Mnogo je veća šteta od gušenja privredne aktivnosti, nego što je korist od tako povećanih sredstava."
             },
             "Nova stranka": {
@@ -217,7 +217,8 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "Pitanje je dosta uopšteno postavljeno i teško je na njega odgovoriti bez komentara. Teško se može reći da treba ukinuti SVE parafiskalne namete. Svakako da treba ukinuti one koji se nepotrebni, koji samo guše privredu, posebno mala i srednja preduzeća. "
-            }
+          }
+      }
     },
      "q5": {
       "question": "Treba onemogućiti da država sklapa tajne ugovore sa stranim investitorima.",
@@ -249,7 +250,7 @@
             },
             "Pokret Dveri": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "Živimo u vremenu ogromne moći kapitala koji se  koncentriše, akumulira i oplođuje velikom brzinom i pri tom ruši sve pred sobom. Krupni kapital traži razne načine da zaobiđe prepreke pa traži neformalne dogovore sa predstavnicima vlasti,  izbegava zakone i standardne procedure, namešta situaciju na tržištu u svoju korist i sl. Tako je u Srbiji preuzet bankarski sektor, maloprodajni lanci, i tržište za razne vrste proizvoda.  Treba po ovom pitanju onemogućiti i domaće tajkune. "
             },
             "Demokratska stranka Srbije": {
@@ -328,7 +329,6 @@
                 "comment": "Ako bi se samo deo ogromnih sredstava koja se daju stranim investitorima preusmerio na  domaću privredu, rezultati bi bili nemerljivo bolji. Kada je u pitanju poljoprivreda, ova vlast je subvencije za poljoprivredu smanjila tri puta – sa 12.000 dinara na 4.000, za šta ne može biti opravdanja ni u kakvoj štednji."
             }
       }
-      }
     },
      "q7": {
       "question": "Vlada bi trebalo da uskrati državne podsticaje investitorima koji ne poštuju ljudska i radna prava zaposlenih.",
@@ -336,7 +336,7 @@
           "Socijaldemokratska stranka Srbije": {
                 "answer": "slažem se",
                 "importance": "Veoma važno",
-                "comment": "Ovo je veoma važno pitanej za zaštitu ljudskih i radnih prava naših građana."
+                "comment": "Ovo je Veoma važno pitanej za zaštitu ljudskih i radnih prava naših građana."
             },
             "Nova stranka": {
                 "answer": "Slažem se",
@@ -501,7 +501,7 @@
         "Demokratska stranka": {
                 "answer": "Slažem se",
                 "comment": "Ovo se ne odnosi samo na ugrožene kategorije stanovništva nego i na teško zapošljive kategorije – mlade, ljude starije od 50 godina koji su ostali bez posla... Demokratska stranka predviđa čitav niz olakšica za poslodavce koji zapošljavaju upravo ove ljude.",
-                "importance": "Veoma Važno"
+                "importance": "Veoma važno"
             },
           "Demokratska stranka Srbije": {
               "answer": "Slažem se",
@@ -526,12 +526,12 @@
           "Nova stranka": {
               "answer": "Ne slažem se",
               "comment": "Socijalna preduzeća treba osnivati u oblastima gde je moguća njihova tržišna verifikacija, uz olakšiće za fiskalna zahvatanja iz njih. Preferencijalni položaj bi doveo do mnogih zloupotreba, to je praksa pokazala. Dakle – pomoć pri osnivanju, poreske olakšice , a ne netržišni povlašćeni položaj u javnim nabavkama.",
-              "importance": "Veoma Važno"
+              "importance": "Veoma važno"
           },
           "Pokret Dveri": {
               "answer": "Slažem se",
               "comment": "Država mora, ne pojedinačnim merama, u koje spada gore pomenuta, već strateški da pristupi problemu socijalne kohezije (uključivanja). Mišljenja smo da u ovom trenutku, u Republici Srbiji, siromaštvo, nejednakost i socijalna isključenost predstavljaju najveću pretnju privrednom rastu i narušavaju socijalni kapital. ",
-              "importance": "Veoma Važno"
+              "importance": "Veoma važno"
           },
           "Savez vojvođanskih Mađara": {
               "answer": "Slažem se",
@@ -541,7 +541,7 @@
           "Socijaldemokratska stranka Srbije": {
               "answer": "Slažem se",
               "comment": "Potrebno je dati i ovu vrstu podsticaja socijalno odgovornim kompanijama i institucijama od posebnog društvenog značaja.",
-              "importance": "Veoma Važno"
+              "importance": "Veoma važno"
           },
           "Srpska radikalna stranka": {
               "answer": "Slažem se",
@@ -612,7 +612,7 @@
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "To je jedan od načina da se vrati poverenje u pravosudni sistem, bez koga nema ni pravde ni ekonomskog razvoja."
             },
             "Nova stranka": {
@@ -724,7 +724,7 @@
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "To je tako u celoj EU. Za to ne bi bili ni preveliki troškovi, jer nastavnika ionako imamo viška, a time bismo obezbedili višu konkurentnost našeg stanovništva u međunarodnoj podeli rada. Potrebno je sistematski i dugoročno povisiti obrazovni nivo našeg stanovništva, jer je to edna od hroničnih i sistemskih nedostatak sa kojima se suočavamo."
             },
             "Nova stranka": {
@@ -800,7 +800,7 @@
             "Srpska radikalna stranka": {
                 "answer": "Slažem se",
                 "importance": "manje važno",
-                "comment": "Ovo je manje važno zato što je veoma važno da se obrazovni sistem iz korena menja. Strani jezici i rad na kompjuteru jesu važni i prilično su zastupljeni i to nisu nikakve prenosive veštine već znanja koja treba da se stiču i koja su korisna."
+                "comment": "Ovo je manje važno zato što je Veoma važno da se obrazovni sistem iz korena menja. Strani jezici i rad na kompjuteru jesu važni i prilično su zastupljeni i to nisu nikakve prenosive veštine već znanja koja treba da se stiču i koja su korisna."
             },
             "Pokret Dveri": {
                 "answer": "Ne slažem se",
@@ -944,7 +944,7 @@
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "Ovo bi trebalo da bude obavezan predmet."
             },
             "Nova stranka": {
@@ -1000,7 +1000,7 @@
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
-                "comment": "To je veoma važno jer je doveden u pitanje kredibilitet privatnih univerziteta."
+                "comment": "To je Veoma važno jer je doveden u pitanje kredibilitet privatnih univerziteta."
             },
             "Nova stranka": {
                 "answer": "Slažem se",
@@ -1055,7 +1055,7 @@
         "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
-                "comment": "Ovo je veoma važno da bi se mladi ljudi već tokom obrazovanja pripremili za konkretne buduće poslove."
+                "comment": "Ovo je Veoma važno da bi se mladi ljudi već tokom obrazovanja pripremili za konkretne buduće poslove."
             },
             "Nova stranka": {
                 "answer": "Nemam stav",
@@ -1333,7 +1333,7 @@
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "Postoje efikasniji mehanizmi da se radno sposobni korisnici materijalnog obezbeđenja vrate na tržište rada od ukidanja isplate tokom sezonskih radova svim korisnicima što predstavlja cinizam prema najsiromašnijim građanima, a ujedno je i dokaz nesposobnosti vlasti da vodi socijalnu politiku u skladu sa civilizacijskim standardima."
             },
             "Nova stranka": {
@@ -1456,7 +1456,7 @@
             },
             "Liberalno demokratska stranka": {
                 "answer": "Ne slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "/"
             },
             "Levica Srbije": {
@@ -1471,7 +1471,7 @@
             },
             "Pokret Dveri": {
                 "answer": "Ne slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "Kineska poslovica kaže: Zemljište je majka svih stvari. Zemljište je praktično neobnovljiv resurs, a njegovo očuvanje je od suštinske važnosti za nacionalnu prehrambenu sigurnost i održivu budućnost generacija naših naslednika.\nU Danskoj kao jednoj od najstarijih članica EEZ/EU zemljišni maksimum je ograničen na 300 ha po farmi, a farmer i članovi njegovog domaćinstva su obavezni da žive na farmi. Mađarska je kao punopravna članica EU (od 2004. godine), i posle isteka 11 godina zabrane prodaje poljoprivrednog zemljišta strancima, trajno zabranila prodaju poljoprivrenog zemljišta čak i kupcima iz EU. U Izraelu je praktično svo poljoprivredno zemljište (99,7%) u državnom ili paradržavnom vlasništvu, a poljoprivrednici ga mogu samo zakupiti na rok do 49 godina.\nU pogledu korišćenja, uređenja i zaštite poljoprivrednog zemljišta u Srbiji treba se ponašati u skladu sa sledećom porukom: Generacija sadašnjih korisnika nije poljoprivredno zemljište nasledila od svojih predaka, već ga je pozajmila od budućih generacija – svojih naslednika! Zato je generacija sadašnjih korisnika obavezna da poljoprivredno zemljište preuzeto od svojih predaka koristi u skladu sa latinskom sentencom „bonus pater familias“ i da ga, ako ne u povećanoj površini i u poboljšanom stanju, onda najmanje u preuzetoj površini i zatečenom stanju, ostavi u nasleđe narednoj generaciji korisnika za njihov održivi razvoj!\nZato uređene komplekse poljoprivrednog zemljišta u Srbiji ne treba ni prodavati a kamoli poklanjati stranim investitorima."
             },
             "Demokratska stranka Srbije": {
@@ -1556,7 +1556,7 @@
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Ne slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "Dok god ne postoji jasna garancija međunarodnih zdravstvenih institucija o neštetnosti, u Srbije ne bi trebalo dozvoliti primenu genetski modifikovane hrane."
             },
             "Nova stranka": {
@@ -1613,7 +1613,7 @@
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "Sva pitanja iz domena zaštite ljudskih prava su veoma važna."
             },
             "Nova stranka": {
@@ -1943,7 +1943,7 @@
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "Kvote nisu dovoljno dobar instrument za ravnopravno učešće žena u politici, već su neophodni i svi drugi podsticaji.  "
             },
             "Nova stranka": {
@@ -2053,7 +2053,7 @@
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "30 posto mladih živi u riziku od siromaštva, a većina mladih i obrazovanih žele da napuste zemlju. Očigledno je potrebno da i skupština uzme aktivno učešće u rešavanje tog gorućeg problema naše zemlje."
             },
             "Nova stranka": {
@@ -2108,7 +2108,7 @@
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "Za to smo uvek snažno zalagali. "
             },
             "Nova stranka": {
@@ -2333,7 +2333,7 @@
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
-                "comment": "Ovo je veoma važno zbog transparentnosti budžetskih izdvajanja za medije. "
+                "comment": "Ovo je Veoma važno zbog transparentnosti budžetskih izdvajanja za medije. "
             },
             "Nova stranka": {
                 "answer": "Slažem se",
@@ -2383,12 +2383,12 @@
       }
     },
     "q3": {
-      "question": "Dodatno ojačati mehanizme koji obezbeđuju nezavistan i efikasan rad kontrolnih institucija.",
+      "question": "Dodatno ojačati mehanizme koji obezbeđuju nezavisan i efikasan rad kontrolnih institucija.",
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
-                "comment": "Ovo je veoma važno zbog ograničavanja samovolje izvršne vlasti, pod uslovom da te kontrolne institucije ne postanu primer iste takve samovolje."
+                "comment": "Ovo je Veoma važno zbog ograničavanja samovolje izvršne vlasti, pod uslovom da te kontrolne institucije ne postanu primer iste takve samovolje."
             },
             "Nova stranka": {
                 "answer": "Slažem se",
@@ -2432,7 +2432,7 @@
             },
             "Demokratska stranka": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "/"
             }
       }
@@ -2444,7 +2444,7 @@
       "politiciansAnswers":{
         "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "veoma važno",
+                "importance": "Veoma važno",
                 "comment": "To je i naša međunarodna obaveza."
             },
             "Nova stranka": {
@@ -2550,7 +2550,7 @@
       }
     }
   },
-  "Budžetski prioriti": {
+  "Budžetski prioriteti": {
     "question": "Budžetski prioriti",
     "areas": ["Vojska", "Kultura", "Socijalna zažtita", "Policija", "Nauka", "Zdravstvo", "Obrazovanje"],
     "politiciansAnswers":{
