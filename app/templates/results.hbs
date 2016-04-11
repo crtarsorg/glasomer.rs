@@ -225,6 +225,12 @@ function formatSubTable ( d ) {
         }else{
             comment = d.parties[party]['comment'];
         }
+        if(d.parties[party]['answer'] == undefined){
+            d.parties[party]['answer'] = '/';
+        }
+        if(d.parties[party]['importance']){
+            d.parties[party]['importance'] = '/';
+        }
         rowInjection = rowInjection +
         '<tr>'+
             '<td>' + party + '</td>'+
