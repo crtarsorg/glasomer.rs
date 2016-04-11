@@ -101,6 +101,8 @@ window.ResultView = Backbone.View.extend({
     },
     render: function(options) {
 
+        $('#glasomerLink').hide();
+        $('#ibracImg').show();
         var profiles = partiesProfiles();
         var matchingResult;
         var template = this.template;

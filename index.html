@@ -2,18 +2,18 @@
 <head>
     <title>Glasomer</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <!-- Meta tags for Social media networks -->
     <meta name="description" content="Glasomer pomaže građanima da uporede svoje političke stavove sa stavovima političkih stranaka koje se takmiče na izborima. Pitanja su u vezi sa aktuelnim temama iz ekonomije, politike, društva, obrazovanja, zdravstvene i socijalne zaštite, itd."/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- sample fb meta -->
+    <!-- FB meta -->
     <meta property="og:title" content="Zanima te koliko se tvoji stavovi poklapaju sa stavovima stranaka? Proveri na Glasomeru!" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://opendatakosovo.org/app/glasomer" />
     <meta property="og:image" content="http://opendatakosovo.org/app/glasomer/app/static/imgs/glasomer-logo.png" />
     <meta property="og:description" content="Glasomer pomaže građanima da uporede svoje političke stavove sa stavovima političkih stranaka koje se takmiče na izborima. Pitanja su u vezi sa aktuelnim temama iz ekonomije, politike, društva, obrazovanja, zdravstvene i socijalne zaštite, itd."/>
 
-    <!-- sample twitter meta -->
+    <!-- Twitter meta -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@CRTArs">
     <meta name="twitter:creator" content="@CRTArs">
@@ -97,11 +97,12 @@ hr.hr-style {
     <div class="row">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="">
-                        <h4 style="margin-top: 0px;">Glasomer</h4>
-                    </a>
+                <img src="app/static/imgs/glasomer-logo.png" style="width: 150px; height:70px;border-radius: 7px; box-shadow: inset 0 0 10px black, 0 0 40px black; margin-left: 20px; padding: 5px"  class="col-xs-4 pull-left img-responsive">
+                <div class="col-xs-offset-2 col-xs-4" id="headerDescriptionBtn">
+                    <a type="button" id="glasomerLink" class="btn btn-primary col-xs-offset-4 col-xs-6" style="margin-top:15px;" data-toggle="modal" data-target="#glasomerModal">Šta je Glasomer?</a>
+                    <img src="app/static/imgs/ibrac.png" id="ibracImg" style="display:none;width: 150px; height:70px; border-radius: 7px; box-shadow: inset 0 0 10px black, 0 0 40px black; margin-right:60px;padding: 5px" class="col-xs-4 pull-right img-responsive">
                 </div>
+                <img src="app/static/imgs/izboris2016.jpg" style="width: 150px; height:70px; border-radius: 7px; box-shadow: inset 0 0 10px black, 0 0 40px black; margin-right: 20px; padding: 5px" class="col-xs-4 pull-right img-responsive">
             </div>
         </nav>
     </div>
@@ -112,6 +113,55 @@ hr.hr-style {
     <script>
         var questionnaireView = new QuestionnaireView({el: $("#container")});
     </script>
+</div>
+<!-- Modal -->
+<div id="glasomerModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 style="color: #0a0a0a;">Šta je Glasomer?</h4>
+        </div>
+      <div class="modal-body">
+        <p style="color: #0a0a0a;">
+            Glasomer pomaže građanima da uporede svoje političke stavove sa stavovima političkih stranaka koje se takmiče na izborima. Pitanja su u vezi sa aktuelnim temama iz ekonomije, politike, društva, obrazovanja, zdravstvene i socijalne zaštite, itd.
+        </p>
+        <p style="color: #0a0a0a;">
+            Na pitanja imate mogućnost da odgovorite sa  “SLAŽEM SE“, "NE SLAŽEM SE" ili "NEMAM STAV“.
+        </p>
+        <p style="color: #0a0a0a;">
+            Takođe, za svako pitanje izbaberite i koliko Vam je važno.
+        </p>
+        <p style="color: #0a0a0a;">
+            Na kraju upitnika, kao rezultat, dobićete informaciju koje tri stranke su najbliže Vašim političkim stavovima.
+
+            Političke stranke su odgovarale na istovetan način i ostavljena im je mogućnost da svaki odgovor dodatno obrazlože.
+
+            Moći ćete i da uporedite Vaše odgovore sa odgovorima svih stranaka i utvrdite sličnosti i razlike.
+        </p>
+        <p style="color: #0a0a0a;">
+
+            Možete da preskočite pitanje na koje ne želite da odgovorite, ali će rezultat biti precizniji ukoliko odgovorite na što više pitanja.
+
+            Vaši odgovori su samo Vaši. Glasomer ne čuva Vaše odgovore i rezultat je poznat samo Vama, a ukoliko želite da podelite rezultat sa Vašim prijateljima na Facebooku ili Twitteru, imate i tu mogućnost.
+
+            Pitanja smo poslali na adrese svih stranaka koje su se kandidovale na vanrednim parlamentarnim izborima 24. aprila 2016. godine. Odgovore smo do sad dobili od njih devet  –  (Demokratske stranke, Demokratske stranke Srbije, Dosta je bilo, Liberalno demokratske partije, Nove stranke, Saveza vojvođanskih Mađara, Srpske radikalne stranke, Socijaldemokratske stranke i Pokreta Dveri).
+
+            Zahvaljujemo se strankama koje su se odazvale na poziv Glasomera, a sa žaljenjem konstatujemo da su ostale stranke propustile da se i na ovaj način predstave potencijalnim biračima i upoznaju građane sa svojim stavovima o važnim i aktuelnim temama. Ukoliko dobijemo naknadne odgovore partija, uvrstićemo ih odmah u Glasomer.
+        </p>
+        <p style="color: #0a0a0a;">
+            Da se ne lažemo!
+        </p>
+        <p style="color: #0a0a0a;">
+            Vaš tim Istinomera
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Zatvorite</button>
+      </div>
+    </div>
+
+  </div>
 </div>
 </body>
 </html>
