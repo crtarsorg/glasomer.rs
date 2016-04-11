@@ -66,12 +66,6 @@
       src:url("app/assets/font/Exo-Regular.otf");
     }
 
-    @media screen and (max-width: 1080px) {
-        .container-div {
-            width:90% !important;
-        }
-        .slider-label { font-size: 19px; }
-    }
     .container-div {
         width:65%;
         height: auto;
@@ -97,18 +91,16 @@ hr.hr-style {
     <div class="row">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                <img src="app/static/imgs/glasomer-logo.png" style="width: 150px; height:70px;border-radius: 7px; box-shadow: inset 0 0 10px black, 0 0 40px black; margin-left: 20px; padding: 5px"  class="col-xs-4 pull-left img-responsive">
+                <img src="app/static/imgs/logoi-glasomer-2.png" style="width: 150px; height:70px; margin-left: 20px; padding: 5px"  class="col-xs-4 pull-left img-responsive">
                 <div class="col-xs-offset-2 col-xs-4" id="headerDescriptionBtn">
                     <a type="button" id="glasomerLink" class="btn btn-primary col-xs-offset-4 col-xs-6" style="margin-top:15px;" data-toggle="modal" data-target="#glasomerModal">Šta je Glasomer?</a>
-                    <img src="app/static/imgs/ibrac.png" id="ibracImg" style="display:none;width: 150px; height:70px; border-radius: 7px; box-shadow: inset 0 0 10px black, 0 0 40px black; margin-right:60px;padding: 5px" class="col-xs-4 pull-right img-responsive">
+                    <img src="app/static/imgs/logoi-glasomer-3.png" id="ibracImg" style="display:none;width: 150px; height:70px; margin-right:60px;padding: 5px" class="col-xs-4 pull-right img-responsive">
                 </div>
-                <a href="http://www.istinomer.rs/2016izbori/" target="_blank"><img src="app/static/imgs/izboris2016.jpg" style="width: 150px; height:70px; border-radius: 7px; box-shadow: inset 0 0 10px black, 0 0 40px black; margin-right: 20px; padding: 5px" class="col-xs-4 pull-right img-responsive"></a>
+                <a href="http://www.istinomer.rs/2016izbori/" target="_blank"><img src="app/static/imgs/logoi-glasomer.png" style="width: 150px; height:70px; margin-right: 20px; padding: 5px" class="col-xs-4 pull-right img-responsive"></a>
             </div>
         </nav>
     </div>
-    <div class="row">
-        <div id="container" class="container-div">
-        </div>
+    <div id="container" class="container-div" style="width: 900px !important;">
     </div>
     <script>
         var questionnaireView = new QuestionnaireView({el: $("#container")});
