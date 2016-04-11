@@ -85,7 +85,7 @@ window.QuestionnaireView = Backbone.View.extend({
         answers_array.push(ch_b_json);
 
         if (answers_array.length < 5) {
-            alert("You must fill all of the fields to continue.!");
+            alert("Morate popuniti sva polja da biste nastavili!");
         }
         else {
             // Switch to results' view
