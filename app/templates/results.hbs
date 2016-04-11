@@ -151,31 +151,45 @@
           });
 
         var allDataTbl = {{{json all_answers}}}; // we put three brackets to escape html encoding
+        var tbl_cnt = 0;
         $('#showAll').click(function(){
             $('#resultsTbl').show();
+            $('#resultsTbl_wrapper').show();
             $('#topThreeTbl').hide();
-            drawTable(allDataTbl, '#resultsTbl', '#topThreeTbl_wrapper');
+            $('#topThreeTbl_wrapper').hide();
+            if(tbl_cnt == 0){
+                drawTable(allDataTbl, '#resultsTbl');
+                tbl_cnt += 1;
+            }
+
         });
 
         var topThreeResultsTbl = {{{json answers_matched}}};
+        var top_cnt= 0;
         $('#showTopThree').click(function(){
             $('#resultsTbl').hide();
+            $('#resultsTbl_wrapper').hide();
             $('#topThreeTbl').show();
-            drawTable(topThreeResultsTbl, '#topThreeTbl', '#resultsTbl_wrapper');
+            $('#topThreeTbl_wrapper').show();
+            if(top_cnt == 0){
+                drawTable(topThreeResultsTbl, '#topThreeTbl');
+                top_cnt += 1;
+
+            }
         });
 
     });
 
-function drawTable(dataTbl, divContainer, wrapper){
-    $(wrapper).hide();
+function drawTable(dataTbl, divContainer){
+
     var table = $(divContainer).DataTable( {
         destroy: true,
         "data": dataTbl,
         "columns": [
             {
-                "className":      'details-control',
-                "orderable":      false,
-                "data":           null,
+                "className": 'details-control',
+                "orderable": false,
+                "data":  null,
                 "defaultContent": ''
             },
             { "data": "question" }
