@@ -152,6 +152,7 @@ window.ResultView = Backbone.View.extend({
                             question: json_handler[item][element]['question'],
                             parties: json_handler[item][element]['politiciansAnswers']
                         };
+                        tmp_json['parties']['Users Answer'] = '/';
                         $.each(answers_collection, function(index, sub_item){
                             if (json_handler[item][element]['question'] == sub_item['question'] ) {
                                 var user_answer;
