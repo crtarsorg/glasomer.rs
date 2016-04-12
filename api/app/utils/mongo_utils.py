@@ -1,4 +1,4 @@
-
+import datetime
 class MongoUtils:
 
     def __init__(self, mongo):
@@ -9,5 +9,9 @@ class MongoUtils:
         self._insert(data)
 
     def _insert(self, data):
+        json_doc = {
+            'data': data,
+            'timestamp': datetime.datetime.utcnow()
+        }
 
-        self.mongo.db[self.collection_name].insert(data)
+        self.mongo.db[self.collection_name].insert(json_doc)
