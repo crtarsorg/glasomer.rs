@@ -144,7 +144,7 @@
         $('.rrssb-buttons').rrssb({
             // required:
             title: "Meni najbliža stranka je - "+ parties,
-            url: 'http://opendatakosovo.org/app/glasomer/',
+            url: 'http://glasomer.rs',
 
             // optional:
             description: "Meni najbliža stranka je - "+ parties
@@ -224,7 +224,7 @@ function formatSubTable ( d ) {
 
     for(var party in d.parties){
         var comment, answer, importance;
-        if (party == 'Users Answer'){
+        if (party == 'Vaš odgovor'){
             comment = '/';
         }else{
             comment = d.parties[party]['comment'];
@@ -251,9 +251,9 @@ function formatSubTable ( d ) {
         '</tr>';
     }
     return '<table class="table" style="padding-left:50px; border: 1px">'
-             + "<th>Party Name</th>"
-             + '<th>Answer</th>'
-             + '<th>Importance</th>'
+             + "<th>Ime stranke</th>"
+             + '<th>Odgovor</th>'
+             + '<th>Koliko je pitanje važno</th>'
              + '<th>Komentar</th>'
              + rowInjection
              + '</table>';

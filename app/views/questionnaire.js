@@ -154,17 +154,17 @@ window.ResultView = Backbone.View.extend({
                             question: json_handler[item][element]['question'],
                             parties: json_handler[item][element]['politiciansAnswers']
                         };
-                        tmp_json['parties']['Users Answer'] = '/';
+                        tmp_json['parties']['Vaš odgovor'] = '/';
                         $.each(answers_collection, function(index, sub_item){
                             if (json_handler[item][element]['question'] == sub_item['question'] ) {
                                 var user_answer;
-                                if (sub_item['parties']['Users Answer'] != undefined){
-                                    user_answer = sub_item['parties']['Users Answer'];
+                                if (sub_item['parties']['Vaš odgovor'] != undefined){
+                                    user_answer = sub_item['parties']['Vaš odgovor'];
                                 }
                                 else{
                                     user_answer = '/'
                                 }
-                                tmp_json['parties']['Users Answer'] = user_answer;
+                                tmp_json['parties']['Vaš odgovor'] = user_answer;
                             }
 
                         });
@@ -184,7 +184,7 @@ window.ResultView = Backbone.View.extend({
                     new_json['parties'][value['partyName']] = item['parties'][value['partyName']];
 
                 });
-                new_json['parties']['Users Answer'] = item['parties']['Users Answer'];
+                new_json['parties']['Vaš odgovor'] = item['parties']['Vaš odgovor'];
                 answers_collection[index] = new_json;
             });
 
@@ -242,7 +242,7 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
                 }
             });
 
-            user_match_answer['parties']['Users Answer'] = {answer: userAnswer['answer'], importance: userAnswer['importance_level']};
+            user_match_answer['parties']['Vaš odgovor'] = {answer: userAnswer['answer'], importance: userAnswer['importance_level']};
 
         }
         //else if (item["question"] == "Budžetski prioriteti" && userAnswer['question'] == "Budžetski prioriteti"){
