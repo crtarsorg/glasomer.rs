@@ -45,6 +45,12 @@ module.exports = function(grunt) {
                             './css/rrssb.css',
                             './js/rrssb.min.js'
                         ]
+                    },
+                    "jquery-ui-slider-pips": {
+                        main:[
+                            './dist/jquery-ui-slider-pips.min.css',
+                            './dist/jquery-ui-slider-pips.min.js'
+                        ]
                     }
                 }
             }

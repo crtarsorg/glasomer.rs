@@ -32,22 +32,25 @@ window.QuestionnaireView = Backbone.View.extend({
             var selected_answer = $("input[name='" + name + "']:checked").val();
 
             answers_json = {
-                question: name,
+                question: name.trim(),
                 answer: selected_answer
             };
 
-            $(':radio:checked', '.question-fieldset').map(function() {
 
-                var tmp_val;
-                if(answers_json.answer != undefined){
-                    tmp_val = this.value;
-                }
-                else{
-                    tmp_val = undefined;
-                }
-                answers_json['importance_level'] = tmp_val;
+            var slider_val = $("input[name='" + name + "importance']:checked", ".radio-div-importance").val();
+            var tmp_val;
+            if(answers_json.answer != undefined){
+                    tmp_val = slider_val;
+                    console.log(tmp_val);
+                    tmp_val = tmp_val.trim();
+            }
+            else{
+                tmp_val = undefined;
+                answers_json['answer'] = answers_json['answer'];
+            }
 
-            }).get();
+
+            answers_json['importance_level'] = tmp_val;
 
             if(answers_json['question'] != ""){
                 answers_array.push(answers_json);
@@ -107,6 +110,7 @@ window.ResultView = Backbone.View.extend({
         var matchingResult;
         var template = this.template;
 
+        console.log(options.data);
         Handlebars.registerHelper('json', function(context) {
             return JSON.stringify(context);
         });
@@ -120,7 +124,7 @@ window.ResultView = Backbone.View.extend({
             for (var item in options.data){
                 if(options.data[item]['question'] != '' && options.data[item]['answer'] != undefined){
                     matchingResult = calculateMatchingResult(json_handler, options.data[item]);
-
+                    debugger;
                     if (!$.isEmptyObject(matchingResult['answer_collection']['parties'])){
                         answers_collection.push(matchingResult['answer_collection']);
                     }
@@ -206,7 +210,7 @@ window.ResultView = Backbone.View.extend({
 
 function calculateMatchingResult(politicianAnswers, userAnswer){
 
-    // Constants used to calculate the matching results, dual quote: 2.17391304
+    // Constants used to calculate the matching results, dual quote: 2,17391304
     var SINGLE_MATCHING_QT = 1.0869565;
     // var DOUBLE_MATCHING_QT = 1.88679;
 
@@ -218,18 +222,20 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
 
 
         if (item["question"] != "Budžetski prioriteti" && userAnswer['question'] != "Budžetski prioriteti") {
-
+            debugger;
             $.each(item, function (key, party) {
 
-                if (party['question'] == userAnswer['question']){
+                if (party['question'].trim() == userAnswer['question'].trim()){
 
-                    user_match_answer['question'] = userAnswer['question'];
+                    user_match_answer['question'] = userAnswer['question'].trim();
                     $.each(party['politiciansAnswers'], function(prop, val){
 
-                        if (userAnswer['answer'] == party['politiciansAnswers'][prop]['answer']){
+                        var parties_answer = party['politiciansAnswers'][prop]['answer'].trim();
+                        if (userAnswer['answer'].trim() == (parties_answer.charAt(0).toUpperCase() + parties_answer.slice(1))){
 
                             var first_match_qt = SINGLE_MATCHING_QT;
-                            if(userAnswer['importance_level'] == party['politiciansAnswers'][prop]['importance']){
+                            var importance_answer = party['politiciansAnswers'][prop]['importance'].trim();
+                            if(userAnswer['importance_level'] == (importance_answer.charAt(0).toUpperCase() + importance_answer.slice(1))){
 
                                 first_match_qt = first_match_qt + SINGLE_MATCHING_QT;
                             }

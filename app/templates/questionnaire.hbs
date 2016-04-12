@@ -8,6 +8,13 @@
         background-color: #fff;
         color: #000;
     }
+    .radio-div-importance{
+        background-color: #829db4;
+        width: 600px;
+        margin: 0 auto;
+        border-radius: 8px;
+        border: solid 1px;
+    }
 
     .questions {
         border-radius: 3px;
@@ -168,45 +175,19 @@
                                         {{/each}}
                                     </div>
                                 </div>
-                                <fieldset class="question-fieldset">
-                                    <div style="text-align: center">
-                                        <h5 style="color: #000;">Koliko je ovo pitanje važno</h5>
-                                    </div>
-                                    <div class="round">
-                                        <div class="slider"></div>
-                                    </div>
-                                    <label class="col-xs-4 slider-label" for="a1">
-                                        <input type="radio"
-                                         name="importance_level"
-                                         id="a1"
-                                         data-value="86"
-                                         value="Nije važno">
-                                        Nije važno
-                                    </label>
+                                <div class="radio-div-importance" style="">
+                                    <input type="radio" id="Nije važno{{text}}" value="Nije važno" name="{{text}}importance" style="margin-left: 30px">
+                                    <label for="Nije važno{{text}}" style="margin-left: 30px"><span></span>&nbsp;Nije važno</label>
 
-                                    <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a2"><input
-                                            type="radio"
-                                            name="importance_level"
-                                            id="a2"
-                                            data-value="87"
-                                            value="Manje važno">Manje važno</label>
+                                    <input type="radio" id="Manje važno{{text}}" value="Manje važno" name="{{text}}importance" style="margin-left: 30px">
+                                    <label for="Manje važno{{text}}" style="margin-left: 30px"><span></span>&nbsp;Manje važno</label>
 
-                                    <label style="margin-left: 50px;" class="col-xs-4 slider-label" for="a3"><input
-                                            type="radio"
-                                            name="importance_level"
-                                            id="a3"
-                                            data-value="88"
-                                            value="Važno"
-                                            checked="checked">Važno</label>
+                                    <input type="radio" id="Važno{{text}}" value="Važno" name="{{text}}importance" style="margin-left: 30px">
+                                    <label for="Važno{{text}}" style="margin-left: 30px"><span></span>&nbsp;Važno</label>
 
-                                    <label style="margin-left: 30px;" class="col-xs-4 slider-label" for="a4"><input
-                                            type="radio"
-                                            name="importance_level"
-                                            id="a4"
-                                            data-value="89"
-                                            value="Veoma">Veoma
-                                        važno</label>
-                                </fieldset>
+                                    <input type="radio" id="Veoma važno{{text}}" value="Veoma važno" name="{{text}}importance" style="margin-left: 30px">
+                                    <label for="Veoma važno{{text}}" style="margin-left: 30px"><span></span>&nbsp;Veoma važno</label>
+                                </div>
                                 <br>
                                 <hr class="hr-style" style="width: 100%;">
                             </div>
@@ -267,17 +248,6 @@
             }
         });
 
-        $('.question-fieldset').each(function () {
-            var radios = $(this).find(':radio').hide();
-            //console.log(radios);
-            $('.slider').slider({
-                min: parseInt(radios.first().data('value'), 10),
-                max: parseInt(radios.last().data('value'), 10),
-                slide: function (event, ui) {
-                    $(this).closest('.question').find('[data-value=' + ui.value + ']').click();
-                }
-            });
-        });
 
         $(".css-checkbox").change(function () {
             var id = $(this).attr("id");

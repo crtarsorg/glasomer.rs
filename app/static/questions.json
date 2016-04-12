@@ -280,7 +280,7 @@
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "Razvoj domaćeg preduzetništva i poljoprivrede kao oslonac za napredak privrede je jednako važan kao i strane visokotehnološke investicije, tako da se na ovako postavljeno pitanje ne može celovito odgovoriti ponuđenim odgovorima."
             },
             "Nova stranka": {
@@ -290,7 +290,7 @@
             },
             "Liberalno demokratska stranka": {
                 "answer": "Slažem se",
-                "importance": " važno",
+                "importance": "Važno",
                 "comment": "Otvaranja vrata stranim investicijama je takođe izuzetno važno za razvoj privrede u Srbiji, baš kao i podsticanje razvoja domaćeg preduzetništva i poljoprivrede. Za to je neophodno rasterećenje birokratije i povećavanje sigurnosti kako domaćih, tako i stranih investicija.  "
             },
             "Levica Srbije": {
@@ -400,7 +400,7 @@
             },
             "Liberalno demokratska stranka": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "/"
             },
             "Levica Srbije": {
@@ -415,7 +415,7 @@
             },
             "Pokret Dveri": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "Fiskalna stabilizacija ne bi smela da se zasniva na umanjenju penzija i smanjenja kupovne moći peznionera. Srbija mora voditi aktivnu fiskalnu politiku sa precizno definisanim ciljnim grupama i prioritetima.\nNeophodno je u cilju održivosti penzionog sistema Republike Srbije izvršiti reformu penziono-invalidskog fonda Republike Srbije osnivanjem Kapitalnog penzionog fonda, u cilju samoodrživosti. Oduzetu imovinu penzionog fonda vratiti Fondu, a imovinu rehabilaticionih centara i srpskih banja preneti u svojinu penzionog fonda.\nPotrebno je razdvojiti prilive po osnovu penzionog osiguranja od ostalih budžetskih priliva i namenski ih preusmeriti u penzioni fond iz koga bi se isključivo isplaćivale penzije. Potrebno je sprečiti nenamenska zahvatanja ovih sredstava od strane vlade za druge budžetske izdatke."
             },
             "Demokratska stranka Srbije": {
@@ -744,12 +744,12 @@
             },
             "Srpska radikalna stranka": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "U Srbiji nažalost još uvek svi ne završavaju ni osnovno obrazovanje i to je ozbiljan problem. Država mora da obezbedi uslove za osnovno i srednje obrazovanje za sve. Socijalno ugroženoj deci mora se obezbediti i materijalna podrška da bi se obrazovali jer srednjoškolsko obrazovanje ipak osigurava koliko-toliko bolji društveni status."
             },
             "Pokret Dveri": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "Jedini način da pariramo izazovima savremenog sveta je da nivo obrazovanja našeg stanovništva bude što viši. Neophodno je jasno definisanje potreba privrede, medicine, prosvete, nauke i drugih delova društva za odgovarajućim kadrovima. Razvoj onih zanimanja za kojima postoji realna potreba u društvu treba podsticati kroz stipendije,  garantovano zaposlenje itd. "
             },
             "Demokratska stranka Srbije": {
@@ -799,12 +799,12 @@
             },
             "Srpska radikalna stranka": {
                 "answer": "Slažem se",
-                "importance": "manje važno",
+                "importance": "Manje važno",
                 "comment": "Ovo je manje važno zato što je Veoma važno da se obrazovni sistem iz korena menja. Strani jezici i rad na kompjuteru jesu važni i prilično su zastupljeni i to nisu nikakve prenosive veštine već znanja koja treba da se stiču i koja su korisna."
             },
             "Pokret Dveri": {
                 "answer": "Ne slažem se",
-                "importance": "manje važno",
+                "importance": "Manje važno",
                 "comment": "Nastavu treba unapređivati iz svih predmeta, a pogotovo iz onih koji su značajni za razvoj privrede, jačanje društva i razvoj patriotske svesti. Strani jezici su pozitivna nadogradnja, korišćenje kompjutera se neophodno ali se uči u hodu, za razliku od programiranja koje iziskuje znatno viši nivo informatičkog obrazovanja, od prezentovanja materijala ne treba praviti nauku, to se stiče iskustvom.  "
             },
             "Demokratska stranka Srbije": {
@@ -1303,7 +1303,7 @@
             },
             "Pokret Dveri": {
                 "answer": "Ne slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "O penzijskom sistemu odgovorili smo u komentaru na pitanje broj 8, u odeljku ekonomija."
             },
             "Demokratska stranka Srbije": {
@@ -1318,7 +1318,7 @@
             },
             "Savez vojvođanskih Mađara": {
                 "answer": "Ne slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "Penzioni sistem takođe očekuju dubinske reforme. SVM se zalaže za izgradnju takvog penzijskog sistema, koji se zasniva na demografskim parametrima. Očekujemo, da se prilikom transformacije PIO sistema, primeni postepenost, ali i društvena solidarnost."
             },
             "Demokratska stranka": {
@@ -1476,7 +1476,7 @@
             },
             "Demokratska stranka Srbije": {
                 "answer": "Ne slažem se",
-                "importance": "Veom važno",
+                "importance": "Veoma važno",
                 "comment": "Poljoprivredno zemljište i druge prirodne resurse država ne sme da prodaje, a još manje poklanja strancima. Kao ni strateški važna državna preduzeća."
             },
             "Dosta je bilo": {
@@ -1491,7 +1491,7 @@
             },
             "Demokratska stranka": {
                 "answer": "Ne slažem se",
-                "importance": "Veom važno",
+                "importance": "Veoma važno",
                 "comment": "Ovo je jedno od najvažnijih pitanja za Demokratsku stranku. Skandalozan Zakon o poljoprivrednom zemljištu omogućio je da se u svakoj opštini bez ikakvog kriterijuma trećina državnog poljoprivrednog zemljišta pokloni investitoru po izboru vladajuće stranke. Demokratska stranka će raskinuti sve ugovore sklopljene po ovom zakonu."
             }
       }
@@ -1571,7 +1571,7 @@
             },
             "Levica Srbije": {
                 "answer": "Ne slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "/"
             },
             "Srpska radikalna stranka": {
@@ -1693,7 +1693,7 @@
             },
             "Pokret Dveri": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "Pitanje najboljeg izbornog sistema može se rešiti jedino stručnom i ozbiljnom analizom prednosti i mana većinskog i proporcionalnog sistema. Uporedna pravna iskustva koja su primenjiva na slučaj Srbije su takođe od velikog značaja. Stoga je veoma teško opredeliti se za čiste oblike oba sistema. Iako je u Srbiji važeći proporcionalni sistem na svim izbornim nivoima, Dveri nalaze da bi mane ovog sistema mogle biti otklonjene uvođenjem određenih elemenata većinskog izbornog sistema. Smatramo da je za Srbiju najbolje uvesti mešoviti sistem koji će uvažiti sve činioce i političke programe koji u Srbiji postoje, proporcionalnu zastupljenost svih delova Srbije i istovremeno dati prednost kvalitetnim ličnostima.  "
             },
             "Demokratska stranka Srbije": {
@@ -1708,7 +1708,7 @@
             },
             "Savez vojvođanskih Mađara": {
                 "answer": "Ne slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "SVM je dao svoj prilog radu Akcionog tima za reformu političkog sistema i stava smo da su predstojeće promene Ustava (Akcioni plan za pregovaranje poglavlja 23 predviđa da će Ustav biti promenjen do kraja 2017.)  prilika da se postigne dogovor i o izmenama izbornog sistema. Smatramo da treba zadržati neki od oblika proporcionalnog izbornog sistema i razmisliti o uvođenju stepenastog cenzusa za koalicije. \nTreba pažljivo pristupati izbornoj problematici, budući da smo svedoci da je promenom Odluke o izborima u Autonomnoj pokrajini Vojvodini, kojom se uvodi čist proporcionalni, umesto kombinovanog izbornog sistema (kojim je bila obezbeđena zastupljenost svih vojvođanskih opština u Skupštini AP Vojvodne) učinjen korak unazad."
             },
             "Demokratska stranka": {
@@ -1793,7 +1793,7 @@
             },
             "Levica Srbije": {
                 "answer": "Ne slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "/"
             },
             "Srpska radikalna stranka": {
@@ -1853,7 +1853,7 @@
             },
             "Srpska radikalna stranka": {
                 "answer": "Slažem se",
-                "importance": "Veoma ",
+                "importance": "Veoma važno",
                 "comment": "Sve što je vezano za sakralni deo funkcionisanja crkava i verskih organizacija ne sme biti oporezovano. Proizvodi koji se prodaju na tržištu moraju imati isti tretman bez obzira na proizvođača. "
             },
             "Pokret Dveri": {
@@ -1903,12 +1903,12 @@
             },
             "Levica Srbije": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "/"
             },
             "Srpska radikalna stranka": {
                 "answer": "Slažem se",
-                "importance": " važno",
+                "importance": "Važno",
                 "comment": "Sve dozvole za koje je zainteresovano bilo koje fizičko ili pravno lice, koje ispunjava propisane uslove, moraju se dobijati nesmetano i brzo."
             },
             "Pokret Dveri": {
@@ -1998,7 +1998,7 @@
       "politiciansAnswers":{
           "Socijaldemokratska stranka Srbije": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "Svim građanima podjednako moraju biti dostupni društveni servisi, čime im se olakšava život."
             },
             "Nova stranka": {
@@ -2068,7 +2068,7 @@
             },
             "Levica Srbije": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "/"
             },
             "Srpska radikalna stranka": {
@@ -2235,7 +2235,7 @@
             },
             "Levica Srbije": {
                 "answer": "Ne slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "/"
             },
             "Srpska radikalna stranka": {
@@ -2357,7 +2357,7 @@
             },
             "Pokret Dveri": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "Svi mediji treba da posluju transprantno. Građani imaju pravo da znaju na šta se troši njihov novac, a pored toga bi trebalo da se zna ko su pravi vlasnici privatnih medija."
             },
             "Demokratska stranka Srbije": {
@@ -2412,7 +2412,7 @@
             },
             "Pokret Dveri": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "U potpunosti se slažemo sa ovom idejom. "
             },
             "Demokratska stranka Srbije": {
@@ -2454,7 +2454,7 @@
             },
             "Liberalno demokratska stranka": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "/"
             },
             "Levica Srbije": {
@@ -2514,7 +2514,7 @@
             },
             "Levica Srbije": {
                 "answer": "Slažem se",
-                "importance": "važno",
+                "importance": "Važno",
                 "comment": "/"
             },
             "Srpska radikalna stranka": {
