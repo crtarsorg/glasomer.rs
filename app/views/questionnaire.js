@@ -38,15 +38,15 @@ window.QuestionnaireView = Backbone.View.extend({
 
 
             var slider_val = $("input[name='" + name + "importance']:checked", ".radio-div-importance").val();
-            var tmp_val;
+            var tmp_val = '';
             if(answers_json.answer != undefined){
-                    tmp_val = slider_val;
-                    console.log(tmp_val);
+                    if(slider_val != undefined) {
+                        tmp_val = slider_val;
+                    }
                     tmp_val = tmp_val.trim();
             }
             else{
                 tmp_val = undefined;
-                answers_json['answer'] = answers_json['answer'];
             }
 
 
