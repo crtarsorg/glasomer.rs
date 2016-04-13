@@ -194,9 +194,27 @@ window.ResultView = Backbone.View.extend({
 
             $(options.element).html(template({results: resultJson, all_answers: answers_array, answers_matched: answers_collection }));
 
+            var matched_sub_doc = {};
+            $.each(resultJson, function(idx, item){
+                var tmp_sub_doc = {
+                    name: item['partyName'],
+                    result: item['matchingResult']
+                };
+                if(idx == 0){
+                    matched_sub_doc['first'] = tmp_sub_doc
+                }
+                else if(idx == 1){
+                    matched_sub_doc['second'] = tmp_sub_doc
+                }
+                else if (idx == 2){
+                    matched_sub_doc['third'] = tmp_sub_doc
+                }
+
+            });
+
             var data_container = {
                 answers: answers_collection,
-                matched_parties: resultJson
+                matched_parties: matched_sub_doc
 
             };
 
@@ -373,7 +391,7 @@ function partiesProfiles(){
             imgUrl: ''
         },
         "Zavetnici": {
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+            text: "Srpski sabor Zavetnici je politička organizacija, zvanično formirana na Sretenje, 15. februara 2012. godine. Srpski sabor Zavetnici zalaže se za vođenje suverenističke i nacionalno odgovorne politike, koja se zasniva na odbrani teritorijalnog integriteta i političke nezavisnosti Republike Srbije. Suverenistička politika označava delovanje u skladu sa vitalnim državnim i nacionalnim interesima srpskog naroda, što podrazumeva očuvanje Kosova i Metohije kao sastavnog i neotuđivog dela državne teritorije Republike Srbije. Predsednik Srpskog sabora Zavetnici je Stefan Stamenkovski, a portparolka Milica Đurđević, koja je prva na listi Zavetnika za vanredne parlamentarne izbore. Na republičkim vanrednim parlamentarnim izborima 2014. godine, stranka je nastupila u koaliciji pod nazivom 'Patriotski front' sa Saborom srpskog jedinstva, NP - Preporodom Srbije i Slobodnom Srbijom - Niš; ali osvajaju svega 4. 514 glasova i ne prelaze izborni cenzus.",
             imgUrl: ''
         }
 

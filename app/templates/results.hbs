@@ -133,10 +133,25 @@
             $("#questionnaire").css('display', "block");
         }, 1000);
 
+        // Parties abbreviation
+        var parties_abbr = {
+            "Demokratska stranka Srbije": 'DSS',
+            "Demokratska stranka": 'DS',
+            "Dosta je bilo": 'DJB',
+            "Pokret Dveri": 'Dveri',
+            "Liberalno demokratska stranka": 'LDP',
+            "Nova stranka": 'NS',
+            "Savez vojvođanskih Mađara": 'SVM',
+            "Srpska radikalna stranka": 'SRS',
+            "Socijaldemokratska stranka Srbije": 'SPS',
+            "Zavetnici": 'Zavetnici',
+            "Levica Srbije": 'Levica'
+        };
+
         var topThreeMatch = {{{json results}}};
         var parties = '';
         $.each(topThreeMatch, function(key, val){
-            parties = parties + val['partyName'] + "-" + val['matchingResult'] +"%, ";
+            parties = parties + parties_abbr[val['partyName']] + "-" + val['matchingResult'] +"%, ";
         });
 
 
@@ -147,7 +162,7 @@
             url: 'http://glasomer.rs',
 
             // optional:
-            description: "Meni najbliža stranka je - "+ parties
+            description: "Meni najbliža stranka je - "+ parties + "#Glasomer"
           });
 
         var allDataTbl = {{{json all_answers}}}; // we put three brackets to escape html encoding
