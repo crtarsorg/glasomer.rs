@@ -33,7 +33,7 @@ class MongoUtils:
         top_docs = self.mongo.db[self.collection_name].aggregate(
             [
                 {'$group': {'_id': query, 'count': {'$sum': 1}}},
-                {'$sort': SON([('count', 1)])}
+                {"$sort": SON([("count", -1), ("_id", -1)])}
 
             ]
         )

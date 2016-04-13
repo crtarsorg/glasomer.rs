@@ -42,6 +42,6 @@ def get_second_matches():
 
 @mod_api.route('/get/matches/third', methods=['GET'])
 def get_third_matches():
-    
+
     third_matches = mongo_utils.get_top_matches('third')
     return Response(response=json_util.dumps(third_matches), status=200, mimetype="application/json")
