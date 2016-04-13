@@ -19,3 +19,9 @@ class MongoUtils:
         }
 
         self.mongo.db[self.collection_name].insert(json_doc)
+
+    def get_total_count(self):
+
+        total = self.mongo.db[self.collection_name].count()
+
+        return total
