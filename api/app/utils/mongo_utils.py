@@ -10,7 +10,7 @@ class MongoUtils:
 
     def _insert(self, data):
         json_doc = {
-            'data': data,
+            'answers': data,
             'timestamp': datetime.datetime.utcnow()
         }
 

@@ -189,12 +189,12 @@
                 "comment": "/"
             },
             "Srpska radikalna stranka": {
-                "answer": "Ne slaažem se",
+                "answer": "Ne slažem se",
                 "importance": "Važno",
                 "comment": "Postoje parafiskalni nameti koje treba odmah ukinuti, ali neke od taksa treba ostaviti. Ne mogu svi poslovi državne uprave i lokalne samouprave da se obavljaju bez ikakve naknade. Povećanje broja internet usluga treba da dovede do oslobađanja plaćanja taksi, odnosno parafiskalnih nameta."
             },
             "Pokret Dveri": {
-                "answer": "Ne slaažem se",
+                "answer": "Ne slažem se",
                 "importance": "Važno",
                 "comment": "Poreski sistem bazirati na oslobađanju plaćanja poreza i doprinosa za novoosnovana domaća preduzeća u inicijalnim godinama rada. Takođe, smatramo korisnim da se uvedu progresivne poreske stope za inovativna i izvozno orijentisana privredna društva koja privrednu delatnost obavljaju u devastiranim područjima Republike Srbije. \nSprečiti sve manipulativne tehnike izbegavanja plaćanja poreza na svim nivoima i isisavanja kapitala iz Republike Srbije.\nPrioritetno i selektivno, u okviru realizacije mera ekonomske politike moguće je neke od parafiskalnih nameta ukinuti u cilju povećanja zaposlenosti, konkurentnosti, sektorske podrške, podrške regionalnom razvoju i slično. Sve u smislu jasno definisane strategije razvoja."
             },
@@ -334,7 +334,7 @@
       "question": "Vlada bi trebalo da uskrati državne podsticaje investitorima koji ne poštuju ljudska i radna prava zaposlenih.",
       "politiciansAnswers": {
           "Socijaldemokratska stranka Srbije": {
-                "answer": "slažem se",
+                "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "Ovo je Veoma važno pitanej za zaštitu ljudskih i radnih prava naših građana."
             },
