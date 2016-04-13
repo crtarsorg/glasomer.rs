@@ -194,25 +194,32 @@ window.ResultView = Backbone.View.extend({
 
             $(options.element).html(template({results: resultJson, all_answers: answers_array, answers_matched: answers_collection }));
 
-        });
+            var data_container = {
+                answers: answers_collection,
+                matched_parties: resultJson
 
-        $.ajax({
-            type: "POST",
-            url: "http://glasomer.rs/api/save",
-            data: JSON.stringify(options.data),
-            contentType: "application/json"
-        }).fail(function(err) {
-            console.log('An error occurred!')
-        });
+            };
 
+            $.support.cors = true;
+            $.ajax({
+                type: "POST",
+                url: "http://glasomer.rs/api/save",
+                crossDomain: true,
+                data: JSON.stringify(data_container),
+                contentType: "application/json"
+            }).fail(function(err) {
+                console.log(JSON.stringify(err));
+            });
+
+        });
     }
 });
 
 function calculateMatchingResult(politicianAnswers, userAnswer){
 
-    // Constants used to calculate the matching results, dual quote: 2,17391304
+    // Constants used to calculate the matching results, dual quote: 2.17391304
     var SINGLE_MATCHING_QT = 1.0869565;
-    // var DOUBLE_MATCHING_QT = 1.88679;
+    // var DOUBLE_MATCHING_QT = 2.17391304;
 
     var partyMatcher = initPartiesCounter();
     var user_match_answer = {
@@ -364,6 +371,10 @@ function partiesProfiles(){
         "Levica Srbije": {
             text:"Nekadašnji potpredsednik DS i šef poslaničke grupe u Skupštini Srbije Borko Stefanović, nakon napuštanja Demokratske stranke zbog “programskih i ideoloških razlika”, osniva pokret “Levica Srbije”. Na parlamentarne izbore 2016. godine ovaj pokret izlazi sa planom pod nazivom “Srbija posle Vučića”. Ideološki program i manifest Levice je pisao sociolog Jovo Bakić, koji je nakon toga optužio Stefanovića da želi “uspeh preko noći” i objavio da neće pristušiti pokretu.",
             imgUrl: ''
+        },
+        "Zavetnici": {
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+            imgUrl: ''
         }
 
     };
@@ -380,7 +391,7 @@ function initPartiesCounter(){
         "Savez vojvođanskih Mađara": 0,
         "Srpska radikalna stranka": 0,
         "Socijaldemokratska stranka Srbije": 0,
-        //"Srpska napredna stranka": 0,
+        "Zavetnici": 0,
         "Levica Srbije": 0
 
     };
