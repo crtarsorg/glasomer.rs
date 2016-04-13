@@ -52,6 +52,11 @@
                 "answer": "Ne slažem se",
                 "comment": "Dosdašnja praksa je pokazala da je subvencionisanje stranih investitora isisalo ogromnu količinu novca iz budžeta, a da su rešenja bila kratkog daha. Davanjem tog novca radnicima dalo bi bolje rezultate. Ljudi bi se sami snalazili i trajno rešavali svoje probleme.",
                 "importance": "Veoma važno"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "Subvencije za domaće, a ne samo strane investitore."
             }
       }
     },
@@ -107,7 +112,12 @@
                 "answer": "Ne slažem se",
                 "importance": "Važno",
                 "comment": "/"
-            }
+            },
+            "Zavetnici": {
+                  "answer": "Slažem se",
+                  "importance": "Veoma važno",
+                  "comment": "/"
+              }
       }
     },
      "q3": {
@@ -162,7 +172,12 @@
               "answer": "Slažem se",
               "importance": "Veoma važno",
               "comment": "Treba uvesti posebne olakšice za zapošljavanje mladih ljudi. To je jedna od najvažnijih mera koje Demokratska stranka predlaže."
-          }
+          },
+          "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            }
       }
     },
      "q4": {
@@ -217,7 +232,12 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "Pitanje je dosta uopšteno postavljeno i teško je na njega odgovoriti bez komentara. Teško se može reći da treba ukinuti SVE parafiskalne namete. Svakako da treba ukinuti one koji se nepotrebni, koji samo guše privredu, posebno mala i srednja preduzeća. "
-          }
+          },
+          "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
+            }
       }
     },
      "q5": {
@@ -272,6 +292,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "Ne samo da ubuduće treba prekinuti ovu praksu, svi dosadašnji tajni ugovori koji su sklopljeni, sklopljeni su pod nepovoljnim uslovima za građane i zbog toga će biti raskinuti. Vlada Vojvodine objavila je na posebnom sajtu informacije o tome kako je utrošen svaki dinar iz budžeta, a to očekujemo od svih nivoa vlasti."
+            },
+          "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -327,6 +352,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "Ako bi se samo deo ogromnih sredstava koja se daju stranim investitorima preusmerio na  domaću privredu, rezultati bi bili nemerljivo bolji. Kada je u pitanju poljoprivreda, ova vlast je subvencije za poljoprivredu smanjila tri puta – sa 12.000 dinara na 4.000, za šta ne može biti opravdanja ni u kakvoj štednji."
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -382,6 +412,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "Subvencije treba uskratiti i onim investitorima koji isplaćuju minimalne zarade zaposlenima. To što ova vlada nema drugog načina da privuče investitore pa pristaje na sve njihove uslove, počevši od skandaloznog Zakona o radu sve do minimalnih zarada, ne sme da se odražava na status radnika i takvo ponašanje je nedopustivo."
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -437,6 +472,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "Demokratska stranka će penzionerima vratiti penzije na nivo pre umanjenja i vratiće penzionerima sve ono što im je oduzeto. Ova mera je protivustavna, penzije su imovina penzionera koji su ih tokom celog svog radnog veka uplaćivali i nisu smele biti smanjene. Celokupna ušteda od smanjenja plata i penzija je 370 miliona evra – suma koja se samo jednim zakonom dodeli Srbijagasu ili Železari."
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -489,6 +529,11 @@
                 "comment": "SVM je stava da je poštovanje odluka suda deo pravne kulture, ali i da postoji ceo kompleks problema u oblasti zaštite rada koji se moraju rešavati kao prethodna pitanja, dakle pre no što dođemo do oštrijih sankcija za poslodavce u slučaju nepoštovanja suda u radnim sporovima: npr. veliki je broj nerešenih sporova (statistika govori da su sudovi započeli 2014. godinu sa 39.606 slučajeva radnih sporova, od čega je 10.140 starije od 2 godine); evidentan je nedostatak sudija osposobljenih za vođenje radnih sporova; sudska praksa je neujednačena. To je deo razloga koji su uzrokovali poremećaj u oblasti zaštite rada, doveli do gubljenja poverenja u sud, stvaranje osećaja nejednakosti, ali i nesigurnosti i poslodavaca i radnika kao stranaka u postupku. "
             },
             "Demokratska stranka": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
@@ -547,7 +592,12 @@
               "answer": "Slažem se",
               "comment": "Da, ako ima takvih preduzeća. Još bolje rešenje bi bilo da se određenim priviegijama što je moguće više preduzeća obaveže na ovu vrstu zapošljavanja.",
               "importance": "Važno"
-          }
+          },
+          "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma Važno",
+                "comment": "/"
+            }
       }
     }
   },
@@ -601,6 +651,11 @@
                 "comment": "Očuvanje nezavisnosti sudija i tužilaca od upliva države je temelj dobrog pravosuđa u demokratskoj državi: dobro pravosuđe u demokratskoj državi počiva na poverenju građana u instituciju zakona, u sudske i tužilačke instance. Zadatak pravno uređene države je da obezbedi vladavinu prava nad politikom, makar u najbitnijim elementima domena pravosudne vlasti, kao što je izbor sudija i javnih tužilaca. I Izveštaj Evropske komisije o napretku Srbije u procesima evropskih integracija (10. novembar 2015.) posebno naglašava značaj koraka koji moraju biti preduzeti kako bi se otklonili politički uticaji u pravosuđu. Pristupanje EU zahteva prihvatanje evropskog standarda pravosuđa, a taj standard se definiše kao sposobnost suda da odgovori: osnovnom pravu građanina na pošteno suđenje, kao i interesima države u kojoj vlada pravo, a ne samo politička moć. "
             },
             "Demokratska stranka": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -659,6 +714,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -711,6 +771,11 @@
                 "comment": "Ovo je važno pitanje, ali je SVM mišljenja da je, iako zvuči logično odmah prihvatiti ovakav predlog, potrebno ozbiljno promisliti o svim aspektima i posledicama eventualnog osnivanja posebnih sudova koji bi se bavili radnim sporovima. Nesporno je da problem postoji, da smo suočeni sa kršenjem zakonskih odredbi da se radni sporovi moraju okončati u roku od 6 meseci, da postoji slučaj da pred redovnim sudom u Beogradu jedan ovakav spor traje 23 godine, da su na kraju 2014. godine evidentirana 2.004 spora starija od 5 godina, od čega su čak 304 ušla u drugu deceniju trajanja. No, moramo imati u vidu da se u slučaju osnivanja novih sudova mora utvrditi njihova teritorijalna mreža i organizacija i da se mora sprovesti novi opšti izbor sudija. "
             },
             "Demokratska stranka": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
@@ -771,6 +836,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -826,6 +896,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "Naš ceo obrazovni sistem i dalje je formiran po zastarelim metodama i principima iz pretprošlog veka, u njegovom centru se nalazi učenje sadržaja napamet, nema učenja putem otkrića, a uspeh učenika zavisi isključivo od finansijskih prilika njihovih roditelja i toga da li mogu da im plaćaju privatne časove ili ne.  Umesto toga, treba nam moderan sistem u kom će učenici sami, razumevajući, dolaziti do saznanja i znanja koja će trajati i nakon što napiste školovanje."
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -880,6 +955,11 @@
             "Demokratska stranka": {
                 "answer": "/",
                 "importance": "/",
+                "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Veoma važno",
                 "comment": "/"
             }
       }
@@ -936,6 +1016,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "U školama u AP Vojvodini je već uvedeno seksualno obrazovanje, koje je danas za decu od izuzetnog značaja"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "/",
+                "comment": "Ali ne sexsualno obrazovanje koje promoviše i nameće LGBT populacija. Već isključivo usmereno edukaciji mladih."
             }
       }
     },
@@ -990,6 +1075,11 @@
             "Demokratska stranka": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Važno",
                 "comment": "/"
             }
       }
@@ -1046,6 +1136,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "Osim prilikom dobijanja akreditacije, veoma je važno i između dve akreditacije proveravati da li fakulteti i dalje ispunjavaju uslove koje su ispunjavali prilikom akreditacije – da li imaju sve nastavne programe, da li ti profesori i dalje rade na njima, da li sprovode sve aktivnosti. Veoma je česta pojava da fakulteti prilikom akreditacije ispunjavaju sve uslove samo radi dobijanja akreditacije, a da posle to nije slučaj."
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -1101,6 +1196,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Manje važno",
                 "comment": "Srbija nema privredu koja bi mogla da isprati ovaj, u načelu, dobar sistem. Moglo bi nam se desiti da na kraju dobijemo kadrove koji se školuju za radna mesta koja ne postoje."
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     }
@@ -1155,6 +1255,11 @@
                 "comment": "Smatramo da pacijentima treba da se omogući zdravstvena zaštita istog kvaliteta bez obzira gde žive. Zalagaćemo se da privatne zdravstvene ustanove postanu deo sistema zdravstvenog osiguranja, ali i da se poveća nivo zdravstvenih usluga u domovima zdravlja i bolnicama. "
             },
             "Demokratska stranka": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -1213,6 +1318,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -1266,6 +1376,11 @@
             },
             "Demokratska stranka": {
                 "answer": "Ne slažem se",
+                "importance": "Važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
             }
@@ -1325,6 +1440,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Veoma važno",
                 "comment": "Očuvanje postojećeg sistema, koji imaju sve zemlje EU, veoma je važno za nas."
+            },
+            "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -1380,6 +1500,11 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -1432,6 +1557,11 @@
                 "comment": "SVM je stava da se socijalno ugroženima mora obezbediti besplatna pravna pomoć polazeći od preporuka Saveta Evrope i od činjenice da u EU pravo na pravnu pomoć predstavlja jedno od osnovnih prava, čijim se ostvarivanjem obezbeđuje delotvoran pristup pravdi. U Povelji Evropske unije o osnovnim pravima iz 2000. utvrđeno je da: “svakome treba pružiti mogućnost da bude savetovan, branjen i zastupan, a da se onima koji nemaju dovoljno sredstava, mora učiniti dostupnom pravna pomoć u meri koja je neophodna da bi im se obezbedio efikasan pristup pravdi” (član 47. st. 2. i 3). \n\nSvesni smo kompleksnosti problema: u Vojvodini je u svega 28 od 45 lokalnih samouprava organizovano besplatno pružanje pravne pomoći; mali broj opština pruža besplatnu pravnu pomoć građanima, ali nema formiranu posebnu službu. Iskustva su različita, ali generalno stanje u većim gradovima je povoljnije, pa je npr. Grad Subotica je organizovao besplatnu pravnu pomoć kroz sporazum sa advokatskom komorom u Subotici. Manje sredine, iako su u obavezi, Kancelariju za pravnu pomoć najčešće nemaju. \n\nSmatramo da zakonom o besplatnoj pravnoj pomoći mora biti uređen način ostvarivanja prava na besplatnu pravnu pomoć, organizacija službi pri opštinama, formiranje i vođenje registra svih pružalaca pravne pomoći, bilo da se radi o advokatima, bilo o drugim pravnicima iz različitih udruženja i službi lokalnih samouprava; iskustva govore da se mora razmisliti i o rešenju da pravna pomoć u opštinama treba da bude organizaciono odvojena od lokalne uprave u cilju izbegavanja sukoba interesa prilikom davanja saveta građanima čija su prava ugrožena od strane lokalnih vlasti; takođe, ne smemo smetnuti s uma da je primarna pravna pomoć, pravno savetovanje građana izvan i pre formalnih pravnih postupaka, od posebnog značaja, da doprinosi pravnoj sigurnosti, umanjuje broj nepotrebnih postupaka, te rasterećuje sudove i trebalo bi uvažiti i podržati upravo savetodavnu aktivnost unutar sistema besplatne pravne pomoći."
             },
             "Demokratska stranka": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
@@ -1493,6 +1623,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Veoma važno",
                 "comment": "Ovo je jedno od najvažnijih pitanja za Demokratsku stranku. Skandalozan Zakon o poljoprivrednom zemljištu omogućio je da se u svakoj opštini bez ikakvog kriterijuma trećina državnog poljoprivrednog zemljišta pokloni investitoru po izboru vladajuće stranke. Demokratska stranka će raskinuti sve ugovore sklopljene po ovom zakonu."
+            },
+            "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -1548,6 +1683,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "U vreme kada je Demokratska stranka vodila državu, poljoprivrednici su imali subvencije 12.000 dinara, a danas imaju 4.000."
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -1602,6 +1742,11 @@
             "Demokratska stranka": {
                 "answer": "Ne slažem se",
                 "importance": "Važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Veoma važno",
                 "comment": "/"
             }
       }
@@ -1660,6 +1805,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -1712,6 +1862,11 @@
                 "comment": "SVM je dao svoj prilog radu Akcionog tima za reformu političkog sistema i stava smo da su predstojeće promene Ustava (Akcioni plan za pregovaranje poglavlja 23 predviđa da će Ustav biti promenjen do kraja 2017.)  prilika da se postigne dogovor i o izmenama izbornog sistema. Smatramo da treba zadržati neki od oblika proporcionalnog izbornog sistema i razmisliti o uvođenju stepenastog cenzusa za koalicije. \nTreba pažljivo pristupati izbornoj problematici, budući da smo svedoci da je promenom Odluke o izborima u Autonomnoj pokrajini Vojvodini, kojom se uvodi čist proporcionalni, umesto kombinovanog izbornog sistema (kojim je bila obezbeđena zastupljenost svih vojvođanskih opština u Skupštini AP Vojvodne) učinjen korak unazad."
             },
             "Demokratska stranka": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -1770,6 +1925,11 @@
                 "answer": "Slažem se",
                 "importance": "Manje važno",
                 "comment": "Mnogo je važnije pitanje i mnogo veći problem to što se ne poštuju ni nadležnosti koje AP Vojvodina sada ima. Ne potpuna, ali delimična sudska vlast bi bila prihvatljivo rešenje."
+            },
+            "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -1825,6 +1985,11 @@
                 "answer": "/",
                 "importance": "Nije važno",
                 "comment": "Ovo nije stvarna dilema"
+            },
+            "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -1879,6 +2044,11 @@
             "Demokratska stranka": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Važno",
                 "comment": "/"
             }
       }
@@ -1935,6 +2105,11 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -1990,6 +2165,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Važno",
+                "comment": "Smatramo da je neophodno učešće žena u izvršnoj vlasti, ali uslov za 50% žena na izbornim listama nije ostavariv u ovim okolnostima, jer ne postoji dovoljna motivacija kod žena da se politički angažuju. "
             }
       }
     },
@@ -2042,6 +2222,11 @@
                 "comment": "SVM će podržati sve inicijative kako bi se obezbedio pristup servisima u zajednici za sve osobe bez obzira na pol, starosnu dob, invaliditet i druge razlike polazeći od načela evropske politike socijalne uključenosti i uvažavajući odredbe Ustava, Akcionog plana Evropske Unije o invalidnosti, Konvencije UN o pravima OSI, kao i Zakona o zabrani diskriminacije i načela Strategije prevencije i zaštite od diskriminacije i Akcionog plana za primenu Strategije prevencije i zaštite od diskriminacije za period od 2014. do 2018.  Naša podrška politikama antidiskriminacije znači podršku istinski inkluzivnom društvu u kome će svi članovi zajednice imati pristup odgovarajućim servisima. Naravno, svesni smo da to podrazumeva i promenu regulative, ali i da se neminovno postavlja pitanje sredstava. SVM je stava da se servisi prilagođeni određenim kategorijama, moraju razvijati kao prioritet, a da se problem sredstava može rešiti kroz projektnu podršku iz fondova EU. "
             },
             "Demokratska stranka": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -2100,6 +2285,11 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -2152,6 +2342,11 @@
                 "comment": "SVM će apsolutno podržati donošenje Zakona o poreklu imovine u sledećem sazivu Narodne skupštine. U borbi protiv kriminala i korupcije, a posebna pažnja tom problemu je posvećena u Akcionom planu za pregovaranje poglavlja 23, donošenje zakona o poreklu imovine je jedan od ključnih koraka. Izveštaj Evropske komisije o napretku Srbije u procesima evropskih integracija (od 10.novembra 2015.) posebno naglašava da borba protiv korupcije još uvek ne donosi značajne rezultate; da institucionalno okruženje još uvek ne funkcioniše kao kredibilan sistem odvraćanja i, da se očekuju značajnija postignuća u istragama, tužilaštvu i presudama, uključujući i slučajeve korupcije na visokom nivou.  Srbija je usvojila strategije za borbu protiv pranja novca i finansiranja terorizma, kao i Strategiju finansijskih istraga, ali još uvek nedostaje široka slika o stanju organizovanog kriminala. Evropska unija očekuje značajnija, kredibilna postignuća u borbi protiv organizovanog kriminala, a donošenje i primena ovog zakona će predstavljati kredibilno postignuće. "
             },
             "Demokratska stranka": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -2212,6 +2407,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -2267,6 +2467,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Važno",
                 "comment": "Učešće Srbije u partnerstvu za mir je dovoljna mera atlantskih integracija Srbije."
+            },
+            "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     }
@@ -2321,6 +2526,11 @@
                 "comment": "SVM prati i uočava brojne kontraverze koje u javnosti izaziva rad Regulatornog tela za elektronske medije u poslednjoj deceniji, počev od dodele frekvencija 2006. Svesni smo da su evidentni problemi u donošenju neefikasne regulative, neadekvatne kontrole emitera, da je nerazvijen sistem za postupanje po pritužbama gledalaca, da postoji uzdržavanje od sprovođenja pojedinih nadležnosti. Međutim, SVM je mala poslanička grupa koja ne može da ostvari takvu vrstu uticaja da bi se lista pomenutih problema i rešila. SVM jedino može da apeluje da sve institucije obavljaju posao savesno i kompetentno, da štite javni interes, ljudsko dostojanstvo i prava građana. "
             },
             "Demokratska stranka": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -2379,6 +2589,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -2431,6 +2646,11 @@
                 "comment": "SVM prihvata preporuke Evropske komisije iz Izveštaja o napretku Srbije u procesima evropskih integracija (10. novembar 2015.) da Narodna skupština mora da pojača svoju podršku nezavisnim regulatornim telima, kao i kancelariji Ombudsmana i da promoviše i osigura implementaciju njegovih preporuka. "
             },
             "Demokratska stranka": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -2491,6 +2711,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -2545,6 +2770,11 @@
             "Demokratska stranka": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
                 "comment": "/"
             }
       }
