@@ -110,7 +110,6 @@ window.ResultView = Backbone.View.extend({
         var matchingResult;
         var template = this.template;
 
-        console.log(options.data);
         Handlebars.registerHelper('json', function(context) {
             return JSON.stringify(context);
         });
@@ -263,6 +262,9 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
                             if(userAnswer['importance_level'] == (importance_answer.charAt(0).toUpperCase() + importance_answer.slice(1))){
 
                                 first_match_qt = first_match_qt + SINGLE_MATCHING_QT;
+                            }
+                            else{
+                                console.log("user's:"+userAnswer['importance_level']+", party:" + prop + ", Imprtc answer: " + importance_answer);
                             }
                             partyMatcher[prop] = first_match_qt;
                         }
