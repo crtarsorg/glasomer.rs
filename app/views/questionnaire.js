@@ -91,7 +91,7 @@ window.QuestionnaireView = Backbone.View.extend({
         }
         else {
             // Switch to results' view
-            var resultView = new ResultView({element: "#container", data: answers_array});
+            var resultView = new ResultView({element: "#container", data: answers_array, budgetInfo: ch_b_json});
         }
     }
 
@@ -213,7 +213,8 @@ window.ResultView = Backbone.View.extend({
 
             var data_container = {
                 answers: answers_collection,
-                matched_parties: matched_sub_doc
+                matched_parties: matched_sub_doc,
+                budget: options.budgetInfo.answer
 
             };
 

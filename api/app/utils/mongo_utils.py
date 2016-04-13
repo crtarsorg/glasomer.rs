@@ -12,6 +12,7 @@ class MongoUtils:
         json_doc = {
             'answers': data['answers'],
             'topMatches': data['matched_parties'],
+            'budget': data['budget'],
             'timestamp': datetime.datetime.utcnow()
         }
 
