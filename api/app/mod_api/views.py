@@ -24,3 +24,24 @@ def save_data():
 def counts():
     total = mongo_utils.get_total_count()
     return Response(response=json_util.dumps({"totalNumberOfAnswers": total}), status=200, mimetype="application/json")
+
+
+@mod_api.route('/get/matches/first', methods=['GET'])
+def get_first_matches():
+
+    first_matches = mongo_utils.get_top_matches('first')
+    return Response(response=json_util.dumps(first_matches), status=200, mimetype="application/json")
+
+
+@mod_api.route('/get/matches/second', methods=['GET'])
+def get_second_matches():
+
+    second_matches = mongo_utils.get_top_matches('second')
+    return Response(response=json_util.dumps(second_matches), status=200, mimetype="application/json")
+
+
+@mod_api.route('/get/matches/third', methods=['GET'])
+def get_third_matches():
+    
+    third_matches = mongo_utils.get_top_matches('third')
+    return Response(response=json_util.dumps(third_matches), status=200, mimetype="application/json")

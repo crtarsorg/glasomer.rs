@@ -1,4 +1,5 @@
 import datetime
+from bson import SON
 
 
 class MongoUtils:
@@ -25,3 +26,16 @@ class MongoUtils:
         total = self.mongo.db[self.collection_name].count()
 
         return total
+
+    def get_top_matches(self, place):
+
+        query = '$topMatches.' + place + '.name'
+        top_docs = self.mongo.db[self.collection_name].aggregate(
+            [
+                {'$group': {'_id': query, 'count': {'$sum': 1}}},
+                {'$sort': SON([('count', 1)])}
+
+            ]
+        )
+
+        return top_docs['result']
