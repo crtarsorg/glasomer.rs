@@ -11,7 +11,7 @@ def index():
     return render_template('index.html')
 
 
-@mod_api.route('/api/save', methods=['POST'])
+@mod_api.route('/save', methods=['POST'])
 def save_data():
     if len(request.json) > 0:
         mongo_utils.save_to_database(request.json)
