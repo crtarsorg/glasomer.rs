@@ -49,7 +49,6 @@ window.QuestionnaireView = Backbone.View.extend({
                 tmp_val = undefined;
             }
 
-
             answers_json['importance_level'] = tmp_val;
 
             if(answers_json['question'] != ""){
@@ -74,7 +73,6 @@ window.QuestionnaireView = Backbone.View.extend({
             if (checkedValue != ""){
                 dec_checkboxes.push(checkedValue);
             }
-
         });
 
         var ch_b_json = {
@@ -274,13 +272,12 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
             });
 
             user_match_answer['parties']['Vaš odgovor'] = {answer: userAnswer['answer'], importance: userAnswer['importance_level']};
-
         }
         //else if (item["question"] == "Budžetski prioriteti" && userAnswer['question'] == "Budžetski prioriteti"){
         //
         //    $.each(item['politiciansAnswers'], function (key, party) {
         //
-        //        $.each(party['increase'], function(indx, val){
+        //        $.each(party['increase'], function(idx, val){
         //            if (isInArray(val, userAnswer['answer'])){
         //                partyMatcher[key] = partyMatcher[key] + DOUBLE_MATCHING_QT;
         //            }
@@ -290,10 +287,6 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
     });
 
     return {matcher: partyMatcher, answer_collection: user_match_answer};
-}
-
-function isInArray(value, array) {
-    return array.indexOf(value) > -1;
 }
 
 function initCategoriesWithQuestions(el, template) {
@@ -394,7 +387,6 @@ function partiesProfiles(){
             text: "Srpski sabor Zavetnici je politička organizacija, zvanično formirana na Sretenje, 15. februara 2012. godine. Srpski sabor Zavetnici zalaže se za vođenje suverenističke i nacionalno odgovorne politike, koja se zasniva na odbrani teritorijalnog integriteta i političke nezavisnosti Republike Srbije. Suverenistička politika označava delovanje u skladu sa vitalnim državnim i nacionalnim interesima srpskog naroda, što podrazumeva očuvanje Kosova i Metohije kao sastavnog i neotuđivog dela državne teritorije Republike Srbije. Predsednik Srpskog sabora Zavetnici je Stefan Stamenkovski, a portparolka Milica Đurđević, koja je prva na listi Zavetnika za vanredne parlamentarne izbore. Na republičkim vanrednim parlamentarnim izborima 2014. godine, stranka je nastupila u koaliciji pod nazivom 'Patriotski front' sa Saborom srpskog jedinstva, NP - Preporodom Srbije i Slobodnom Srbijom - Niš; ali osvajaju svega 4. 514 glasova i ne prelaze izborni cenzus.",
             imgUrl: ''
         }
-
     };
 }
 
