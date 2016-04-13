@@ -263,9 +263,6 @@ function calculateMatchingResult(politicianAnswers, userAnswer){
 
                                 first_match_qt = first_match_qt + SINGLE_MATCHING_QT;
                             }
-                            else{
-                                console.log("user's:"+userAnswer['importance_level']+", party:" + prop + ", Imprtc answer: " + importance_answer);
-                            }
                             partyMatcher[prop] = first_match_qt;
                         }
 
