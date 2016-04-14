@@ -112,6 +112,13 @@ window.ResultView = Backbone.View.extend({
             return JSON.stringify(context);
         });
 
+        Handlebars.registerHelper('if_eq', function (a, b, opts) {
+            if (a == b)
+                return opts.fn(this);
+            else
+                return opts.inverse(this);
+        });
+
         readTextFile("app/static/questions.json", function (respJson) {
             var json_handler = JSON.parse(respJson);
             var partyMatcher = initPartiesCounter();
@@ -219,7 +226,7 @@ window.ResultView = Backbone.View.extend({
             $.support.cors = true;
             $.ajax({
                 type: "POST",
-                url: "http://glasomer.rs/api/save",
+                url: "http://0.0.0.0:5001/save",
                 crossDomain: true,
                 data: JSON.stringify(data_container),
                 contentType: "application/json"

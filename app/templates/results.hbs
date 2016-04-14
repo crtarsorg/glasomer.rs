@@ -66,7 +66,7 @@
                 <div class="panel-body">
                     <div class="quotes col-xs-5">
                         <img class="img-responsive img-thumbnail" src="app/static/imgs/logos/{{this.partyName}}.png"/>
-                        <div class="text" style="font-size: 20px;">{{this.partyName}}</div>
+                        <div class="text" style="font-size: 20px;">{{#if_eq partyName "Liberalno demokratska stranka"}}Liberalno demokratska patija{{else}}{{partyName}}{{/if_eq}}</div>
                         <div class="large-text" style="font-size: 4em; color: darkred;">{{this.matchingResult}}%</div>
                     </div>
                     <div class="col-xs-7">
@@ -241,7 +241,11 @@ function formatSubTable ( d ) {
         var comment, answer, importance;
         if (party == 'Vaš odgovor'){
             comment = '/';
-        }else{
+        }
+        else if(party == "Liberalno demokratska stranka"){
+            party = "Liberalno demokratska partija";
+        }
+        else{
             comment = d.parties[party]['comment'];
         }
 
