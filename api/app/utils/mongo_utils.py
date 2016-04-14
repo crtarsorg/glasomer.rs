@@ -39,3 +39,15 @@ class MongoUtils:
         )
 
         return top_docs['result']
+
+    def get_counts_on_budget_increase_decrease(self):
+
+        top_budget = self.mongo.db[self.collection_name].aggregate(
+            [
+                {'$unwind': '$budget.increase'},
+                {'$unwind': '$budget.decrease'},
+                {'$group': {'_id': '', 'count': {'$sum': 1}}},
+                {"$sort": SON([("count", -1), ("_id", -1)])}
+
+            ]
+        )
