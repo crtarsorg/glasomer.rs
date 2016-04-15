@@ -226,7 +226,7 @@ window.ResultView = Backbone.View.extend({
             $.support.cors = true;
             $.ajax({
                 type: "POST",
-                url: "http://glasomer.rs/api/save",
+                url: "http://0.0.0.0:5001/save",
                 crossDomain: true,
                 data: JSON.stringify(data_container),
                 contentType: "application/json"

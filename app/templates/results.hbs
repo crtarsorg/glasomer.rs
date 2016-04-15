@@ -243,9 +243,6 @@ function formatSubTable ( d ) {
         if (party == 'Vaš odgovor'){
             comment = '/';
         }
-        else if(party == "Liberalno demokratska stranka"){
-            party = "Liberalno demokratska partija";
-        }
         else{
             comment = d.parties[party]['comment'];
         }
@@ -260,6 +257,10 @@ function formatSubTable ( d ) {
             importance = '/';
         }else{
             importance = d.parties[party]['importance'];
+        }
+
+        if(party == "Liberalno demokratska stranka"){
+            party = "Liberalno demokratska partija";
         }
 
         rowInjection = rowInjection +
