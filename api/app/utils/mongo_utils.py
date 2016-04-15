@@ -42,12 +42,25 @@ class MongoUtils:
 
     def get_counts_on_budget_increase_decrease(self):
 
-        top_budget = self.mongo.db[self.collection_name].aggregate(
+        increase_budget = self.mongo.db[self.collection_name].aggregate(
             [
                 {'$unwind': '$budget.increase'},
-                {'$unwind': '$budget.decrease'},
-                {'$group': {'_id': '', 'count': {'$sum': 1}}},
+                {'$group': {'_id': '$budget.increase', 'count': {'$sum': 1}}},
                 {"$sort": SON([("count", -1), ("_id", -1)])}
-
             ]
         )
+
+        decrease_budget = self.mongo.db[self.collection_name].aggregate(
+            [
+                {'$unwind': '$budget.decrease'},
+                {'$group': {'_id': '$budget.decrease', 'count': {'$sum': 1}}},
+                {"$sort": SON([("count", -1), ("_id", -1)])}
+            ]
+        )
+
+        main_json = {
+            'increaseBudget': increase_budget['result'],
+            'decreaseBudget': decrease_budget['result']
+        }
+
+        return main_json

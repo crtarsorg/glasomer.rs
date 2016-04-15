@@ -57,6 +57,11 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "Subvencije za domaće, a ne samo strane investitore."
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Ne slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -117,7 +122,12 @@
                   "answer": "Slažem se",
                   "importance": "Veoma važno",
                   "comment": "/"
-              }
+              },
+              "Liga socijaldemokrata Vojvodine": {
+                "answer": "Ne slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            }
       }
     },
      "q3": {
@@ -174,6 +184,11 @@
               "comment": "Treba uvesti posebne olakšice za zapošljavanje mladih ljudi. To je jedna od najvažnijih mera koje Demokratska stranka predlaže."
           },
           "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -237,7 +252,13 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
+
       }
     },
      "q5": {
@@ -294,6 +315,11 @@
                 "comment": "Ne samo da ubuduće treba prekinuti ovu praksu, svi dosadašnji tajni ugovori koji su sklopljeni, sklopljeni su pod nepovoljnim uslovima za građane i zbog toga će biti raskinuti. Vlada Vojvodine objavila je na posebnom sajtu informacije o tome kako je utrošen svaki dinar iz budžeta, a to očekujemo od svih nivoa vlasti."
             },
           "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+          "Liga socijaldemokrata Vojvodine": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -357,6 +383,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -417,6 +448,11 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -474,6 +510,11 @@
                 "comment": "Demokratska stranka će penzionerima vratiti penzije na nivo pre umanjenja i vratiće penzionerima sve ono što im je oduzeto. Ova mera je protivustavna, penzije su imovina penzionera koji su ih tokom celog svog radnog veka uplaćivali i nisu smele biti smanjene. Celokupna ušteda od smanjenja plata i penzija je 370 miliona evra – suma koja se samo jednim zakonom dodeli Srbijagasu ili Železari."
             },
             "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -537,6 +578,11 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -595,7 +641,12 @@
           },
           "Zavetnici": {
                 "answer": "Slažem se",
-                "importance": "Veoma Važno",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+          "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
                 "comment": "/"
             }
       }
@@ -659,6 +710,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+          "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "Nezavisno pravosuđe je deo garancije vladavine prava. Istovremeno, da bi bilo nezavisno, mora da bude stručno i to na izuzetno visokom nivou."
             }
       }
     },
@@ -719,6 +775,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "Potrebno je doneti novi zakon o praničnom postupku i Zakon o krivičnom postupku."
             }
       }
     },
@@ -779,6 +840,11 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Ne slažem se",
+                "importance": "Veoma važno",
+                "comment": "Problem efikasnosti u rešavanju radnih sporova ne rešava formiranje posebnih sudova. I sada se radni sporovi rešavaju u okviru posebnih odeljenja. Efikasnost je vezana za stručnost sudije i zakon u postupku."
             }
       }
     }
@@ -841,6 +907,11 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+          "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -901,6 +972,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -959,6 +1035,11 @@
             },
             "Zavetnici": {
                 "answer": "Ne slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
             }
@@ -1021,6 +1102,11 @@
                 "answer": "Slažem se",
                 "importance": "/",
                 "comment": "Ali ne sexsualno obrazovanje koje promoviše i nameće LGBT populacija. Već isključivo usmereno edukaciji mladih."
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "Obrazovanje mora da bude otvoreno, bez tabu tema."
             }
       }
     },
@@ -1078,6 +1164,11 @@
                 "comment": "/"
             },
             "Zavetnici": {
+                "answer": "Ne slažem se",
+                "importance": "Važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
                 "answer": "Ne slažem se",
                 "importance": "Važno",
                 "comment": "/"
@@ -1141,6 +1232,11 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -1198,6 +1294,11 @@
                 "comment": "Srbija nema privredu koja bi mogla da isprati ovaj, u načelu, dobar sistem. Moglo bi nam se desiti da na kraju dobijemo kadrove koji se školuju za radna mesta koja ne postoje."
             },
             "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
@@ -1263,6 +1364,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "Prethodno definisati tačan sadržaj osnovnog paketa zdravstvenih usluga. Kriterijumima i standaradima opredeliti privatne zdravstvene ustanove koje bi pružale zdravstvene usluge."
             }
       }
     },
@@ -1320,6 +1426,11 @@
                 "comment": "/"
             },
             "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
@@ -1383,6 +1494,11 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "Omogućiti dobrovoljno i dopunsko osiguranje kojim bi se bavile i državne i privatne osiguravajuće kuće."
             }
       }
     }
@@ -1445,6 +1561,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Nemam stav",
+                "importance": "Veoma važno",
+                "comment": "To što nemamo stav znači da upravo radimo na predlogu reformisanja PIO fonda."
             }
       }
     },
@@ -1502,6 +1623,11 @@
                 "comment": "/"
             },
             "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
@@ -1564,6 +1690,11 @@
             "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
                 "comment": "/"
             }
       }
@@ -1628,6 +1759,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Ne slažem se",
+                "importance": "Veoma važno",
+                "comment": "Poklanjanje poljoprivrednog zemljišta stranim investitorima je bezakoje i samovolja izvršne vlasti."
             }
       }
     },
@@ -1688,6 +1824,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "U funkciji podsticanja razvoja poljoprivrede"
             }
       }
     },
@@ -1748,6 +1889,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Ne slažem se",
+                "importance": "Veoma važno",
+                "comment": "U domenu zagađivanja sredine"
             }
       }
     }
@@ -1810,6 +1956,11 @@
                 "answer": "Slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -1869,6 +2020,11 @@
             "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Ne slažem se",
+                "importance": "Važno",
                 "comment": "/"
             }
       }
@@ -1930,6 +2086,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "Ovakvom organizacijom vlasti načelo vladavine prava se tek ostvaruje u potpunosti."
             }
       }
     },
@@ -1988,6 +2149,11 @@
             },
             "Zavetnici": {
                 "answer": "Ne slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
             }
@@ -2050,6 +2216,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -2109,6 +2280,11 @@
             "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Važno",
                 "comment": "/"
             }
       }
@@ -2170,6 +2346,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Važno",
                 "comment": "Smatramo da je neophodno učešće žena u izvršnoj vlasti, ali uslov za 50% žena na izbornim listama nije ostavariv u ovim okolnostima, jer ne postoji dovoljna motivacija kod žena da se politički angažuju. "
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -2227,6 +2408,11 @@
                 "comment": "/"
             },
             "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -2290,6 +2476,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -2347,6 +2538,11 @@
                 "comment": "/"
             },
             "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -2412,6 +2608,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -2472,6 +2673,11 @@
                 "answer": "Ne slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Nemam stav",
+                "importance": "Veoma važno",
+                "comment": "Stranački organi trenutno pripremaju Platformu o odnosu LSV prema NATO integracijama."
             }
       }
     }
@@ -2534,6 +2740,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "U ovoj sferi treba početi od početka."
             }
       }
     },
@@ -2594,6 +2805,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Važno",
+                "comment": "/"
             }
       }
     },
@@ -2651,6 +2867,11 @@
                 "comment": "/"
             },
             "Zavetnici": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
@@ -2716,6 +2937,11 @@
                 "answer": "Slažem se",
                 "importance": "Veoma važno",
                 "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
+                "comment": "/"
             }
       }
     },
@@ -2775,6 +3001,11 @@
             "Zavetnici": {
                 "answer": "Slažem se",
                 "importance": "Važno",
+                "comment": "/"
+            },
+            "Liga socijaldemokrata Vojvodine": {
+                "answer": "Slažem se",
+                "importance": "Veoma važno",
                 "comment": "/"
             }
       }

@@ -393,6 +393,10 @@ function partiesProfiles(){
         "Zavetnici": {
             text: "Srpski sabor Zavetnici je politička organizacija, zvanično formirana na Sretenje, 15. februara 2012. godine. Srpski sabor Zavetnici zalaže se za vođenje suverenističke i nacionalno odgovorne politike, koja se zasniva na odbrani teritorijalnog integriteta i političke nezavisnosti Republike Srbije. Suverenistička politika označava delovanje u skladu sa vitalnim državnim i nacionalnim interesima srpskog naroda, što podrazumeva očuvanje Kosova i Metohije kao sastavnog i neotuđivog dela državne teritorije Republike Srbije. Predsednik Srpskog sabora Zavetnici je Stefan Stamenkovski, a portparolka Milica Đurđević, koja je prva na listi Zavetnika za vanredne parlamentarne izbore. Na republičkim vanrednim parlamentarnim izborima 2014. godine, stranka je nastupila u koaliciji pod nazivom 'Patriotski front' sa Saborom srpskog jedinstva, NP - Preporodom Srbije i Slobodnom Srbijom - Niš; ali osvajaju svega 4. 514 glasova i ne prelaze izborni cenzus.",
             imgUrl: ''
+        },
+        'Liga socijaldemokrata Vojvodine':{
+            text:"Liga socijaldemokrata Vojvodine/Jugoslavije (LSV/J) nastala je 14. jula 1990. godine. Od 1994. godine zvanični naziv stranke je Liga socijaldemokrata Vojvodine (LSV). U LSV navode da je „vraćanje autonomije Vojvodine stalni razlog borbe članica i članova LSV. Politika stranke počiva na principima socijaldemokratije i zahtevima da Vojvodini bude vraćeno ono što joj pripada. Viđenje LSV je da su to zakonodavna, izvršna i sudska vlast, izvorni prihodi i sopstvena imovina pokrajine garantovani Ustavom. Predsednik stranke, od njenog osnivanja, jeste Nenad Čanak. Tokom 1999. LSV je promovisala programski dokument „Vojvodina republika – put mira, stabilnosti i razvoja“. LSV 2000. godine postaje članica DOS-a, koja je na izborima u septembru i decembru te godine srušila režim Slobodana Miloševića. U maju 2012. godine LSV nastupa u koaliciji stranaka okupljenih oko Demokratske stranke “Izbor za bolji život – Boris Tadić”, koja je osvojila je 22,11 odsto glasova (67 poslanika), a LSV je pripalo pet poslaničkih mesta u Skupštini Srbije. Na vanredne parlamentarne izbore 2014. godine stranka je izašla u koaliciji pod nazivom „Boris Tadić — Nova demokratska stranka — Zeleni, LSV — Nenad Čanak, Zajedno za Srbiju, VMDK, Zajedno za Vojvodinu, Demokratska levica Roma”, stranka je osvojila šest poslaničkih mesta u Skupštini Srbije.",
+            imgUrl: ''
         }
     };
 }
@@ -409,7 +413,7 @@ function initPartiesCounter(){
         "Srpska radikalna stranka": 0,
         "Socijaldemokratska stranka Srbije": 0,
         "Zavetnici": 0,
-        "Levica Srbije": 0
-
+        "Levica Srbije": 0,
+        "Liga socijaldemokrata Vojvodine": 0
     };
 }

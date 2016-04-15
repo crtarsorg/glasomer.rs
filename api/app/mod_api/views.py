@@ -45,3 +45,9 @@ def get_third_matches():
 
     third_matches = mongo_utils.get_top_matches('third')
     return Response(response=json_util.dumps(third_matches), status=200, mimetype="application/json")
+
+
+@mod_api.route('/get/budget/counts', methods=['GET'])
+def budget_balance():
+    result = mongo_utils.get_counts_on_budget_increase_decrease()
+    return Response(response=json_util.dumps(result), status=200, mimetype="application/json")
