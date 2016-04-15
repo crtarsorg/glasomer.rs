@@ -1,6 +1,6 @@
 import datetime
 from bson import SON
-
+import string
 
 class MongoUtils:
 
@@ -58,9 +58,25 @@ class MongoUtils:
             ]
         )
 
+
+
         main_json = {
-            'increaseBudget': increase_budget['result'],
-            'decreaseBudget': decrease_budget['result']
+            'increase': self.structure_sub_json(increase_budget['result']),
+            'decrease': self.structure_sub_json(decrease_budget['result'])
         }
 
         return main_json
+
+    def structure_sub_json(self, item_array):
+        json_doc = {}
+        for item in item_array:
+            json_doc[self.convert_case(item['_id'])] = item['count']
+
+        return json_doc
+
+    @staticmethod
+    def convert_case(name):
+
+        string_key = string.capwords(name).replace(' ', '')
+
+        return string_key[:1].lower() + string_key[1:]
