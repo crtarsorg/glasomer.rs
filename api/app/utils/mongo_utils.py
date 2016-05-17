@@ -77,29 +77,99 @@ class MongoUtils:
         return json_doc
 
     def get_insights(self):
-        match = {
-                "$match": {
-                    "answers.parties": {}
-                }
-            }
-        match["$match"]["answers.parties"][u"Vaš odgovor"] = {}
-        match["$match"]["answers.parties"][u"Vaš odgovor"]["importance"] = u"Važno"
+        vaz = []
+        
+        vaz = self.pipeline_build(["Važno"])
+        nije_vaz = self.pipeline_build(["Nije važno"])
+        manje_vaz = self.pipeline_build(["Manje važno"])
+        veoma = self.pipeline_build(["Veoma važno"])
+        all_tp = self.pipeline_build(["", "Važno", "Nije važno", "Manje važno", "Veoma važno"])
 
-        group = {
-            "$group": {
-                "_id": {"qst":"$answers.question"},
-                "counter": {"$sum": 1}
-            }
-        }
-
-        group["$group"]["_id"]["importance"] = u"$answers.parties.Vaš odgovor.importance"
-
-        aggregation = [
+        # Query
+        all_pipe = self.mongo.db[self.collection_name].aggregate(pipeline = [
             {
                 "$unwind": "$answers"
             },
-            match,
-            group,
+            {
+                "$group": {
+                    "_id": {"qst":"$answers.question"},
+                    "counter": {"$sum": 1}
+                }
+            },
+            {
+                "$sort": SON([("counter", 1), ("_id.qst", 1)])
+            },
+            {
+                "$project": {
+                    "_id": 0,
+                    "question": "$_id.qst",
+                    "importance": "$_id.importance",
+                    "totalAnswers": "$counter"
+                }
+            }
+        ])
+        vazno = self.mongo.db[self.collection_name].aggregate(vaz)
+        nije_vazno = self.mongo.db[self.collection_name].aggregate(nije_vaz)
+        manje_vazno = self.mongo.db[self.collection_name].aggregate(manje_vaz)
+        veoma_vazno = self.mongo.db[self.collection_name].aggregate(veoma)
+
+        for ind, itm in enumerate(all_pipe['result']):
+
+            counter = 0
+            # Vazno
+            for elem in vazno['result']:
+                if itm['question'] == elem['question']:
+                    itm["vazno"] = elem['totalAnswers']
+                    counter += elem['totalAnswers'] 
+                    all_pipe['result'][ind] = itm
+
+            # nije_vazno
+            for elem in nije_vazno['result']:
+                if itm['question'] == elem['question']:
+                    itm["NijeVazno"] = elem['totalAnswers']
+                    counter += elem['totalAnswers']
+                    all_pipe['result'][ind] = itm
+            # manje_vazno
+            for elem in manje_vazno['result']:
+                if itm['question'] == elem['question']:
+                    itm["manjeVazno"] = elem['totalAnswers']
+                    counter += elem['totalAnswers'] 
+                    all_pipe['result'][ind] = itm
+            # veoma_vazno
+            for elem in veoma_vazno['result']:
+                if itm['question'] == elem['question']:
+                    itm["veomaVazno"] = elem['totalAnswers']
+                    counter += elem['totalAnswers']
+                    all_pipe['result'][ind] = itm
+            itm['noAnswer'] = itm['totalAnswers'] - counter
+            all_pipe['result'][ind] = itm
+
+        return all_pipe['result']
+
+    @staticmethod
+    def convert_case(name):
+
+        string_key = string.capwords(name).replace(' ', '')
+
+        return string_key[:1].lower() + string_key[1:]
+
+    
+    def pipeline_build(self, value):
+        pipeline = [
+            {
+                "$unwind": "$answers"
+            },
+            {
+                "$match": {
+                    "answers.parties.Vaš odgovor.importance": {"$in":value}
+                }
+            },
+            {
+                "$group": {
+                    "_id": {"qst":"$answers.question", "importance": "$answers.parties.Vaš odgovor.importance"},
+                    "counter": {"$sum": 1}
+                }
+            },
             {
                 "$sort": SON([("counter", 1), ("_id.qst", 1)])
             },
@@ -112,13 +182,4 @@ class MongoUtils:
                 }
             }
         ]
-        docs = self.mongo.db[self.collection_name].aggregate(aggregation)
-
-        return docs['result']
-
-    @staticmethod
-    def convert_case(name):
-
-        string_key = string.capwords(name).replace(' ', '')
-
-        return string_key[:1].lower() + string_key[1:]
+        return pipeline
