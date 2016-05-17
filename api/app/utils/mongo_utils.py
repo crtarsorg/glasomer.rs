@@ -81,18 +81,24 @@ class MongoUtils:
                 "$unwind": "$answers"
             },
             {
+                "$match": {
+                    "answers.parties.Vaš odgovor.importance": "Važno"
+                }
+            },
+            {
                 "$group": {
-                    "_id": "$answers.question",
+                    "_id": {"qst":"$answers.question", "importance": "$answers.parties.Vaš odgovor.importance"}
                     "counter": {"$sum": 1}
                 }
             },
             {
-                "$sort": SON([("count", 1), ("_id", 1)])
+                "$sort": SON([("counter", 1), ("_id.qst", 1)])
             },
             {
                 "$project": {
                     "_id": 0,
-                    "question": "$_id",
+                    "question": "$_id.qst",
+                    "importance": "$_id.importance",
                     "totalAnswers": "$counter"
                 }
             }
