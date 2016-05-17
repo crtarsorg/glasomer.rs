@@ -51,3 +51,10 @@ def get_third_matches():
 def budget_balance():
     result = mongo_utils.get_counts_on_budget_increase_decrease()
     return Response(response=json_util.dumps(result), status=200, mimetype="application/json")
+
+@mod_api.route('/get/insights', methods=['GET'])
+def get_insight():
+
+    docs = mongo_utils.get_insights()
+    return Response(response=json_util.dumps(docs), status=200, mimetype="application/json")
+

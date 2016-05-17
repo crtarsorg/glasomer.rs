@@ -2,6 +2,7 @@ import datetime
 from bson import SON
 import string
 
+
 class MongoUtils:
 
     def __init__(self, mongo):
@@ -73,6 +74,31 @@ class MongoUtils:
             json_doc[self.convert_case(item['_id'])] = item['count']
 
         return json_doc
+
+    def get_insights():
+        docs = self.mongo.db[self.collection_name].aggregate([
+            {
+                "$unwind": "$answers"
+            },
+            {
+                "$group": {
+                    "_id": "$answers.question",
+                    "counter": {"$sum": 1}
+                }
+            },
+            {
+                "$sort": SON([("count", 1), ("_id", 1)])
+            },
+            {
+                "$project": {
+                    "_id": 0,
+                    "question": "$_id",
+                    "totalAnswers": "$counter"
+                }
+            }
+        ])
+
+        return docs['result']
 
     @staticmethod
     def convert_case(name):

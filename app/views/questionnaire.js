@@ -128,7 +128,6 @@ window.ResultView = Backbone.View.extend({
             for (var item in options.data){
                 if(options.data[item]['question'] != '' && options.data[item]['answer'] != undefined){
                     matchingResult = calculateMatchingResult(json_handler, options.data[item]);
-                    debugger;
                     if (!$.isEmptyObject(matchingResult['answer_collection']['parties'])){
                         answers_collection.push(matchingResult['answer_collection']);
                     }
