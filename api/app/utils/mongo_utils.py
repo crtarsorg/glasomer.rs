@@ -1,3 +1,4 @@
+# coding=utf-8
 import datetime
 from bson import SON
 import string
@@ -76,21 +77,29 @@ class MongoUtils:
         return json_doc
 
     def get_insights(self):
-        docs = self.mongo.db[self.collection_name].aggregate([
+        match = {
+                "$match": {
+                    "answers.parties": {}
+                }
+            }
+        match["$match"]["answers.parties"][u"Vaš odgovor"] = {}
+        match["$match"]["answers.parties"][u"Vaš odgovor"]["importance"] = u"Važno"
+
+        group = {
+            "$group": {
+                "_id": {"qst":"$answers.question"},
+                "counter": {"$sum": 1}
+            }
+        }
+
+        group["$group"]["_id"]["importance"] = u"$answers.parties.Vaš odgovor.importance"
+
+        aggregation = [
             {
                 "$unwind": "$answers"
             },
-            {
-                "$match": {
-                    "answers.parties.Vaš odgovor.importance": "Važno"
-                }
-            },
-            {
-                "$group": {
-                    "_id": {"qst":"$answers.question", "importance": "$answers.parties.Vaš odgovor.importance"}
-                    "counter": {"$sum": 1}
-                }
-            },
+            match,
+            group,
             {
                 "$sort": SON([("counter", 1), ("_id.qst", 1)])
             },
@@ -102,7 +111,8 @@ class MongoUtils:
                     "totalAnswers": "$counter"
                 }
             }
-        ])
+        ]
+        docs = self.mongo.db[self.collection_name].aggregate(aggregation)
 
         return docs['result']
 
