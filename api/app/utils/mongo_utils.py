@@ -75,7 +75,7 @@ class MongoUtils:
 
         return json_doc
 
-    def get_insights():
+    def get_insights(self):
         docs = self.mongo.db[self.collection_name].aggregate([
             {
                 "$unwind": "$answers"
